@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <?php include '../../include/head.html'; ?>
+    <link rel="stylesheet" href="../../lib/air-datepicker/datepicker.min.css" />
+    <script src="../../lib/tinymce/tinymce.min.js"></script>
+    <script src="../../lib/air-datepicker/datepicker.min.js"></script>
+    <script src="../../lib/air-datepicker/datepicker.ko.js"></script>
+    <script src="https://t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
+    <title>Edit | Design | Sample | 디노웍스 관리시스템</title>
+    <meta name="description" content="디노웍스 관리시스템 샘플 Edit" />
+  </head>
+  <body class="sub design edit">
+    <div id="wrapper" class="light">
+      <?php include '../../include/header.html'; ?>
+
+      <main id="main">
+        <h2>Edit 샘플</h2>
+        <p>폼페이지(edit) 샘플 : The most complete user interface framework that can be used to create stunning admin dashboards and presentation websites.</p>
+
+        <section class="container type-1">
+          <section>
+            <h3>회원정보관리</h3>
+
+            <table class="form-box">
+              <colgroup>
+                <col style="width: 120px;" />
+                <col />
+                <col style="width: 120px;" />
+                <col />
+              </colgroup>
+              <tbody>
+                <tr>
+                  <td class="th"><label for="user-id"><em>*</em>아이디</label></td>
+                  <td colspan="3">
+                    <input type="text" name="user_id" id="user-id" class="text" value="" />
+                    <a href="#" class="btn regular blue">중복확인</a>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="th"><label for="user-pw"><em>*</em>비밀번호</label></td>
+                  <td><input type="password" name="user_pw" id="user-pw" class="text" value="" /></td>
+                  <td class="th"><label for="user-pw-re"><em>*</em>비밀번호(확인)</label></td>
+                  <td>
+                    <input type="password" name="user_pw_re" id="user-pw-re" class="text" value="" />
+                    <span class="desc">※ 필수입력 항목입니다.</span>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="th"><label for="name"><em>*</em>이름</label></td>
+                  <td><input type="text" name="name" id="name" class="text" value="" /></td>
+                  <td class="th"><label for="email"><em>*</em>E-mail</label></td>
+                  <td><input type="text" name="email" id="email" class="text" value="" /></td>
+                </tr>
+                <tr>
+                  <td class="th"><label for="org-name">소속기관</label></td>
+                  <td>
+                    <input type="text" name="org_name" id="org-name" class="text" value="" readonly="readonly" />
+                    <a href="#" class="btn regular blue icon round"><i class="fa-solid fa-search"><span>검색</span></i></a>
+                  </td>
+                  <td class="th"><label for="grade-seq">회원등급</label></td>
+                  <td>
+                    <select name="grade_seq" id="grade-seq">
+                      <option value="">-회원등급선택-</option>
+                      <option value="1">일반회원</option>
+                      <option value="2">브론즈</option>
+                      <option value="3">실버</option>
+                      <option value="4">골드</option>
+                      <option value="5">VIP</option>
+                    </select>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="th"><label for="reserve-date"><em>*</em>예약일</label></td>
+                  <td>
+                    <div class="input-group">
+                      <input type="text" name="reserve_date" id="reserve-date" class="text date" readonly="readonly" data-view="months" />
+                      <a href="#" class="btn regular blue icon"><i class="fa-regular fa-calendar"><span>일자선택</span></i></a>
+                    </div>
+                  </td>
+                  <td class="th"><label for="reserve-date-1"><em>*</em>예약기간</label></td>
+                  <td>
+                    <div class="input-group">
+                      <input type="text" name="reserve_date_1" id="reserve-date-1" class="text date" readonly="readonly" title="예약시작일" />
+                      <a href="#" class="btn regular blue icon"><i class="fa-regular fa-calendar"><span>일자선택</span></i></a>
+                    </div> ~
+                    <div class="input-group">
+                      <input type="text" name="reserve_date_2" id="reserve-date-2" class="text date" readonly="readonly" title="예약종료일" />
+                      <a href="#" class="btn regular blue icon"><i class="fa-regular fa-calendar"><span>일자선택</span></i></a>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="th"><label for="apply-date"><em>*</em>예약신청일시</label></td>
+                  <td>
+                    <div class="input-group">
+                      <input type="text" name="apply_date" id="apply-date" class="text date" readonly="readonly" />
+                      <a href="#" class="btn regular blue icon"><i class="fa-regular fa-calendar"><span>일자선택</span></i></a>
+                    </div>
+                    <div class="input-group">
+                      <label for="apply-hour"><i class="fa-regular fa-clock"><span>시간선택</span></i></label>
+                      <select name="apply_hour" id="apply-hour">
+                        <option value="00:00">00:00</option>
+                        <option value="00:30">00:30</option>
+                        <option value="01:00">01:00</option>
+                        <option value="01:30">01:30</option>
+                        <option value="23:30">23:30</option>
+                      </select>
+                    </div>
+                  </td>
+                  <td class="th"><label for="apply-date-1"><em>*</em>예약기간(시간)</label></td>
+                  <td>
+                    <div class="input-group">
+                      <input type="text" name="apply_date_1" id="apply-date-1" class="text date" readonly="readonly" title="신청시작일" />
+                      <a href="#" class="btn regular blue icon"><i class="fa-regular fa-calendar"><span>일자선택</span></i></a>
+                    </div>
+                    <select name="apply_hour_1" id="apply-hour-1" title="신청시작시간">
+                      <option value="00:00">00:00</option>
+                      <option value="00:30">00:30</option>
+                      <option value="01:00">01:00</option>
+                      <option value="01:30">01:30</option>
+                      <option value="23:30">23:30</option>
+                    </select> ~
+                    <div class="input-group">
+                      <input type="text" name="apply_date_2" id="apply-date-2" class="text date" readonly="readonly" title="신청종료일" />
+                      <a href="#" class="btn regular blue icon"><i class="fa-regular fa-calendar"><span>일자선택</span></i></a>
+                    </div>
+                    <select name="apply_hour_2" id="apply-hour-2" title="신청종료시간">
+                      <option value="00:00">00:00</option>
+                      <option value="00:30">00:30</option>
+                      <option value="01:00">01:00</option>
+                      <option value="01:30">01:30</option>
+                      <option value="23:30">23:30</option>
+                    </select>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="th"><label for="contract-amt">계약금</label></td>
+                  <td>
+                    <div class="input-group">
+                      <span class="label"><i class="fa-solid fa-coins"></i></span>
+                      <input type="text" name="contract_amt" id="contract-amt" class="text digit" value="" />
+                      <span class="label">원</span>
+                    </div>
+                    <p class="desc">※ 필수입력 항목입니다. 필수입력 항목입니다. 필수입력 항목입니다. 필수입력 항목입니다. 필수입력 항목입니다.</p>
+                  </td>
+                  <td class="th"><label for="global-amt">지불액</label></td>
+                  <td>
+                    <div class="input-group">
+                      <span class="label"><i class="fa-solid fa-coins"></i></span>
+                      <select name="unit_cd" id="unit-cd" title="통화구분">
+                        <option value="krw">KRW</option>
+                        <option value="usd">USD</option>
+                        <option value="yen">YEN</option>
+                        <option value="eur">EUR</option>
+                      </select>
+                      <input type="text" name="global_amt" id="global-amt" class="text digit" value="" title="지불액" />
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="th"><label for="title">제목</label></td>
+                  <td colspan="3"><input type="text" name="title" id="title" class="text full" value="" /></td>
+                </tr>
+                <tr>
+                  <td class="th"><label for="interest-seq-1">관심분야</label></td>
+                  <td>
+                    <ul class="input-list">
+                      <li><input type="checkbox" name="interest_seq[]" id="interest-seq-1" value="11" /><label for="interest-seq-1">HTML</label></li>
+                      <li><input type="checkbox" name="interest_seq[]" id="interest-seq-2" value="12" /><label for="interest-seq-2">CSS</label></li>
+                      <li><input type="checkbox" name="interest_seq[]" id="interest-seq-3" value="13" /><label for="interest-seq-3">JavaScript</label></li>
+                      <li><input type="checkbox" name="interest_seq[]" id="interest-seq-4" value="14" /><label for="interest-seq-4">jQuery</label></li>
+                      <li><input type="checkbox" name="interest_seq[]" id="interest-seq-5" value="15" /><label for="interest-seq-5">PHP</label></li>
+                      <li><input type="checkbox" name="interest_seq[]" id="interest-seq-6" value="16" /><label for="interest-seq-6">MySQL</label></li>
+                      <li><input type="checkbox" name="interest_seq[]" id="interest-seq-7" value="17" /><label for="interest-seq-7">React</label></li>
+                      <li><input type="checkbox" name="interest_seq[]" id="interest-seq-8" value="18" /><label for="interest-seq-8">Vue</label></li>
+                      <li><input type="checkbox" name="interest_seq[]" id="interest-seq-9" value="19" /><label for="interest-seq-9">Svelte</label></li>
+                      <li><input type="checkbox" name="interest_seq[]" id="interest-seq-10" value="20" /><label for="interest-seq-10">TypeScript</label></li>
+                    </ul>
+                  </td>
+                  <td class="th"><label for="enter-cd-1">입주형태</label></td>
+                  <td>
+                    <ul class="input-list">
+                      <li><input type="radio" name="enter_cd" id="enter-cd-1" value="type1" /><label for="enter-cd-1">월세</label></li>
+                      <li><input type="radio" name="enter_cd" id="enter-cd-2" value="type2" /><label for="enter-cd-2">전세</label></li>
+                      <li><input type="radio" name="enter_cd" id="enter-cd-3" value="type3" /><label for="enter-cd-3">매매(자가)</label></li>
+                      <li><input type="radio" name="enter_cd" id="enter-cd-4" value="type4" /><label for="enter-cd-4">반전세</label></li>
+                      <li><input type="radio" name="enter_cd" id="enter-cd-5" value="type5" /><label for="enter-cd-5">국민임대</label></li>
+                      <li><input type="radio" name="enter_cd" id="enter-cd-6" value="type6" /><label for="enter-cd-6">지식산업센터</label></li>
+                      <li><input type="radio" name="enter_cd" id="enter-cd-7" value="type7" /><label for="enter-cd-7">오피스텔</label></li>
+                      <li><input type="radio" name="enter_cd" id="enter-cd-8" value="type8" /><label for="enter-cd-8">기타</label></li>
+                    </ul>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="th"><label for="pay-cd">지불방식</label></td>
+                  <td>
+                    <div class="input-group">
+                      <span class="label"><i class="fa-solid fa-comment-dollar"></i></span>
+                      <select name="pay_cd" id="pay-cd">
+                        <option value="">-옵션선택-</option>
+                        <option value="cash">현금</option>
+                        <option value="card-1">신용카드</option>
+                        <option value="card-2">체크카드</option>
+                        <option value="trasnfer">계좌이체</option>
+                      </select>
+                    </div>
+                    <a href="#" class="btn-toggle">
+                      <label for="">완료여부</label>
+                      <input type="hidden" name="" id="" data-left="N" data-right="Y" value="N" />
+                    </a>
+                  </td>
+                  <td class="th"><label for="">계약자명</label></td>
+                  <td>
+                    <div class="input-group">
+                      <span class="label"><i class="fa-solid fa-file-signature"></i></span>
+                      <input type="text" name="" id="" class="text" value="" />
+                    </div>
+                    <a href="#" class="btn-toggle">
+                      <label for="">계약유효여부</label>
+                      <input type="hidden" name="" id="" data-left="N" data-right="Y" value="Y" />
+                    </a>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="th"><label for="org-cd-1"><em>*</em>소속기관구분</label></td>
+                  <td>
+                    <ul class="input-list fake">
+                      <li><label><input type="radio" name="org_cd" id="org-cd-1" value="industry" >신업계</label></li>
+                      <li><label><input type="radio" name="org_cd" id="org-cd-2" value="acedemy" checked="checked" >학계</label></li>
+                      <li><label><input type="radio" name="org_cd" id="org-cd-3" value="research" >연구소</label></li>
+                      <li><label><input type="radio" name="org_cd" id="org-cd-4" value="etc" >기타</label></li>
+                    </ul>
+                  </td>
+                  <td class="th"><label for="rel-industry-seq-1">연관산업분야</label></td>
+                  <td>
+                    <ul class="input-list fake">
+                      <li><label><input type="checkbox" name="rel_industry_seq[]" id="rel-industry-seq-1" value="21" checked="checked" >IT</label></li>
+                      <li><label><input type="checkbox" name="rel_industry_seq[]" id="rel-industry-seq-2" value="22" >바이오</label></li>
+                      <li><label><input type="checkbox" name="rel_industry_seq[]" id="rel-industry-seq-3" value="23" >금융</label></li>
+                      <li><label><input type="checkbox" name="rel_industry_seq[]" id="rel-industry-seq-4" value="24" checked="checked" >빅데이타</label></li>
+                      <li><label><input type="checkbox" name="rel_industry_seq[]" id="rel-industry-seq-5" value="25" >인공지능</label></li>
+                    </ul>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="th"><label for="zip-code">배송지주소</label></td>
+                  <td colspan="3">
+                    <div class="line">
+                      <input type="text" name="zip_code" id="zip-code" class="text" maxlength="5" readonly="readonly" title="우편번호" />
+                      <a href="#" class="btn regular white">우편번호선택</a>
+                    </div>
+                    <div class="line">
+                      <input type="text" name="address_1" id="address-1" class="text" readonly="readonly" title="공통주소" />
+                      <input type="text" name="address_2" id="address-2" class="text" title="상세주소" />
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="th"><label for="editor-content"><em>*</em>상세내용</label></td>
+                  <td colspan="3" class="editor">
+                    <textarea name="editor_content" id="editor-content" class="editor" style="height: 500px;"></textarea>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="th"><label for="remarks">비고</label></td>
+                  <td colspan="3">
+                    <textarea name="remarks" id="remarks"></textarea>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+
+          </section>
+        </section>
+
+
+
+
+      </main>
+
+      <?php include '../../include/footer.html'; ?>
+    </div> <!-- #wrapper -->
+
+<script>
+'use strict';
+
+// datepicker 접근성 문제시 readonly를 풀어서, 직접 입력가능 하도록함
+
+$('#reserve-date').datepicker({
+  language: 'ko'
+});
+// tinymce.init({ selector: 'textarea.editor',});
+
+var sampleData = {
+  user_id: 'test_abc',
+  name: '이름',
+  email: 'abc@naver.com', 
+  org_name: '디노웍스(주)',
+  grade_seq: 4, 
+  apply_date: '2022-03-29', 
+  apply_hour: '01:30',
+  interest_seq: [11, 15, 16, 19], 
+  enter_cd: 'type3', 
+  org_cd: 'research', 
+  rel_industry_seq: [21, 23, 24], 
+  global_amt: 20000, 
+  remarks: 'test data\ntest 1234\nabcd'
+};
+
+setFormData(sampleData);
+function setFormData(data) {
+  for (var prop in data) {
+    // console.log(prop + ' : ' + data[prop]);
+    var form = null;
+    var type = '';
+    if (Array.isArray(data[prop]) === true) {
+      form = document.querySelector('[name="' + prop + '[]"]');
+      for(var i = 0; i < data[prop].length; i ++) {
+        data[prop][i] = data[prop][i].toString();
+      }
+    } else {
+      form = document.querySelector('[name="' + prop + '"]');
+    }
+    type = form.tagName.toLocaleLowerCase();
+    if (type === 'input') {
+      if (form.type === 'radio' || form.type === 'checkbox') {
+        type += '-' + form.type;
+      } else {
+        type += '-text';
+      }
+    }
+    // console.log(type); 
+
+    switch(type) {
+      case 'input-radio':
+        var radio = document.querySelectorAll('[name="' + prop + '"]');
+        for (var i = 0; i < radio.length; i ++){
+          // console.log(radio[i].value);
+          if(radio[i].value === data[prop].toString()) radio[i].checked = true;
+        }
+        break;
+      case 'input-checkbox':
+        var checkbox = document.querySelectorAll('[name="' + prop + '[]"]');
+        for (var i = 0; i < checkbox.length; i ++){
+          // console.log(typeof(checkbox[i].value));
+          if(data[prop].includes(checkbox[i].value) === true) {
+            checkbox[i].checked = true;
+          } else {
+            checkbox[i].checked = false;
+          }
+        }
+        break;
+      case 'input-text':
+      case 'select':
+      case 'textarea':
+        form.value = data[prop];
+        break;
+      default: 
+        console.log('no-type');
+        break;
+    }
+  }
+}
+
+// var jsonData = JSON.stringify(data);
+
+// console.log(jsonData);
+
+// var json = '{"user_id":"test_abc","name":"이름","email":"abc@naver.com","org_name":"디노웍스(주)","grade_seq":4,"apply_date":"2022-03-29","apply_hour":"01:30","interest_seq":[11,15,16,19],"enter_cd":"type3","org_cd":"research","rel_industry_seq":[21,23,24],"remarks":"test data\\ntest 1234\\nabcd"}';
+// var newData = JSON.parse(json);
+
+// console.log(newData);
+// $('[name="remarks"]').val(data.remarks);
+
+// var data = {
+//   user_id: 'dinoworks',
+//   name: '이시영',
+//   email: 'lsy@dinoworks.kr',
+//   grade_seq: 5,
+//   org_cd: 'etc',
+//   rel_industry_seq: [22, 24, 25]
+// };
+// seq=id 값
+// cd : 긴어떠한 소스를 code로 줄인 code값
+
+
+$('[name="user_id"]').val(sampleData.user_id);
+$('[name="name"]').val(sampleData.name);
+$('[name="email"]').val(sampleData.email);
+
+$('[name="grade_seq"] option').each(function() {
+  if ($(this).val() === sampleData.grade_seq.toString()) {
+    $(this).prop({'selected': true});
+  } else {
+    $(this).prop({'selected': false});
+  }
+});
+
+$('[name="org_cd"]').each(function() {
+  if ($(this).val() === sampleData.org_cd) {
+    $(this).prop({'checked': true});
+  } else {
+    $(this).prop({'checked': false});
+  }
+});
+
+$('[name="rel_industry_seq[]"]').each(function() {
+  if (sampleData.rel_industry_seq.includes(parseInt($(this).val())) === true) {
+    $(this).prop({'checked': true});
+  } else {
+    $(this).prop({'checked': false});
+  }
+});
+
+
+
+
+
+
+
+
+setFakeForm();
+function setFakeForm() {
+  var classRadio = 'fa-regular fa-circle';
+  var classRadioChecked = 'fa-regular fa-circle-check';
+  var classCheckbox = 'fa-regular fa-square';
+  var classCheckboxChecked = 'fa-regular fa-square-check';
+
+  $('ul.input-list.fake > li').each(function() {
+    var $input = $(this).find('input');
+    var type = $input.attr('type');
+    var isChecked = $input.prop('checked');
+
+    if (type === 'radio') {
+      if (isChecked === true) {
+        $input.after('<i class="' + classRadioChecked + '"></i>');
+      } else {
+        $input.after('<i class="' + classRadio + '"></i>');
+      }
+    } else if (type === 'checkbox') {
+      if (isChecked === true) {
+        $input.after('<i class="' + classCheckboxChecked + '"></i>');
+      } else {
+        $input.after('<i class="' + classCheckbox + '"></i>');
+      }
+    }
+  });
+
+  $('ul.input-list.fake > li input').on('change', function() {
+    var type = $(this).attr('type');
+    var $parent = $(this).closest('ul');
+
+    if (type === 'radio') {
+      $parent.find('li').each(function() {
+        if ($(this).find('input').prop('checked') === true) {
+          $(this).find('i').attr({'class': classRadioChecked});
+        } else {
+          $(this).find('i').attr({'class': classRadio});
+        }
+      });
+    } else if (type === 'checkbox') {
+      $parent.find('li').each(function() {
+        if ($(this).find('input').prop('checked') === true) {
+          $(this).find('i').attr({'class': classCheckboxChecked});
+        } else {
+          $(this).find('i').attr({'class': classCheckbox});
+        }
+      });
+    }
+  });
+
+  $(document).on('keydown', function() {
+    $('ul.input-list.fake').addClass('keydown');
+  });
+
+  $(document).on('mousedown', function() {
+    $('ul.input-list.fake').removeClass('keydown');
+  });
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+setEditor();
+
+// tinymce editor 적용
+function setEditor() {
+  var rootPath = (document.querySelector('base')) ? document.querySelector('base').getAttribute('href') : '/';
+
+  tinymce.init({
+    selector: 'textarea.editor',
+    plugins: [
+      'advlist autolink link image lists charmap print preview hr anchor pagebreak spellchecker',
+      'searchreplace wordcount visualblocks visualchars code fullscreen insertdatetime media nonbreaking',
+      'save table directionality emoticons template paste'
+    ],
+    //content_css: 'css/content.css',
+    content_style: 'p {font-family: "나눔고딕", NanumGothic; margin: 5px; font-size: 13px; line-height: 1.4em;}',
+    toolbar: 'print preview newdocument undo redo | fontselect | fontsizeselect | forecolor backcolor bold italic underline strikethrough | link image media charmap code',
+    font_formats: '나눔고딕=나눔고딕,NanumGothic;Andale Mono=andale mono,times;Arial=arial,helvetica,sans-serif;Arial Black=arial black,avant garde;Book Antiqua=book antiqua,palatino;Comic Sans MS=comic sans ms,sans-serif;Courier New=courier new,courier;Georgia=georgia,palatino;Helvetica=helvetica;Impact=impact,chicago;Symbol=symbol;Tahoma=tahoma,arial,helvetica,sans-serif;Terminal=terminal,monaco;Times New Roman=times new roman,times;Trebuchet MS=trebuchet ms,geneva;Verdana=verdana,geneva;Webdings=webdings;Wingdings=wingdings,zapf dingbats',
+    fontsize_formats: '11px 12px 14px 16px 18px 24px 36px 48px',
+    language: 'ko_KR',
+    // images_upload_url: rootPath + 'editor-image-upload',
+    // images_upload_base_path: rootPath + 'storage/editor',
+    relative_urls : false,
+    images_upload_credentials: true,
+    image_dimensions: false,
+    setup: function (editor) {
+        editor.on('change', function() { editor.save(); });
+    }
+  });
+}
+
+
+
+/*
+// calendar UI
+function setDatepicker() {
+    // 이벤트(위임 방식 적용 / jquery data 활용(attr 사용시 적용 후 복사된 요소에 미적용))
+    $(document).on('focusin', 'input.year, input.month, input.date, input.datetime-hour, input.datetime-min', function() {
+        var $inputDate = $(this);
+        if ($(this).data('isApplied') !== 'true') {
+            $(this).data({'isApplied': 'true'});
+            applyDatepicker($inputDate);
+            setTimeout(function() {$inputDate.trigger('focus');}, 100);
+        }
+    });
+    $(document).on('click', 'input.year ~ a.btn, input.month ~ a.btn, input.date ~ a.btn, input.datetime-hour ~ a.btn, input.datetime-min ~ a.btn', function() {
+        $(this).parent().find('input').trigger('focus');
+    });
+
+    function applyDatepicker($selector) {
+        var autoClose = true;
+        var date = new Date();
+        var minuteStep = 5;      // 분 기본 Step 5분
+        $selector.attr({'readonly': 'readonly'});
+
+        if ($selector.attr('class').indexOf('year') !== -1) {
+            $selector.attr({'maxlength': 4, 'data-min-view': 'years', 'data-view': 'years', 'data-date-format': 'yyyy'});
+        } else if ($selector.attr('class').indexOf('month') !== -1) {
+            $selector.attr({'maxlength': 7, 'data-min-view': 'months', 'data-view': 'months', 'data-date-format': 'yyyy-mm'});
+        } else if ($selector.attr('class').indexOf('date') !== -1) {
+            $selector.attr({'maxlength': 10});
+            if ($selector.attr('class').indexOf('datetime-hour') !== -1) {
+                autoClose = false;
+                $selector.attr({'maxlength': 16, 'data-timepicker': 'true', 'data-time-format': 'hh:00'});
+                if ($selector.attr('data-step') !== undefined) {
+                    minuteStep = Number($selector.attr('data-step'));   // step 설정 가능
+                }
+            } else if ($selector.attr('class').indexOf('datetime-min') !== -1) {
+                autoClose = false;
+                $selector.attr({'maxlength': 16, 'data-timepicker': 'true', 'data-time-format': 'hh:ii'});
+                if ($selector.attr('data-step') !== undefined) {
+                    minuteStep = Number($selector.attr('data-step'));   // step 설정 가능
+                }
+            }
+        }
+
+        $selector.datepicker({
+            language: 'ko',
+            autoClose: autoClose,
+            startDate: new Date(date.getFullYear(), date.getMonth(), date.getDate(), '00', '00'),  // 시간, 분은 00으로 초기 설정
+            minutesStep: minuteStep,    // 분 단위
+            clearButton: true,
+            onHide: function() {$selector.trigger('change');}   // 달력이 사라질때 해당 input에 change 이벤트 발생
+            //minDate: new Date()
+        });
+
+        autoFormatDateTime($selector);
+    }
+
+    // 자동포맷 적용
+    function autoFormatDateTime($selector) {
+        // 이벤트(포맷 자동변경)
+        $selector.on('keyup', function(e) {
+            // backspace이면 동작하지 않음(수정시)
+            if (e.keyCode === 8) return false;
+
+            var maxLength = Number($(this).attr('maxlength'));
+            var text = $(this).val();
+            var pattern = /[^\d]/g;  // 입력허용값(숫자만)
+            var newText = text.replace(pattern, '');  // 숫자이외의 기호는 없앰
+            var newTextLength = newText.length;
+            // Dash 자동 삽입
+            if (newTextLength > 4) {
+                newText = newText.slice(0, 4) + '-' + newText.slice(4);
+            }
+            if (newTextLength > 6){
+                newText = newText.slice(0, 7) + '-' + newText.slice(7);
+            }
+            if (newTextLength > 8){
+                newText = newText.slice(0, 10) + ' ' + newText.slice(10);
+            }
+            if (newTextLength > 10){
+                newText = newText.slice(0, 13) + ':' + newText.slice(13);
+            }
+            // 최대값을 넘는 경우 삭제
+            if (newText.length > maxLength) {
+                newText = newText.slice(0, maxLength);
+            }
+            // 반영
+            $(this).val(newText);  // 현재 요소만
+        });
+    }
+}
+*/
+
+
+
+
+
+
+
+
+
+</script>
+  </body>
+</html>

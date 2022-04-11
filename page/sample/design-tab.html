@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <?php include '../../include/head.html'; ?>
+    <title>Tab | Design | Sample | 디노웍스 관리시스템</title>
+    <meta name="description" content="디노웍스 관리시스템 샘플 레이아웃" />
+  </head>
+  <body class="sub design tab">
+    <div id="wrapper" class="light">
+      <?php include '../../include/header.html'; ?>
+
+      <main id="main">
+
+        <section class="container type-2">
+          <section>
+            <h3>Default Tabs</h3>
+            <p>Simple widget of tabbable panes of local content.</p>
+
+            <div class="tabview border">
+              <ul class="tab">
+                <li><a href="#">Preview</a></li>
+                <li><a href="#">Code</a></li>
+              </ul>
+              <ul class="tab-content">
+                <li>
+                  <div class="tabview default">
+                    <ul class="tab">
+                      <li><a href="#">Home</a></li>
+                      <li><a href="#">Profile</a></li>
+                      <li><a href="#">Settings</a></li>
+                    </ul>
+                    <ul class="tab-content">
+                      <li>Food truck quinoa dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.<br /><br />
+                        Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt.Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.
+                      </li>
+                      <li>Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt.Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.<br /><br />
+                        Food truck quinoa dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.
+                      </li>
+                      <li>Food truck quinoa dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.<br /><br />
+                        Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt.Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <li>
+<div class="code-box">
+  <pre><span style="color: #000080">&lt;div</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;tabview default&quot;</span><span style="color: #000080">&gt;</span>
+  <span style="color: #000080">&lt;ul</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;tab&quot;</span><span style="color: #000080">&gt;</span>
+    <span style="color: #000080">&lt;li&gt;&lt;a</span> <span style="color: #008080">href=</span><span style="color: #bb8844">&quot;#&quot;</span><span style="color: #000080">&gt;</span>Home<span style="color: #000080">&lt;/a&gt;&lt;/li&gt;</span>
+    <span style="color: #000080">&lt;li&gt;&lt;a</span> <span style="color: #008080">href=</span><span style="color: #bb8844">&quot;#&quot;</span><span style="color: #000080">&gt;</span>Profile<span style="color: #000080">&lt;/a&gt;&lt;/li&gt;</span>
+    <span style="color: #000080">&lt;li&gt;&lt;a</span> <span style="color: #008080">href=</span><span style="color: #bb8844">&quot;#&quot;</span><span style="color: #000080">&gt;</span>Settings<span style="color: #000080">&lt;/a&gt;&lt;/li&gt;</span>
+  <span style="color: #000080">&lt;/ul&gt;</span>
+  <span style="color: #000080">&lt;ul</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;tab-content&quot;</span><span style="color: #000080">&gt;</span>
+    <span style="color: #000080">&lt;li&gt;</span>Home content<span style="color: #000080">&lt;/li&gt;</span>
+    <span style="color: #000080">&lt;li&gt;</span>Profile content<span style="color: #000080">&lt;/li&gt;</span>
+    <span style="color: #000080">&lt;li&gt;</span>Settings content<span style="color: #000080">&lt;/li&gt;</span>
+  <span style="color: #000080">&lt;/ul&gt;</span>
+<span style="color: #000080">&lt;/div&gt;</span>
+</pre>
+</div>
+                </li>
+              </ul>
+            </div>
+
+          </section>
+          <section>
+            <h3>Square Tabs</h3> 
+            <p>Using class <span class="code">.square</span>, you can force your tab menu items to use the full available width.</p>
+            
+            <div class="tabview border">
+              <ul class="tab">
+                <li><a href="#">Preview</a></li>
+                <li><a href="#">Code</a></li>
+              </ul>
+              <ul class="tab-content">
+                <li>
+                  <div class="tabview square">
+                    <ul class="tab">
+                      <li><a href="#">Home</a></li>
+                      <li><a href="#">Profile</a></li>
+                      <li><a href="#">Settings</a></li>
+                    </ul>
+                    <ul class="tab-content">
+                      <li>Food truck quinoa dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.<br /><br />
+                        Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt.Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.
+                      </li>
+                      <li>Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt.Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.<br /><br />
+                        Food truck quinoa dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.
+                      </li>
+                      <li>Food truck quinoa dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.<br /><br />
+                        Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt.Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <li>
+<div class="code-box">
+  <pre><span style="color: #000080">&lt;div</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;tabview square&quot;</span><span style="color: #000080">&gt;</span>
+  <span style="color: #000080">&lt;ul</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;tab&quot;</span><span style="color: #000080">&gt;</span>
+    <span style="color: #000080">&lt;li&gt;&lt;a</span> <span style="color: #008080">href=</span><span style="color: #bb8844">&quot;#&quot;</span><span style="color: #000080">&gt;</span>Home<span style="color: #000080">&lt;/a&gt;&lt;/li&gt;</span>
+    <span style="color: #000080">&lt;li&gt;&lt;a</span> <span style="color: #008080">href=</span><span style="color: #bb8844">&quot;#&quot;</span><span style="color: #000080">&gt;</span>Profile<span style="color: #000080">&lt;/a&gt;&lt;/li&gt;</span>
+    <span style="color: #000080">&lt;li&gt;&lt;a</span> <span style="color: #008080">href=</span><span style="color: #bb8844">&quot;#&quot;</span><span style="color: #000080">&gt;</span>Settings<span style="color: #000080">&lt;/a&gt;&lt;/li&gt;</span>
+  <span style="color: #000080">&lt;/ul&gt;</span>
+  <span style="color: #000080">&lt;ul</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;tab-content&quot;</span><span style="color: #000080">&gt;</span>
+    <span style="color: #000080">&lt;li&gt;</span>Home content<span style="color: #000080">&lt;/li&gt;</span>
+    <span style="color: #000080">&lt;li&gt;</span>Profile content<span style="color: #000080">&lt;/li&gt;</span>
+    <span style="color: #000080">&lt;li&gt;</span>Settings content<span style="color: #000080">&lt;/li&gt;</span>
+  <span style="color: #000080">&lt;/ul&gt;</span>
+<span style="color: #000080">&lt;/div&gt;</span>
+</pre>
+</div>
+                </li>
+              </ul>
+            </div>
+
+          </section>
+        </section>
+        
+        <section class="container type-2">
+          <section>
+            <h3>Vertical left Tabs</h3>
+            <p>Using class <span class="code">.vertical-left</span>, you can force your tab menu items to use the full available width.</p>
+
+            <div class="tabview border">
+              <ul class="tab">
+                <li><a href="#">Preview</a></li>
+                <li><a href="#">Code</a></li>
+              </ul>
+              <ul class="tab-content">
+                <li>
+                  <div class="tabview vertical-left">
+                    <ul class="tab">
+                      <li><a href="#">Home</a></li>
+                      <li><a href="#">Profile</a></li>
+                      <li><a href="#">Settings</a></li>
+                    </ul>
+                    <ul class="tab-content">
+                      <li>Food truck quinoa dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.<br /><br />
+                        Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt.Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.
+                      </li>
+                      <li>Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt.Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.<br /><br />
+                        Food truck quinoa dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.
+                      </li>
+                      <li>Food truck quinoa dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.<br /><br />
+                        Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt.Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <li>
+<div class="code-box">
+  <pre><span style="color: #000080">&lt;div</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;tabview vertical-left&quot;</span><span style="color: #000080">&gt;</span>
+  <span style="color: #000080">&lt;ul</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;tab&quot;</span><span style="color: #000080">&gt;</span>
+    <span style="color: #000080">&lt;li&gt;&lt;a</span> <span style="color: #008080">href=</span><span style="color: #bb8844">&quot;#&quot;</span><span style="color: #000080">&gt;</span>Home<span style="color: #000080">&lt;/a&gt;&lt;/li&gt;</span>
+    <span style="color: #000080">&lt;li&gt;&lt;a</span> <span style="color: #008080">href=</span><span style="color: #bb8844">&quot;#&quot;</span><span style="color: #000080">&gt;</span>Profile<span style="color: #000080">&lt;/a&gt;&lt;/li&gt;</span>
+    <span style="color: #000080">&lt;li&gt;&lt;a</span> <span style="color: #008080">href=</span><span style="color: #bb8844">&quot;#&quot;</span><span style="color: #000080">&gt;</span>Settings<span style="color: #000080">&lt;/a&gt;&lt;/li&gt;</span>
+  <span style="color: #000080">&lt;/ul&gt;</span>
+  <span style="color: #000080">&lt;ul</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;tab-content&quot;</span><span style="color: #000080">&gt;</span>
+    <span style="color: #000080">&lt;li&gt;</span>Home content<span style="color: #000080">&lt;/li&gt;</span>
+    <span style="color: #000080">&lt;li&gt;</span>Profile content<span style="color: #000080">&lt;/li&gt;</span>
+    <span style="color: #000080">&lt;li&gt;</span>Settings content<span style="color: #000080">&lt;/li&gt;</span>
+  <span style="color: #000080">&lt;/ul&gt;</span>
+<span style="color: #000080">&lt;/div&gt;</span>
+</pre>
+</div>
+                </li>
+              </ul>
+            </div>
+
+          </section>
+          <section>
+            <h3>Vertical right Tabs</h3>
+            <p>Using class <span class="code">.vertical-right</span>, you can force your tab menu items to use the full available width.</p>
+
+            <div class="tabview border">
+              <ul class="tab">
+                <li><a href="#">Preview</a></li>
+                <li><a href="#">Code</a></li>
+              </ul>
+              <ul class="tab-content">
+                <li>
+                  <div class="tabview vertical-right">
+                    <ul class="tab">
+                      <li><a href="#">Home</a></li>
+                      <li><a href="#">Profile</a></li>
+                      <li><a href="#">Settings</a></li>
+                    </ul>
+                    <ul class="tab-content">
+                      <li>Food truck quinoa dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.<br /><br />
+                        Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt.Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.
+                      </li>
+                      <li>Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt.Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.<br /><br />
+                        Food truck quinoa dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.
+                      </li>
+                      <li>Food truck quinoa dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.<br /><br />
+                        Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt.Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <li>
+<div class="code-box">
+  <pre><span style="color: #000080">&lt;div</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;tabview vertical-right&quot;</span><span style="color: #000080">&gt;</span>
+  <span style="color: #000080">&lt;ul</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;tab&quot;</span><span style="color: #000080">&gt;</span>
+    <span style="color: #000080">&lt;li&gt;&lt;a</span> <span style="color: #008080">href=</span><span style="color: #bb8844">&quot;#&quot;</span><span style="color: #000080">&gt;</span>Home<span style="color: #000080">&lt;/a&gt;&lt;/li&gt;</span>
+    <span style="color: #000080">&lt;li&gt;&lt;a</span> <span style="color: #008080">href=</span><span style="color: #bb8844">&quot;#&quot;</span><span style="color: #000080">&gt;</span>Profile<span style="color: #000080">&lt;/a&gt;&lt;/li&gt;</span>
+    <span style="color: #000080">&lt;li&gt;&lt;a</span> <span style="color: #008080">href=</span><span style="color: #bb8844">&quot;#&quot;</span><span style="color: #000080">&gt;</span>Settings<span style="color: #000080">&lt;/a&gt;&lt;/li&gt;</span>
+  <span style="color: #000080">&lt;/ul&gt;</span>
+  <span style="color: #000080">&lt;ul</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;tab-content&quot;</span><span style="color: #000080">&gt;</span>
+    <span style="color: #000080">&lt;li&gt;</span>Home content<span style="color: #000080">&lt;/li&gt;</span>
+    <span style="color: #000080">&lt;li&gt;</span>Profile content<span style="color: #000080">&lt;/li&gt;</span>
+    <span style="color: #000080">&lt;li&gt;</span>Settings content<span style="color: #000080">&lt;/li&gt;</span>
+  <span style="color: #000080">&lt;/ul&gt;</span>
+<span style="color: #000080">&lt;/div&gt;</span>
+</pre>
+</div>
+                </li>
+              </ul>
+            </div>
+
+          </section>
+        </section>
+        
+        <section class="container type-2">
+          <section>
+            <h3>Bordered Tabs</h3>
+            <p>Using class <span class="code">.border</span>, you can force your tab menu items to use the full available width.</p>
+
+            <div class="tabview square">
+              <ul class="tab">
+                <li><a href="#">Preview</a></li>
+                <li><a href="#">Code</a></li>
+              </ul>
+              <ul class="tab-content">
+                <li>
+                  <div class="tabview border">
+                    <ul class="tab">
+                      <li><a href="#">Home</a></li>
+                      <li><a href="#">Profile</a></li>
+                      <li><a href="#">Settings</a></li>
+                    </ul>
+                    <ul class="tab-content">
+                      <li>Food truck quinoa dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.<br /><br />
+                        Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt.Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.
+                      </li>
+                      <li>Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt.Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.<br /><br />
+                        Food truck quinoa dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.
+                      </li>
+                      <li>Food truck quinoa dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.<br /><br />
+                        Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt.Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <li>
+<div class="code-box">
+  <pre><span style="color: #000080">&lt;div</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;tabview border&quot;</span><span style="color: #000080">&gt;</span>
+  <span style="color: #000080">&lt;ul</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;tab&quot;</span><span style="color: #000080">&gt;</span>
+    <span style="color: #000080">&lt;li&gt;&lt;a</span> <span style="color: #008080">href=</span><span style="color: #bb8844">&quot;#&quot;</span><span style="color: #000080">&gt;</span>Home<span style="color: #000080">&lt;/a&gt;&lt;/li&gt;</span>
+    <span style="color: #000080">&lt;li&gt;&lt;a</span> <span style="color: #008080">href=</span><span style="color: #bb8844">&quot;#&quot;</span><span style="color: #000080">&gt;</span>Profile<span style="color: #000080">&lt;/a&gt;&lt;/li&gt;</span>
+    <span style="color: #000080">&lt;li&gt;&lt;a</span> <span style="color: #008080">href=</span><span style="color: #bb8844">&quot;#&quot;</span><span style="color: #000080">&gt;</span>Settings<span style="color: #000080">&lt;/a&gt;&lt;/li&gt;</span>
+  <span style="color: #000080">&lt;/ul&gt;</span>
+  <span style="color: #000080">&lt;ul</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;tab-content&quot;</span><span style="color: #000080">&gt;</span>
+    <span style="color: #000080">&lt;li&gt;</span>Home content<span style="color: #000080">&lt;/li&gt;</span>
+    <span style="color: #000080">&lt;li&gt;</span>Profile content<span style="color: #000080">&lt;/li&gt;</span>
+    <span style="color: #000080">&lt;li&gt;</span>Settings content<span style="color: #000080">&lt;/li&gt;</span>
+  <span style="color: #000080">&lt;/ul&gt;</span>
+<span style="color: #000080">&lt;/div&gt;</span>
+</pre>
+</div>
+                </li>
+              </ul>
+            </div>
+
+          </section>
+          <!-- <section>
+            <h3>박스2</h3>
+
+          </section>
+        </section> -->
+      </main>
+
+      <?php include '../../include/footer.html'; ?>
+    </div> <!-- #wrapper -->
+
+<script>
+'use strict';
+setTitle('Tabs');
+
+
+</script>
+  </body>
+</html>

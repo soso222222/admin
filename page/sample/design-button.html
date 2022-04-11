@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <?php include '../../include/head.html'; ?>
+    <title>Button | Design | Sample | 디노웍스 관리시스템</title>
+    <meta name="description" content="디노웍스 관리시스템 샘플 레이아웃" />
+  </head>
+  <body class="sub design button">
+    <div id="wrapper" class="light">
+      <?php include '../../include/header.html'; ?>
+
+      <main id="main">
+
+        <section class="container type-1">
+          <section>
+            <h3>Buttons</h3>
+            <p>Use the button classes on an <span class="code">&lt;a&gt;</span>, <span class="code">&lt;button&gt;</span>, or <span class="code">&lt;input&gt;</span> element.</p>
+
+            <div class="tabview border">
+              <ul class="tab">
+                <li><a href="#">Preview</a></li>
+                <li><a href="#">Code</a></li>
+              </ul>
+              <ul class="tab-content">
+                <li>
+                  <a href="#" class="btn gray">a button</a>
+                  <button type="submit" class="btn gray">button button</button>
+                  <input type="submit" class="btn gray" value="input button" />
+                </li>
+                <li>
+<div class="code-box custom-scroll">
+  <pre><span style="color: #000080">&lt;a</span> <span style="color: #008080">href=</span><span style="color: #bb8844">&quot;#&quot;</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;btn gray&quot;</span><span style="color: #000080">&gt;</span>a button<span style="color: #000080">&lt;/a&gt;</span>
+<span style="color: #000080">&lt;button</span> <span style="color: #008080">type=</span><span style="color: #bb8844">&quot;submit&quot;</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;btn gray&quot;</span><span style="color: #000080">&gt;</span>button button<span style="color: #000080">&lt;/button&gt;</span>
+<span style="color: #000080">&lt;input</span> <span style="color: #008080">type=</span><span style="color: #bb8844">&quot;submit&quot;</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;btn gray&quot;</span> <span style="color: #008080">value=</span><span style="color: #bb8844">&quot;input button&quot;</span> <span style="color: #000080">/&gt;</span>
+</pre>
+</div>
+                </li>
+              </ul>
+            </div>
+
+          </section>
+        </section>
+
+        <section class="container type-1">
+          <section>
+            <h3>Button Colors</h3>
+            <p>Use a classes <span class="code">.btn.**</span> to quickly create a bordered buttons.</p>
+
+            <div class="tabview border">
+              <ul class="tab">
+                <li><a href="#">Preview</a></li>
+                <li><a href="#">Code</a></li>
+              </ul>
+              <ul class="tab-content">
+                <li>
+                  <div class="button-box">
+                    <a href="#" class="btn regular light-red">light red</a>
+                    <button type="submit" class="btn regular red">red</button>
+                    <input type="submit" class="btn regular dark-red" value="dark red" />
+                    <a href="#" class="btn regular light-pink">light pink</a>
+                    <button type="submit" class="btn regular pink">pink</button>
+                    <input type="submit" class="btn regular sand" value="sand" />
+                    <input type="submit" class="btn regular yellow" value="yellow" />
+                    <a href="#" class="btn regular light-orange">light-orange</a>
+                    <button type="submit" class="btn regular orange">orange</button>
+                    <input type="submit" class="btn regular light-green" value="light green" />
+                    <a href="#" class="btn regular green">green</a>
+                    <button type="submit" class="btn regular dark-green">dark-green</button>
+                    <input type="submit" class="btn regular light-purple" value="light purple" />
+                    <a href="#" class="btn regular purple">purple</a>
+                    <button type="submit" class="btn regular dark-purple">dark purple</button>
+                    <input type="submit" class="btn regular gray" value="gray" />
+                    <a href="#" class="btn regular white">white</a>
+                    <button type="submit" class="btn regular black">black</button>
+                  </div>
+      
+                  <div class="button-box">
+                    <a href="#" class="btn regular main">main</a>
+                    <button type="submit" class="btn regular sub1">sub1</button>
+                    <input type="submit" class="btn regular sub2" value="sub2" />
+                    <input type="submit" class="btn regular trans" value="trans" />
+                  </div>
+                </li>
+                <li>
+<div class="code-box custom-scroll">
+  <pre>
+<span style="color: #000080">&lt;a</span> <span style="color: #008080">href=</span><span style="color: #bb8844">&quot;#&quot;</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;btn regular light-red&quot;</span><span style="color: #000080">&gt;</span>light red<span style="color: #000080">&lt;/a&gt;</span>
+<span style="color: #000080">&lt;button</span> <span style="color: #008080">type=</span><span style="color: #bb8844">&quot;submit&quot;</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;btn regular red&quot;</span><span style="color: #000080">&gt;</span>red<span style="color: #000080">&lt;/button&gt;</span>
+<span style="color: #000080">&lt;input</span> <span style="color: #008080">type=</span><span style="color: #bb8844">&quot;submit&quot;</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;btn regular dark-red&quot;</span> <span style="color: #008080">value=</span><span style="color: #bb8844">&quot;dark red&quot;</span> <span style="color: #000080">/&gt;</span>
+<span style="color: #000080">&lt;a</span> <span style="color: #008080">href=</span><span style="color: #bb8844">&quot;#&quot;</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;btn regular light-pink&quot;</span><span style="color: #000080">&gt;</span>light pink<span style="color: #000080">&lt;/a&gt;</span>
+<span style="color: #000080">&lt;button</span> <span style="color: #008080">type=</span><span style="color: #bb8844">&quot;submit&quot;</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;btn regular pink&quot;</span><span style="color: #000080">&gt;</span>pink<span style="color: #000080">&lt;/button&gt;</span>
+<span style="color: #000080">&lt;input</span> <span style="color: #008080">type=</span><span style="color: #bb8844">&quot;submit&quot;</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;btn regular yellow&quot;</span> <span style="color: #008080">value=</span><span style="color: #bb8844">&quot;yellow&quot;</span> <span style="color: #000080">/&gt;</span>
+<span style="color: #000080">&lt;input</span> <span style="color: #008080">type=</span><span style="color: #bb8844">&quot;submit&quot;</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;btn regular sand&quot;</span> <span style="color: #008080">value=</span><span style="color: #bb8844">&quot;sand&quot;</span> <span style="color: #000080">/&gt;</span>
+<span style="color: #000080">&lt;a</span> <span style="color: #008080">href=</span><span style="color: #bb8844">&quot;#&quot;</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;btn regular light-orange&quot;</span><span style="color: #000080">&gt;</span>light-orange<span style="color: #000080">&lt;/a&gt;</span>
+<span style="color: #000080">&lt;button</span> <span style="color: #008080">type=</span><span style="color: #bb8844">&quot;submit&quot;</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;btn regular orange&quot;</span><span style="color: #000080">&gt;</span>orange<span style="color: #000080">&lt;/button&gt;</span>
+<span style="color: #000080">&lt;input</span> <span style="color: #008080">type=</span><span style="color: #bb8844">&quot;submit&quot;</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;btn regular light-green&quot;</span> <span style="color: #008080">value=</span><span style="color: #bb8844">&quot;light green&quot;</span> <span style="color: #000080">/&gt;</span>
+<span style="color: #000080">&lt;a</span> <span style="color: #008080">href=</span><span style="color: #bb8844">&quot;#&quot;</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;btn regular green&quot;</span><span style="color: #000080">&gt;</span>green<span style="color: #000080">&lt;/a&gt;</span>
+<span style="color: #000080">&lt;button</span> <span style="color: #008080">type=</span><span style="color: #bb8844">&quot;submit&quot;</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;btn regular dark-green&quot;</span><span style="color: #000080">&gt;</span>dark-green<span style="color: #000080">&lt;/button&gt;</span>
+<span style="color: #000080">&lt;input</span> <span style="color: #008080">type=</span><span style="color: #bb8844">&quot;submit&quot;</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;btn regular light-purple&quot;</span> <span style="color: #008080">value=</span><span style="color: #bb8844">&quot;light purple&quot;</span> <span style="color: #000080">/&gt;</span>
+<span style="color: #000080">&lt;a</span> <span style="color: #008080">href=</span><span style="color: #bb8844">&quot;#&quot;</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;btn regular purple&quot;</span><span style="color: #000080">&gt;</span>purple<span style="color: #000080">&lt;/a&gt;</span>
+<span style="color: #000080">&lt;button</span> <span style="color: #008080">type=</span><span style="color: #bb8844">&quot;submit&quot;</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;btn regular dark-purple&quot;</span><span style="color: #000080">&gt;</span>dark purple<span style="color: #000080">&lt;/button&gt;</span>
+<span style="color: #000080">&lt;input</span> <span style="color: #008080">type=</span><span style="color: #bb8844">&quot;submit&quot;</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;btn regular gray&quot;</span> <span style="color: #008080">value=</span><span style="color: #bb8844">&quot;gray&quot;</span> <span style="color: #000080">/&gt;</span>
+<span style="color: #000080">&lt;a</span> <span style="color: #008080">href=</span><span style="color: #bb8844">&quot;#&quot;</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;btn regular white&quot;</span><span style="color: #000080">&gt;</span>white<span style="color: #000080">&lt;/a&gt;</span>
+<span style="color: #000080">&lt;button</span> <span style="color: #008080">type=</span><span style="color: #bb8844">&quot;submit&quot;</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;btn regular black&quot;</span><span style="color: #000080">&gt;</span>black<span style="color: #000080">&lt;/button&gt;</span>
+  
+<span style="color: #000080">&lt;a</span> <span style="color: #008080">href=</span><span style="color: #bb8844">&quot;#&quot;</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;btn regular main&quot;</span><span style="color: #000080">&gt;</span>main<span style="color: #000080">&lt;/a&gt;</span>
+<span style="color: #000080">&lt;button</span> <span style="color: #008080">type=</span><span style="color: #bb8844">&quot;submit&quot;</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;btn regular sub1&quot;</span><span style="color: #000080">&gt;</span>sub1<span style="color: #000080">&lt;/button&gt;</span>
+<span style="color: #000080">&lt;input</span> <span style="color: #008080">type=</span><span style="color: #bb8844">&quot;submit&quot;</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;btn regular sub2&quot;</span> <span style="color: #008080">value=</span><span style="color: #bb8844">&quot;sub2&quot;</span> <span style="color: #000080">/&gt;</span>
+<span style="color: #000080">&lt;input</span> <span style="color: #008080">type=</span><span style="color: #bb8844">&quot;submit&quot;</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;btn regular trans&quot;</span> <span style="color: #008080">value=</span><span style="color: #bb8844">&quot;trans&quot;</span> <span style="color: #000080">/&gt;</span>
+</pre>
+</div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+
+        <section class="container type-1">
+          <section>
+            <h3>Button Outline Colors</h3>
+            <p>Use a classes <span class="code">.btn.outline-**</span> to quickly create a bordered buttons.</p>
+
+            <div class="tabview border">
+              <ul class="tab">
+                <li><a href="#">Preview</a></li>
+                <li><a href="#">Code</a></li>
+              </ul>
+              <ul class="tab-content">
+                <li>
+                  <div class="button-box">
+                    <a href="#" class="btn regular outline-light-red">light red</a>
+                    <button type="submit" class="btn regular outline-red">red</button>
+                    <input type="submit" class="btn regular outline-dark-red" value="dark red" />
+                    <a href="#" class="btn regular outline-light-pink">light pink</a>
+                    <button type="submit" class="btn regular outline-pink">pink</button>
+                    <input type="submit" class="btn regular outline-yellow" value="yellow" />
+                    <input type="submit" class="btn regular outline-sand" value="sand" />
+                    <a href="#" class="btn regular outline-light-orange">light-orange</a>
+                    <button type="submit" class="btn regular outline-orange">orange</button>
+                    <input type="submit" class="btn regular outline-light-green" value="light green" />
+                    <a href="#" class="btn regular outline-green">green</a>
+                    <button type="submit" class="btn regular outline-dark-green">dark-green</button>
+                    <input type="submit" class="btn regular outline-light-purple" value="light purple" />
+                    <a href="#" class="btn regular outline-purple">purple</a>
+                    <button type="submit" class="btn regular outline-dark-purple">dark purple</button>
+                    <input type="submit" class="btn regular outline-gray" value="gray" />
+                    <a href="#" class="btn regular outline-white">white</a>
+                    <button type="submit" class="btn regular outline-black">black</button>
+                  </div>
+      
+                  <div class="button-box">
+                    <a href="#" class="btn regular outline-main">main</a>
+                    <button type="submit" class="btn regular outline-sub1">sub1</button>
+                    <input type="submit" class="btn regular outline-sub2" value="sub2" />
+                    <input type="submit" class="btn regular outline-trans" value="trans" />
+                  </div>
+                </li>
+                <li>
+<div class="code-box custom-scroll">
+  <pre>
+<span style="color: #000080">&lt;a</span> <span style="color: #008080">href=</span><span style="color: #bb8844">&quot;#&quot;</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;btn regular outline-light-red&quot;</span><span style="color: #000080">&gt;</span>light red<span style="color: #000080">&lt;/a&gt;</span>
+<span style="color: #000080">&lt;button</span> <span style="color: #008080">type=</span><span style="color: #bb8844">&quot;submit&quot;</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;btn regular outline-red&quot;</span><span style="color: #000080">&gt;</span>red<span style="color: #000080">&lt;/button&gt;</span>
+<span style="color: #000080">&lt;input</span> <span style="color: #008080">type=</span><span style="color: #bb8844">&quot;submit&quot;</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;btn regular outline-dark-red&quot;</span> <span style="color: #008080">value=</span><span style="color: #bb8844">&quot;dark red&quot;</span> <span style="color: #000080">/&gt;</span>
+<span style="color: #000080">&lt;a</span> <span style="color: #008080">href=</span><span style="color: #bb8844">&quot;#&quot;</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;btn regular outline-light-pink&quot;</span><span style="color: #000080">&gt;</span>light pink<span style="color: #000080">&lt;/a&gt;</span>
+<span style="color: #000080">&lt;button</span> <span style="color: #008080">type=</span><span style="color: #bb8844">&quot;submit&quot;</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;btn regular outline-pink&quot;</span><span style="color: #000080">&gt;</span>pink<span style="color: #000080">&lt;/button&gt;</span>
+<span style="color: #000080">&lt;input</span> <span style="color: #008080">type=</span><span style="color: #bb8844">&quot;submit&quot;</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;btn regular outline-yellow&quot;</span> <span style="color: #008080">value=</span><span style="color: #bb8844">&quot;yellow&quot;</span> <span style="color: #000080">/&gt;</span>
+<span style="color: #000080">&lt;input</span> <span style="color: #008080">type=</span><span style="color: #bb8844">&quot;submit&quot;</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;btn regular outline-sand&quot;</span> <span style="color: #008080">value=</span><span style="color: #bb8844">&quot;sand&quot;</span> <span style="color: #000080">/&gt;</span>
+<span style="color: #000080">&lt;a</span> <span style="color: #008080">href=</span><span style="color: #bb8844">&quot;#&quot;</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;btn regular outline-light-orange&quot;</span><span style="color: #000080">&gt;</span>light-orange<span style="color: #000080">&lt;/a&gt;</span>
+<span style="color: #000080">&lt;button</span> <span style="color: #008080">type=</span><span style="color: #bb8844">&quot;submit&quot;</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;btn regular outline-orange&quot;</span><span style="color: #000080">&gt;</span>orange<span style="color: #000080">&lt;/button&gt;</span>
+<span style="color: #000080">&lt;input</span> <span style="color: #008080">type=</span><span style="color: #bb8844">&quot;submit&quot;</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;btn regular outline-light-green&quot;</span> <span style="color: #008080">value=</span><span style="color: #bb8844">&quot;light green&quot;</span> <span style="color: #000080">/&gt;</span>
+<span style="color: #000080">&lt;a</span> <span style="color: #008080">href=</span><span style="color: #bb8844">&quot;#&quot;</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;btn regular outline-green&quot;</span><span style="color: #000080">&gt;</span>green<span style="color: #000080">&lt;/a&gt;</span>
+<span style="color: #000080">&lt;button</span> <span style="color: #008080">type=</span><span style="color: #bb8844">&quot;submit&quot;</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;btn regular outline-dark-green&quot;</span><span style="color: #000080">&gt;</span>dark-green<span style="color: #000080">&lt;/button&gt;</span>
+<span style="color: #000080">&lt;input</span> <span style="color: #008080">type=</span><span style="color: #bb8844">&quot;submit&quot;</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;btn regular outline-light-purple&quot;</span> <span style="color: #008080">value=</span><span style="color: #bb8844">&quot;light purple&quot;</span> <span style="color: #000080">/&gt;</span>
+<span style="color: #000080">&lt;a</span> <span style="color: #008080">href=</span><span style="color: #bb8844">&quot;#&quot;</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;btn regular outline-purple&quot;</span><span style="color: #000080">&gt;</span>purple<span style="color: #000080">&lt;/a&gt;</span>
+<span style="color: #000080">&lt;button</span> <span style="color: #008080">type=</span><span style="color: #bb8844">&quot;submit&quot;</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;btn regular outline-dark-purple&quot;</span><span style="color: #000080">&gt;</span>dark purple<span style="color: #000080">&lt;/button&gt;</span>
+<span style="color: #000080">&lt;input</span> <span style="color: #008080">type=</span><span style="color: #bb8844">&quot;submit&quot;</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;btn regular outline-gray&quot;</span> <span style="color: #008080">value=</span><span style="color: #bb8844">&quot;gray&quot;</span> <span style="color: #000080">/&gt;</span>
+<span style="color: #000080">&lt;a</span> <span style="color: #008080">href=</span><span style="color: #bb8844">&quot;#&quot;</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;btn regular outline-white&quot;</span><span style="color: #000080">&gt;</span>white<span style="color: #000080">&lt;/a&gt;</span>
+<span style="color: #000080">&lt;button</span> <span style="color: #008080">type=</span><span style="color: #bb8844">&quot;submit&quot;</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;btn regular outline-black&quot;</span><span style="color: #000080">&gt;</span>black<span style="color: #000080">&lt;/button&gt;</span>
+  
+<span style="color: #000080">&lt;a</span> <span style="color: #008080">href=</span><span style="color: #bb8844">&quot;#&quot;</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;btn regular outline-main&quot;</span><span style="color: #000080">&gt;</span>main<span style="color: #000080">&lt;/a&gt;</span>
+<span style="color: #000080">&lt;button</span> <span style="color: #008080">type=</span><span style="color: #bb8844">&quot;submit&quot;</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;btn regular outline-sub1&quot;</span><span style="color: #000080">&gt;</span>sub1<span style="color: #000080">&lt;/button&gt;</span>
+<span style="color: #000080">&lt;input</span> <span style="color: #008080">type=</span><span style="color: #bb8844">&quot;submit&quot;</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;btn regular outline-sub2&quot;</span> <span style="color: #008080">value=</span><span style="color: #bb8844">&quot;sub2&quot;</span> <span style="color: #000080">/&gt;</span>
+<span style="color: #000080">&lt;input</span> <span style="color: #008080">type=</span><span style="color: #bb8844">&quot;submit&quot;</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;btn regular outline-trans&quot;</span> <span style="color: #008080">value=</span><span style="color: #bb8844">&quot;trans&quot;</span> <span style="color: #000080">/&gt;</span>
+</pre>
+</div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+
+        
+        <section class="container type-1">
+          <section>
+            <h3>Rounded Button</h3>
+            <p>Add <span class="code">.round</span> to default button to get rounded corners.</p>
+
+            <div class="tabview border">
+              <ul class="tab">
+                <li><a href="#">Preview</a></li>
+                <li><a href="#">Code</a></li>
+              </ul>
+              <ul class="tab-content">
+                <li>
+                  <div class="button-box">
+                    <a href="#" class="btn regular round light-red">light red</a>
+                    <button type="submit" class="btn regular round red">red</button>
+                    <input type="submit" class="btn regular round dark-red" value="dark red" />
+                    <a href="#" class="btn regular round light-pink">light pink</a>
+                    <button type="submit" class="btn regular round pink">pink</button>
+                    <input type="submit" class="btn regular round yellow" value="yellow" />
+                    <input type="submit" class="btn regular round sand" value="sand" />
+                    <a href="#" class="btn regular round light-orange">light-orange</a>
+                    <button type="submit" class="btn regular round orange">orange</button>
+                    <input type="submit" class="btn regular round light-green" value="light green" />
+                    <a href="#" class="btn regular round green">green</a>
+                    <button type="submit" class="btn regular round dark-green">dark-green</button>
+                    <input type="submit" class="btn regular round light-purple" value="light purple" />
+                    <a href="#" class="btn regular round purple">purple</a>
+                    <button type="submit" class="btn regular round dark-purple">dark purple</button>
+                    <input type="submit" class="btn regular round gray" value="gray" />
+                    <a href="#" class="btn regular round white">white</a>
+                    <button type="submit" class="btn regular round black">black</button>
+                  </div>
+      
+                  <div class="button-box">
+                    <a href="#" class="btn regular round main">main</a>
+                    <button type="submit" class="btn regular round sub1">sub1</button>
+                    <input type="submit" class="btn regular round sub2" value="sub2" />
+                  </div>
+
+                  <div class="button-box">
+                    <a href="#" class="btn regular round outline-light-red">light red</a>
+                    <button type="submit" class="btn regular round outline-red">red</button>
+                    <input type="submit" class="btn regular round outline-dark-red" value="dark red" />
+                    <a href="#" class="btn regular round outline-light-pink">light pink</a>
+                    <button type="submit" class="btn regular round outline-pink">pink</button>
+                    <input type="submit" class="btn regular round outline-yellow" value="yellow" />
+                    <input type="submit" class="btn regular round outline-sand" value="sand" />
+                    <a href="#" class="btn regular round outline-light-orange">light-orange</a>
+                    <button type="submit" class="btn regular round outline-orange">orange</button>
+                    <input type="submit" class="btn regular round outline-light-green" value="light green" />
+                    <a href="#" class="btn regular round outline-green">green</a>
+                    <button type="submit" class="btn regular round outline-dark-green">dark-green</button>
+                    <input type="submit" class="btn regular round outline-light-purple" value="light purple" />
+                    <a href="#" class="btn regular round outline-purple">purple</a>
+                    <button type="submit" class="btn regular round outline-dark-purple">dark purple</button>
+                    <input type="submit" class="btn regular round outline-gray" value="gray" />
+                    <a href="#" class="btn regular round outline-white">white</a>
+                    <button type="submit" class="btn regular round outline-black">black</button>
+                  </div>
+      
+                  <div class="button-box">
+                    <a href="#" class="btn regular round outline-main">main</a>
+                    <button type="submit" class="btn regular round outline-sub1">sub1</button>
+                    <input type="submit" class="btn regular round outline-sub2" value="sub2" />
+                  </div>
+                </li>
+                <li>
+<div class="code-box custom-scroll">
+  <pre>
+<span style="color: #000080">&lt;a</span> <span style="color: #008080">href=</span><span style="color: #bb8844">&quot;#&quot;</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;btn regular round light-red&quot;</span><span style="color: #000080">&gt;</span>light red<span style="color: #000080">&lt;/a&gt;</span>
+<span style="color: #000080">&lt;button</span> <span style="color: #008080">type=</span><span style="color: #bb8844">&quot;submit&quot;</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;btn regular round red&quot;</span><span style="color: #000080">&gt;</span>red<span style="color: #000080">&lt;/button&gt;</span>
+<span style="color: #000080">&lt;input</span> <span style="color: #008080">type=</span><span style="color: #bb8844">&quot;submit&quot;</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;btn regular round dark-red&quot;</span> <span style="color: #008080">value=</span><span style="color: #bb8844">&quot;dark red&quot;</span> <span style="color: #000080">/&gt;</span>
+<span style="color: #000080">&lt;a</span> <span style="color: #008080">href=</span><span style="color: #bb8844">&quot;#&quot;</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;btn regular round light-pink&quot;</span><span style="color: #000080">&gt;</span>light pink<span style="color: #000080">&lt;/a&gt;</span>
+<span style="color: #000080">&lt;button</span> <span style="color: #008080">type=</span><span style="color: #bb8844">&quot;submit&quot;</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;btn regular round pink&quot;</span><span style="color: #000080">&gt;</span>pink<span style="color: #000080">&lt;/button&gt;</span>
+<span style="color: #000080">&lt;input</span> <span style="color: #008080">type=</span><span style="color: #bb8844">&quot;submit&quot;</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;btn regular round yellow&quot;</span> <span style="color: #008080">value=</span><span style="color: #bb8844">&quot;yellow&quot;</span> <span style="color: #000080">/&gt;</span>
+<span style="color: #000080">&lt;input</span> <span style="color: #008080">type=</span><span style="color: #bb8844">&quot;submit&quot;</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;btn regular round sand&quot;</span> <span style="color: #008080">value=</span><span style="color: #bb8844">&quot;sand&quot;</span> <span style="color: #000080">/&gt;</span>
+<span style="color: #000080">&lt;a</span> <span style="color: #008080">href=</span><span style="color: #bb8844">&quot;#&quot;</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;btn regular round light-orange&quot;</span><span style="color: #000080">&gt;</span>light-orange<span style="color: #000080">&lt;/a&gt;</span>
+<span style="color: #000080">&lt;button</span> <span style="color: #008080">type=</span><span style="color: #bb8844">&quot;submit&quot;</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;btn regular round orange&quot;</span><span style="color: #000080">&gt;</span>orange<span style="color: #000080">&lt;/button&gt;</span>
+<span style="color: #000080">&lt;input</span> <span style="color: #008080">type=</span><span style="color: #bb8844">&quot;submit&quot;</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;btn regular round light-green&quot;</span> <span style="color: #008080">value=</span><span style="color: #bb8844">&quot;light green&quot;</span> <span style="color: #000080">/&gt;</span>
+<span style="color: #000080">&lt;a</span> <span style="color: #008080">href=</span><span style="color: #bb8844">&quot;#&quot;</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;btn regular round green&quot;</span><span style="color: #000080">&gt;</span>green<span style="color: #000080">&lt;/a&gt;</span>
+<span style="color: #000080">&lt;button</span> <span style="color: #008080">type=</span><span style="color: #bb8844">&quot;submit&quot;</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;btn regular round dark-green&quot;</span><span style="color: #000080">&gt;</span>dark-green<span style="color: #000080">&lt;/button&gt;</span>
+<span style="color: #000080">&lt;input</span> <span style="color: #008080">type=</span><span style="color: #bb8844">&quot;submit&quot;</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;btn regular round light-purple&quot;</span> <span style="color: #008080">value=</span><span style="color: #bb8844">&quot;light purple&quot;</span> <span style="color: #000080">/&gt;</span>
+<span style="color: #000080">&lt;a</span> <span style="color: #008080">href=</span><span style="color: #bb8844">&quot;#&quot;</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;btn regular round purple&quot;</span><span style="color: #000080">&gt;</span>purple<span style="color: #000080">&lt;/a&gt;</span>
+<span style="color: #000080">&lt;button</span> <span style="color: #008080">type=</span><span style="color: #bb8844">&quot;submit&quot;</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;btn regular round dark-purple&quot;</span><span style="color: #000080">&gt;</span>dark purple<span style="color: #000080">&lt;/button&gt;</span>
+<span style="color: #000080">&lt;input</span> <span style="color: #008080">type=</span><span style="color: #bb8844">&quot;submit&quot;</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;btn regular round gray&quot;</span> <span style="color: #008080">value=</span><span style="color: #bb8844">&quot;gray&quot;</span> <span style="color: #000080">/&gt;</span>
+<span style="color: #000080">&lt;a</span> <span style="color: #008080">href=</span><span style="color: #bb8844">&quot;#&quot;</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;btn regular round white&quot;</span><span style="color: #000080">&gt;</span>white<span style="color: #000080">&lt;/a&gt;</span>
+<span style="color: #000080">&lt;button</span> <span style="color: #008080">type=</span><span style="color: #bb8844">&quot;submit&quot;</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;btn regular round black&quot;</span><span style="color: #000080">&gt;</span>black<span style="color: #000080">&lt;/button&gt;</span>
+    
+<span style="color: #000080">&lt;a</span> <span style="color: #008080">href=</span><span style="color: #bb8844">&quot;#&quot;</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;btn regular round main&quot;</span><span style="color: #000080">&gt;</span>main<span style="color: #000080">&lt;/a&gt;</span>
+<span style="color: #000080">&lt;button</span> <span style="color: #008080">type=</span><span style="color: #bb8844">&quot;submit&quot;</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;btn regular round sub1&quot;</span><span style="color: #000080">&gt;</span>sub1<span style="color: #000080">&lt;/button&gt;</span>
+<span style="color: #000080">&lt;input</span> <span style="color: #008080">type=</span><span style="color: #bb8844">&quot;submit&quot;</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;btn regular round sub2&quot;</span> <span style="color: #008080">value=</span><span style="color: #bb8844">&quot;sub2&quot;</span> <span style="color: #000080">/&gt;</span>
+<span style="color: #000080">&lt;a</span> <span style="color: #008080">href=</span><span style="color: #bb8844">&quot;#&quot;</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;btn regular round outline-light-red&quot;</span><span style="color: #000080">&gt;</span>light red<span style="color: #000080">&lt;/a&gt;</span>
+<span style="color: #000080">&lt;button</span> <span style="color: #008080">type=</span><span style="color: #bb8844">&quot;submit&quot;</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;btn regular round outline-red&quot;</span><span style="color: #000080">&gt;</span>red<span style="color: #000080">&lt;/button&gt;</span>
+<span style="color: #000080">&lt;input</span> <span style="color: #008080">type=</span><span style="color: #bb8844">&quot;submit&quot;</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;btn regular round outline-dark-red&quot;</span> <span style="color: #008080">value=</span><span style="color: #bb8844">&quot;dark red&quot;</span> <span style="color: #000080">/&gt;</span>
+<span style="color: #000080">&lt;a</span> <span style="color: #008080">href=</span><span style="color: #bb8844">&quot;#&quot;</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;btn regular round outline-light-pink&quot;</span><span style="color: #000080">&gt;</span>light pink<span style="color: #000080">&lt;/a&gt;</span>
+<span style="color: #000080">&lt;button</span> <span style="color: #008080">type=</span><span style="color: #bb8844">&quot;submit&quot;</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;btn regular round outline-pink&quot;</span><span style="color: #000080">&gt;</span>pink<span style="color: #000080">&lt;/button&gt;</span>
+<span style="color: #000080">&lt;input</span> <span style="color: #008080">type=</span><span style="color: #bb8844">&quot;submit&quot;</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;btn regular round outline-yellow&quot;</span> <span style="color: #008080">value=</span><span style="color: #bb8844">&quot;yellow&quot;</span> <span style="color: #000080">/&gt;</span>
+<span style="color: #000080">&lt;input</span> <span style="color: #008080">type=</span><span style="color: #bb8844">&quot;submit&quot;</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;btn regular round outline-sand&quot;</span> <span style="color: #008080">value=</span><span style="color: #bb8844">&quot;sand&quot;</span> <span style="color: #000080">/&gt;</span>
+<span style="color: #000080">&lt;a</span> <span style="color: #008080">href=</span><span style="color: #bb8844">&quot;#&quot;</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;btn regular round outline-light-orange&quot;</span><span style="color: #000080">&gt;</span>light-orange<span style="color: #000080">&lt;/a&gt;</span>
+<span style="color: #000080">&lt;button</span> <span style="color: #008080">type=</span><span style="color: #bb8844">&quot;submit&quot;</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;btn regular round outline-orange&quot;</span><span style="color: #000080">&gt;</span>orange<span style="color: #000080">&lt;/button&gt;</span>
+<span style="color: #000080">&lt;input</span> <span style="color: #008080">type=</span><span style="color: #bb8844">&quot;submit&quot;</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;btn regular round outline-light-green&quot;</span> <span style="color: #008080">value=</span><span style="color: #bb8844">&quot;light green&quot;</span> <span style="color: #000080">/&gt;</span>
+<span style="color: #000080">&lt;a</span> <span style="color: #008080">href=</span><span style="color: #bb8844">&quot;#&quot;</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;btn regular round outline-green&quot;</span><span style="color: #000080">&gt;</span>green<span style="color: #000080">&lt;/a&gt;</span>
+<span style="color: #000080">&lt;button</span> <span style="color: #008080">type=</span><span style="color: #bb8844">&quot;submit&quot;</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;btn regular round outline-dark-green&quot;</span><span style="color: #000080">&gt;</span>dark-green<span style="color: #000080">&lt;/button&gt;</span>
+<span style="color: #000080">&lt;input</span> <span style="color: #008080">type=</span><span style="color: #bb8844">&quot;submit&quot;</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;btn regular round outline-light-purple&quot;</span> <span style="color: #008080">value=</span><span style="color: #bb8844">&quot;light purple&quot;</span> <span style="color: #000080">/&gt;</span>
+<span style="color: #000080">&lt;a</span> <span style="color: #008080">href=</span><span style="color: #bb8844">&quot;#&quot;</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;btn regular round outline-purple&quot;</span><span style="color: #000080">&gt;</span>purple<span style="color: #000080">&lt;/a&gt;</span>
+<span style="color: #000080">&lt;button</span> <span style="color: #008080">type=</span><span style="color: #bb8844">&quot;submit&quot;</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;btn regular round outline-dark-purple&quot;</span><span style="color: #000080">&gt;</span>dark purple<span style="color: #000080">&lt;/button&gt;</span>
+<span style="color: #000080">&lt;input</span> <span style="color: #008080">type=</span><span style="color: #bb8844">&quot;submit&quot;</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;btn regular round outline-gray&quot;</span> <span style="color: #008080">value=</span><span style="color: #bb8844">&quot;gray&quot;</span> <span style="color: #000080">/&gt;</span>
+<span style="color: #000080">&lt;a</span> <span style="color: #008080">href=</span><span style="color: #bb8844">&quot;#&quot;</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;btn regular round outline-white&quot;</span><span style="color: #000080">&gt;</span>white<span style="color: #000080">&lt;/a&gt;</span>
+<span style="color: #000080">&lt;button</span> <span style="color: #008080">type=</span><span style="color: #bb8844">&quot;submit&quot;</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;btn regular round outline-black&quot;</span><span style="color: #000080">&gt;</span>black<span style="color: #000080">&lt;/button&gt;</span>
+  
+<span style="color: #000080">&lt;a</span> <span style="color: #008080">href=</span><span style="color: #bb8844">&quot;#&quot;</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;btn regular round outline-main&quot;</span><span style="color: #000080">&gt;</span>main<span style="color: #000080">&lt;/a&gt;</span>
+<span style="color: #000080">&lt;button</span> <span style="color: #008080">type=</span><span style="color: #bb8844">&quot;submit&quot;</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;btn regular round outline-sub1&quot;</span><span style="color: #000080">&gt;</span>sub1<span style="color: #000080">&lt;/button&gt;</span>
+<span style="color: #000080">&lt;input</span> <span style="color: #008080">type=</span><span style="color: #bb8844">&quot;submit&quot;</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;btn regular round outline-sub2&quot;</span> <span style="color: #008080">value=</span><span style="color: #bb8844">&quot;sub2&quot;</span> <span style="color: #000080">/&gt;</span>
+</pre>
+</div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+
+        <section class="container type-2">
+          <section>
+            <h3>Icon Buttons</h3>
+            <p>Icon only button. Use the button classes on an <span class="code">&lt;a&gt;</span>, <span class="code">&lt;button&gt;</span> element.</p>
+
+            <div class="tabview border">
+              <ul class="tab">
+                <li><a href="#">Preview</a></li>
+                <li><a href="#">Code</a></li>
+              </ul>
+              <ul class="tab-content">
+                <li>
+                  <div class="button-box">
+                    <a href="#" class="btn small round dark-red icon" title="user"><i class="fa-solid fa-user"></i>user</a>
+                    <button type="submit" class="btn small gray icon" title="user"><i class="fa-solid fa-user"></i>test</button>
+                  </div>
+                  <div class="button-box">
+                    <a href="#" class="btn regular gray icon" title="user"><i class="fa-solid fa-user"></i>user</a>
+                    <button type="submit" class="btn regular outline-gray icon" title="user"><i class="fa-solid fa-user"></i>test</button>
+                  </div>
+                  <div class="button-box">
+                    <a href="#" class="btn x-large white icon" title="user"><i class="fa-solid fa-user"></i>테스트 버튼 테스트 버튼</a>
+                    <button type="submit" class="btn x-large round gray icon" title="user"><i class="fa-solid fa-user"></i>test button</button>
+                  </div>
+                </li>
+                <li>
+<div class="code-box custom-scroll">
+<pre>
+<span style="color: #000080">&lt;a</span> <span style="color: #008080">href=</span><span style="color: #bb8844">&quot;#&quot;</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;btn small round dark-red icon&quot;</span> <span style="color: #008080">title=</span><span style="color: #bb8844">&quot;user&quot;</span><span style="color: #000080">&gt;&lt;i</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;fa-solid fa-user&quot;</span><span style="color: #000080">&gt;&lt;/i&gt;</span>user<span style="color: #000080">&lt;/a&gt;</span>
+<span style="color: #000080">&lt;button</span> <span style="color: #008080">type=</span><span style="color: #bb8844">&quot;submit&quot;</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;btn small round gray icon&quot;</span> <span style="color: #008080">title=</span><span style="color: #bb8844">&quot;user&quot;</span><span style="color: #000080">&gt;&lt;i</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;fa-solid fa-user&quot;</span><span style="color: #000080">&gt;&lt;/i&gt;</span>test<span style="color: #000080">&lt;/button&gt;</span>
+<span style="color: #000080">&lt;a</span> <span style="color: #008080">href=</span><span style="color: #bb8844">&quot;#&quot;</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;btn regular gray icon&quot;</span> <span style="color: #008080">title=</span><span style="color: #bb8844">&quot;user&quot;</span><span style="color: #000080">&gt;&lt;i</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;fa-solid fa-user&quot;</span><span style="color: #000080">&gt;&lt;/i&gt;</span>user<span style="color: #000080">&lt;/a&gt;</span>
+<span style="color: #000080">&lt;button</span> <span style="color: #008080">type=</span><span style="color: #bb8844">&quot;submit&quot;</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;btn regular outline-gray icon&quot;</span> <span style="color: #008080">title=</span><span style="color: #bb8844">&quot;user&quot;</span><span style="color: #000080">&gt;&lt;i</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;fa-solid fa-user&quot;</span><span style="color: #000080">&gt;&lt;/i&gt;</span>test<span style="color: #000080">&lt;/button&gt;</span>
+<span style="color: #000080">&lt;a</span> <span style="color: #008080">href=</span><span style="color: #bb8844">&quot;#&quot;</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;btn x-large white icon&quot;</span> <span style="color: #008080">title=</span><span style="color: #bb8844">&quot;user&quot;</span><span style="color: #000080">&gt;&lt;i</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;fa-solid fa-user&quot;</span><span style="color: #000080">&gt;&lt;/i&gt;</span>테스트 버튼 테스트 버튼<span style="color: #000080">&lt;/a&gt;</span>
+<span style="color: #000080">&lt;button</span> <span style="color: #008080">type=</span><span style="color: #bb8844">&quot;submit&quot;</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;btn x-large round gray icon&quot;</span> <span style="color: #008080">title=</span><span style="color: #bb8844">&quot;user&quot;</span><span style="color: #000080">&gt;&lt;i</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;fa-solid fa-user&quot;</span><span style="color: #000080">&gt;&lt;/i&gt;</span>test button<span style="color: #000080">&lt;/button&gt;</span>
+</pre>
+</div>
+                </li>
+              </ul>
+            </div>
+          </section>
+          <section>
+            <h3>Buttons with Icon</h3>
+            <p>You can combine button with Icons. Use a classes <span class="code">.icon</span>, <span class="code">.icon-left</span>, <span class="code">.icon-right</span>.</p>
+
+            <div class="tabview border">
+              <ul class="tab">
+                <li><a href="#">Preview</a></li>
+                <li><a href="#">Code</a></li>
+              </ul>
+              <ul class="tab-content">
+                <li>
+                  <div class="button-box">
+                    <a href="#" class="btn small pink icon-left"><i class="fa-solid fa-heart"></i>Like</a>
+                    <button type="submit" class="btn small blue icon-right"><i class="fa-brands fa-paypal"></i>PayPal</button>
+                  </div>
+                  <div class="button-box">
+                    <a href="#" class="btn regular outline-yellow icon-left"><i class="fa-solid fa-right-to-bracket"></i>로그인</a>
+                    <button type="submit" class="btn regular outline-dark-green icon-right"><i class="fa-solid fa-cloud"></i>Cloud Hosting</button>
+                  </div>
+                  <div class="button-box">
+                    <a href="#" class="btn large gray icon-left"><i class="fa-solid fa-gears"></i>Settings</a>
+                    <button type="submit" class="btn large sand icon-right"><i class="fa-solid fa-eraser"></i>수정하기</button>
+                  </div>
+                  <div class="button-box">
+                    <a href="#" class="btn x-large round sub1 icon-left"><i class="fa-solid fa-circle-left"></i>Left</a>
+                    <button type="submit" class="btn x-large round sub2 icon-right"><i class="fa-solid fa-circle-right"></i>Right</button>
+                  </div>
+                </li>
+                <li>
+<div class="code-box custom-scroll">
+  <pre>
+<span style="color: #000080">&lt;a</span> <span style="color: #008080">href=</span><span style="color: #bb8844">&quot;#&quot;</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;btn small pink icon-left&quot;</span><span style="color: #000080">&gt;&lt;i</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;fa-solid fa-heart&quot;</span><span style="color: #000080">&gt;&lt;/i&gt;</span>Like<span style="color: #000080">&lt;/a&gt;</span>
+<span style="color: #000080">&lt;button</span> <span style="color: #008080">type=</span><span style="color: #bb8844">&quot;submit&quot;</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;btn small blue icon-right&quot;</span><span style="color: #000080">&gt;&lt;i</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;fa-brands fa-paypal&quot;</span><span style="color: #000080">&gt;&lt;/i&gt;</span>PayPal<span style="color: #000080">&lt;/button&gt;</span>
+<span style="color: #000080">&lt;a</span> <span style="color: #008080">href=</span><span style="color: #bb8844">&quot;#&quot;</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;btn regular outline-yellow icon-left&quot;</span><span style="color: #000080">&gt;&lt;i</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;fa-solid fa-right-to-bracket&quot;</span><span style="color: #000080">&gt;&lt;/i&gt;</span>로그인<span style="color: #000080">&lt;/a&gt;</span>
+<span style="color: #000080">&lt;button</span> <span style="color: #008080">type=</span><span style="color: #bb8844">&quot;submit&quot;</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;btn regular outline-dark-green icon-right&quot;</span><span style="color: #000080">&gt;&lt;i</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;fa-solid fa-cloud&quot;</span><span style="color: #000080">&gt;&lt;/i&gt;</span>Cloud Hosting<span style="color: #000080">&lt;/button&gt;</span>
+<span style="color: #000080">&lt;a</span> <span style="color: #008080">href=</span><span style="color: #bb8844">&quot;#&quot;</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;btn large gray icon-left&quot;</span><span style="color: #000080">&gt;&lt;i</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;fa-solid fa-gears&quot;</span><span style="color: #000080">&gt;&lt;/i&gt;</span>Settings<span style="color: #000080">&lt;/a&gt;</span>
+<span style="color: #000080">&lt;button</span> <span style="color: #008080">type=</span><span style="color: #bb8844">&quot;submit&quot;</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;btn large sand icon-right&quot;</span><span style="color: #000080">&gt;&lt;i</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;fa-solid fa-eraser&quot;</span><span style="color: #000080">&gt;&lt;/i&gt;</span>수정하기<span style="color: #000080">&lt;/button&gt;</span>
+<span style="color: #000080">&lt;a</span> <span style="color: #008080">href=</span><span style="color: #bb8844">&quot;#&quot;</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;btn x-large round sub1 icon-left&quot;</span><span style="color: #000080">&gt;&lt;i</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;fa-solid fa-circle-left&quot;</span><span style="color: #000080">&gt;&lt;/i&gt;</span>Left<span style="color: #000080">&lt;/a&gt;</span>
+<span style="color: #000080">&lt;button</span> <span style="color: #008080">type=</span><span style="color: #bb8844">&quot;submit&quot;</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;btn x-large round sub2 icon-right&quot;</span><span style="color: #000080">&gt;&lt;i</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;fa-solid fa-circle-right&quot;</span><span style="color: #000080">&gt;&lt;/i&gt;</span>Right<span style="color: #000080">&lt;/button&gt;</span>
+</pre>
+</div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+
+        <section class="container type-2">
+          <section>
+            <h3>Button sizes</h3>
+            <p>Add <span class="code">.small</span>, <span class="code">regular</span>, <span class="code">large</span>, <span class="code">x-large</span> for additional sizes.</p>
+
+            <div class="tabview border">
+              <ul class="tab">
+                <li><a href="#">Preview</a></li>
+                <li><a href="#">Code</a></li>
+              </ul>
+              <ul class="tab-content">
+                <li>
+                  <div class="button-box">
+                    <a href="#" class="btn small pink icon-left"><i class="fa-solid fa-heart"></i>small</a>
+                    <button type="submit" class="btn small outline-blue icon-right"><i class="fa-brands fa-paypal"></i>small</button>
+                    <input type="submit" class="btn small outline-black" value="small" />
+                  </div>
+                  <div class="button-box">
+                    <a href="#" class="btn regular round outline-light-red icon-left"><i class="fa-solid fa-right-to-bracket"></i>regular</a>
+                    <button type="submit" class="btn regular dark-green icon-right"><i class="fa-solid fa-cloud"></i>regular</button>
+                    <input type="submit" class="btn regular yellow" value="regular" />
+                  </div>
+                  <div class="button-box">
+                    <a href="#" class="btn large gray icon-left"><i class="fa-solid fa-gears"></i>large</a>
+                    <button type="submit" class="btn large black">large</button>
+                    <input type="submit" class="btn large outline-white" value="large" />
+                  </div>
+                  <div class="button-box">
+                    <a href="#" class="btn x-large outline-sub1 icon-left"><i class="fa-solid fa-circle-left"></i>x-large</a>
+                    <button type="submit" class="btn x-large outline-sub2 icon-right"><i class="fa-solid fa-circle-right"></i>x-large</button>
+                    <input type="submit" class="btn x-large round light-green" value="x-large" />
+                  </div>
+                </li>
+                <li>
+<div class="code-box custom-scroll">
+<pre>
+<span style="color: #000080">&lt;a</span> <span style="color: #008080">href=</span><span style="color: #bb8844">&quot;#&quot;</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;btn small pink icon-left&quot;</span><span style="color: #000080">&gt;&lt;i</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;fa-solid fa-heart&quot;</span><span style="color: #000080">&gt;&lt;/i&gt;</span>small<span style="color: #000080">&lt;/a&gt;</span>
+<span style="color: #000080">&lt;button</span> <span style="color: #008080">type=</span><span style="color: #bb8844">&quot;submit&quot;</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;btn small outline-blue icon-right&quot;</span><span style="color: #000080">&gt;&lt;i</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;fa-brands fa-paypal&quot;</span><span style="color: #000080">&gt;&lt;/i&gt;</span>small<span style="color: #000080">&lt;/button&gt;</span>
+<span style="color: #000080">&lt;input</span> <span style="color: #008080">type=</span><span style="color: #bb8844">&quot;submit&quot;</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;btn small outline-black&quot;</span> <span style="color: #008080">value=</span><span style="color: #bb8844">&quot;small&quot;</span> <span style="color: #000080">/&gt;</span>
+<span style="color: #000080">&lt;a</span> <span style="color: #008080">href=</span><span style="color: #bb8844">&quot;#&quot;</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;btn regular round outline-light-red icon-left&quot;</span><span style="color: #000080">&gt;&lt;i</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;fa-solid fa-right-to-bracket&quot;</span><span style="color: #000080">&gt;&lt;/i&gt;</span>regular<span style="color: #000080">&lt;/a&gt;</span>
+<span style="color: #000080">&lt;button</span> <span style="color: #008080">type=</span><span style="color: #bb8844">&quot;submit&quot;</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;btn regular dark-green icon-right&quot;</span><span style="color: #000080">&gt;&lt;i</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;fa-solid fa-cloud&quot;</span><span style="color: #000080">&gt;&lt;/i&gt;</span>regular<span style="color: #000080">&lt;/button&gt;</span>
+<span style="color: #000080">&lt;input</span> <span style="color: #008080">type=</span><span style="color: #bb8844">&quot;submit&quot;</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;btn regular yellow&quot;</span> <span style="color: #008080">value=</span><span style="color: #bb8844">&quot;regular&quot;</span> <span style="color: #000080">/&gt;</span>
+<span style="color: #000080">&lt;a</span> <span style="color: #008080">href=</span><span style="color: #bb8844">&quot;#&quot;</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;btn large gray icon-left&quot;</span><span style="color: #000080">&gt;&lt;i</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;fa-solid fa-gears&quot;</span><span style="color: #000080">&gt;&lt;/i&gt;</span>large<span style="color: #000080">&lt;/a&gt;</span>
+<span style="color: #000080">&lt;button</span> <span style="color: #008080">type=</span><span style="color: #bb8844">&quot;submit&quot;</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;btn large black&quot;</span><span style="color: #000080">&gt;</span>large<span style="color: #000080">&lt;/button&gt;</span>
+<span style="color: #000080">&lt;input</span> <span style="color: #008080">type=</span><span style="color: #bb8844">&quot;submit&quot;</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;btn large outline-white&quot;</span> <span style="color: #008080">value=</span><span style="color: #bb8844">&quot;large&quot;</span> <span style="color: #000080">/&gt;</span>
+<span style="color: #000080">&lt;a</span> <span style="color: #008080">href=</span><span style="color: #bb8844">&quot;#&quot;</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;btn x-large outline-sub1 icon-left&quot;</span><span style="color: #000080">&gt;&lt;i</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;fa-solid fa-circle-left&quot;</span><span style="color: #000080">&gt;&lt;/i&gt;</span>x-large<span style="color: #000080">&lt;/a&gt;</span>
+<span style="color: #000080">&lt;button</span> <span style="color: #008080">type=</span><span style="color: #bb8844">&quot;submit&quot;</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;btn x-large outline-sub2 icon-right&quot;</span><span style="color: #000080">&gt;&lt;i</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;fa-solid fa-circle-right&quot;</span><span style="color: #000080">&gt;&lt;/i&gt;</span>x-large<span style="color: #000080">&lt;/button&gt;</span>
+<span style="color: #000080">&lt;input</span> <span style="color: #008080">type=</span><span style="color: #bb8844">&quot;submit&quot;</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;btn x-large round light-green&quot;</span> <span style="color: #008080">value=</span><span style="color: #bb8844">&quot;x-large&quot;</span> <span style="color: #000080">/&gt;</span>
+</pre>
+</div>
+                </li>
+              </ul>
+            </div>
+          </section>
+          <section>
+            <h3>Button disabled</h3>
+            <p>Add the disabled attribute to <span class="code">&lt;button&gt;</span>, <span class="code">&lt;input&gt;</span> buttons.</p>
+
+            <div class="tabview border">
+              <ul class="tab">
+                <li><a href="#">Preview</a></li>
+                <li><a href="#">Code</a></li>
+              </ul>
+              <ul class="tab-content">
+                <li>
+                  <div class="button-box">
+                    <button type="submit" class="btn outline-gray" disabled="disabled">disabled button</button>
+                    <input type="submit" class="btn gray" disabled="disabled" value="disabled button" />
+                  </div>
+                  
+                  <div class="button-box">
+                    <button type="submit" class="btn large round gray icon" disabled="disabled" title="disabled"><i class="fa-solid fa-user"></i>disabled button</button>
+                    <button type="submit" class="btn large round outline-gray icon" disabled="disabled" title="disabled"><i class="fa-solid fa-user"></i>disabled button</button>
+                    <button type="submit" class="btn large round outline-red icon" disabled="disabled" title="disabled"><i class="fa-solid fa-user"></i>disabled button</button>
+                  </div>
+                </li>
+                <li>
+<div class="code-box custom-scroll">
+  <pre>
+<span style="color: #000080">&lt;button</span> <span style="color: #008080">type=</span><span style="color: #bb8844">&quot;submit&quot;</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;btn outline-gray&quot;</span> <span style="color: #008080">disabled=</span><span style="color: #bb8844">&quot;disabled&quot;</span><span style="color: #000080">&gt;</span>disabled button<span style="color: #000080">&lt;/button&gt;</span>
+<span style="color: #000080">&lt;input</span> <span style="color: #008080">type=</span><span style="color: #bb8844">&quot;submit&quot;</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;btn gray&quot;</span> <span style="color: #008080">disabled=</span><span style="color: #bb8844">&quot;disabled&quot;</span> <span style="color: #008080">value=</span><span style="color: #bb8844">&quot;disabled button&quot;</span> <span style="color: #000080">/&gt;</span>
+<span style="color: #000080">&lt;button</span> <span style="color: #008080">type=</span><span style="color: #bb8844">&quot;submit&quot;</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;btn large round gray icon&quot;</span> <span style="color: #008080">disabled=</span><span style="color: #bb8844">&quot;disabled&quot;</span> <span style="color: #008080">title=</span><span style="color: #bb8844">&quot;disabled&quot;</span><span style="color: #000080">&gt;&lt;i</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;fa-solid fa-user&quot;</span><span style="color: #000080">&gt;&lt;/i&gt;</span>disabled button<span style="color: #000080">&lt;/button&gt;</span>
+<span style="color: #000080">&lt;button</span> <span style="color: #008080">type=</span><span style="color: #bb8844">&quot;submit&quot;</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;btn large round outline-gray icon&quot;</span> <span style="color: #008080">disabled=</span><span style="color: #bb8844">&quot;disabled&quot;</span> <span style="color: #008080">title=</span><span style="color: #bb8844">&quot;disabled&quot;</span><span style="color: #000080">&gt;&lt;i</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;fa-solid fa-user&quot;</span><span style="color: #000080">&gt;&lt;/i&gt;</span>disabled button<span style="color: #000080">&lt;/button&gt;</span>
+<span style="color: #000080">&lt;button</span> <span style="color: #008080">type=</span><span style="color: #bb8844">&quot;submit&quot;</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;btn large round outline-red icon&quot;</span> <span style="color: #008080">disabled=</span><span style="color: #bb8844">&quot;disabled&quot;</span> <span style="color: #008080">title=</span><span style="color: #bb8844">&quot;disabled&quot;</span><span style="color: #000080">&gt;&lt;i</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;fa-solid fa-user&quot;</span><span style="color: #000080">&gt;&lt;/i&gt;</span>disabled button<span style="color: #000080">&lt;/button&gt;</span>
+</pre>
+</div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+
+        <section class="container type-1">
+          <section>
+            <h3>Align button group</h3>
+            <p>Use the button group classes <span class="code">.left</span>, <span class="code">.center</span>, <span class="code">right</span> to quickly align button group.</p>
+
+            <div class="tabview border">
+              <ul class="tab">
+                <li><a href="#">Preview</a></li>
+                <li><a href="#">Code</a></li>
+              </ul>
+              <ul class="tab-content">
+                <li>
+                  <div class="button-box left">
+                    <a href="#" class="btn regluar gray">left group</a>
+                    <button type="submit" class="btn regluar gray">left group</button>
+                    <input type="submit" class="btn regluar gray" value="left group" />
+                  </div>
+                  <div class="button-box center">
+                    <a href="#" class="btn regluar gray">center group</a>
+                    <button type="submit" class="btn regluar gray">center group</button>
+                    <input type="submit" class="btn regluar gray" value="center group" />
+                  </div>
+                  <div class="button-box right">
+                    <a href="#" class="btn regluar gray">right group</a>
+                    <button type="submit" class="btn regluar gray">right group</button>
+                    <input type="submit" class="btn regluar gray" value="right group" />
+                  </div>
+                  <div class="button-box justify">
+                    <a href="#" class="btn regluar gray left">justify group - left button</a>
+                    <a href="#" class="btn regluar gray left">justify group - left button</a>
+                    <a href="#" class="btn regluar gray left">justify group - left button</a>
+                    <a href="#" class="btn regluar gray">justify group</a>
+                    <button type="submit" class="btn regluar gray">justify group</button>
+                    <input type="submit" class="btn regluar gray" value="justify group" />
+                  </div>
+                </li>
+                <li>
+<div class="code-box custom-scroll">
+  <pre>
+<span style="color: #000080">&lt;div</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;button-box left&quot;</span><span style="color: #000080">&gt;</span>
+  <span style="color: #000080">&lt;a</span> <span style="color: #008080">href=</span><span style="color: #bb8844">&quot;#&quot;</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;btn regluar gray&quot;</span><span style="color: #000080">&gt;</span>left group<span style="color: #000080">&lt;/a&gt;</span>
+  <span style="color: #000080">&lt;button</span> <span style="color: #008080">type=</span><span style="color: #bb8844">&quot;submit&quot;</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;btn regluar gray&quot;</span><span style="color: #000080">&gt;</span>left group<span style="color: #000080">&lt;/button&gt;</span>
+  <span style="color: #000080">&lt;input</span> <span style="color: #008080">type=</span><span style="color: #bb8844">&quot;submit&quot;</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;btn regluar gray&quot;</span> <span style="color: #008080">value=</span><span style="color: #bb8844">&quot;left group&quot;</span> <span style="color: #000080">/&gt;</span>
+<span style="color: #000080">&lt;/div&gt;</span>
+<span style="color: #000080">&lt;div</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;button-box center&quot;</span><span style="color: #000080">&gt;</span>
+  <span style="color: #000080">&lt;a</span> <span style="color: #008080">href=</span><span style="color: #bb8844">&quot;#&quot;</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;btn regluar gray&quot;</span><span style="color: #000080">&gt;</span>center group<span style="color: #000080">&lt;/a&gt;</span>
+  <span style="color: #000080">&lt;button</span> <span style="color: #008080">type=</span><span style="color: #bb8844">&quot;submit&quot;</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;btn regluar gray&quot;</span><span style="color: #000080">&gt;</span>center group<span style="color: #000080">&lt;/button&gt;</span>
+  <span style="color: #000080">&lt;input</span> <span style="color: #008080">type=</span><span style="color: #bb8844">&quot;submit&quot;</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;btn regluar gray&quot;</span> <span style="color: #008080">value=</span><span style="color: #bb8844">&quot;center group&quot;</span> <span style="color: #000080">/&gt;</span>
+<span style="color: #000080">&lt;/div&gt;</span>
+<span style="color: #000080">&lt;div</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;button-box right&quot;</span><span style="color: #000080">&gt;</span>
+  <span style="color: #000080">&lt;a</span> <span style="color: #008080">href=</span><span style="color: #bb8844">&quot;#&quot;</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;btn regluar gray&quot;</span><span style="color: #000080">&gt;</span>right group<span style="color: #000080">&lt;/a&gt;</span>
+  <span style="color: #000080">&lt;button</span> <span style="color: #008080">type=</span><span style="color: #bb8844">&quot;submit&quot;</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;btn regluar gray&quot;</span><span style="color: #000080">&gt;</span>right group<span style="color: #000080">&lt;/button&gt;</span>
+  <span style="color: #000080">&lt;input</span> <span style="color: #008080">type=</span><span style="color: #bb8844">&quot;submit&quot;</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;btn regluar gray&quot;</span> <span style="color: #008080">value=</span><span style="color: #bb8844">&quot;right group&quot;</span> <span style="color: #000080">/&gt;</span>
+<span style="color: #000080">&lt;/div&gt;</span>
+<span style="color: #000080">&lt;div</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;button-box justify&quot;</span><span style="color: #000080">&gt;</span>
+  <span style="color: #000080">&lt;a</span> <span style="color: #008080">href=</span><span style="color: #bb8844">&quot;#&quot;</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;btn regluar gray left&quot;</span><span style="color: #000080">&gt;</span>justify group - left button<span style="color: #000080">&lt;/a&gt;</span>
+  <span style="color: #000080">&lt;a</span> <span style="color: #008080">href=</span><span style="color: #bb8844">&quot;#&quot;</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;btn regluar gray left&quot;</span><span style="color: #000080">&gt;</span>justify group - left button<span style="color: #000080">&lt;/a&gt;</span>
+  <span style="color: #000080">&lt;a</span> <span style="color: #008080">href=</span><span style="color: #bb8844">&quot;#&quot;</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;btn regluar gray left&quot;</span><span style="color: #000080">&gt;</span>justify group - left button<span style="color: #000080">&lt;/a&gt;</span>
+  <span style="color: #000080">&lt;a</span> <span style="color: #008080">href=</span><span style="color: #bb8844">&quot;#&quot;</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;btn regluar gray&quot;</span><span style="color: #000080">&gt;</span>justify group<span style="color: #000080">&lt;/a&gt;</span>
+  <span style="color: #000080">&lt;button</span> <span style="color: #008080">type=</span><span style="color: #bb8844">&quot;submit&quot;</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;btn regluar gray&quot;</span><span style="color: #000080">&gt;</span>justify group<span style="color: #000080">&lt;/button&gt;</span>
+  <span style="color: #000080">&lt;input</span> <span style="color: #008080">type=</span><span style="color: #bb8844">&quot;submit&quot;</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;btn regluar gray&quot;</span> <span style="color: #008080">value=</span><span style="color: #bb8844">&quot;justify group&quot;</span> <span style="color: #000080">/&gt;</span>
+<span style="color: #000080">&lt;/div&gt;</span>
+</pre></div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+
+      </main>
+
+      <?php include '../../include/footer.html'; ?>
+    </div> <!-- #wrapper -->
+
+<script>
+'use strict';
+setTitle('Buttons');
+
+
+
+</script>
+  </body>
+</html>

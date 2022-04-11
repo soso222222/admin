@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <?php include '../../include/head.html'; ?>
+    <title>Dashboard | Overview | 관리시스템</title>
+    <meta name="description" content="디노웍스 관리시스템 대시보드" />
+  </head>
+  <body class="sub dashboard">
+    <div id="wrapper" class="light">
+      <?php include '../../include/header.html'; ?>
+
+      <main id="main">
+        <p>Dashboard 샘플 : The most complete user interface framework that can be used to create stunning admin dashboards and presentation websites.</p>
+
+        <section class="container type-2">
+          <section>
+            <h3>박스1</h3>
+            <div id="chart1" style="height: 400px;"></div>
+          </section>
+          <section>
+            <h3>박스2</h3>
+            <div id="chart2" style="height: 400px;"></div>
+          </section>
+        </section>
+
+
+
+      </main>
+
+      <?php include '../../include/footer.html'; ?>
+    </div> <!-- #wrapper -->
+
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<script type="text/javascript">
+  google.charts.load('current', {'packages':['corechart']});
+  google.charts.setOnLoadCallback(drawChart);
+
+  function drawChart() {
+    var data = google.visualization.arrayToDataTable([
+      ['Year', '운영사1', '운영사2', '운영사3'],
+      ['2018',  1000,      400,      400],
+      ['2019',  1170,      460,      400],
+      ['2020',  660,       1120,      400],
+      ['2021',  660,       1120,      400],
+      ['2022',  1030,      540,      400]
+    ]);
+
+    var options = {
+      title: '연도별 투자실적',
+      curveType: 'function',
+      legend: { position: 'bottom' }
+    };
+
+    var chart = new google.visualization.LineChart(document.getElementById('chart1'));
+
+    chart.draw(data, options);
+  }
+  google.charts.load('current', {'packages':['corechart']});
+  google.charts.setOnLoadCallback(drawChart2);
+
+  function drawChart2() {
+
+    var data = google.visualization.arrayToDataTable([
+      ['Task', 'Hours per Day'],
+      ['Work',     11],
+      ['Eat',      2],
+      ['Commute',  2],
+      ['Watch TV', 2],
+      ['Sleep',    7]
+    ]);
+
+    var options = {
+      title: 'My Daily Activities'
+    };
+
+    var chart = new google.visualization.PieChart(document.getElementById('chart2'));
+
+    chart.draw(data, options);
+  }
+  window.addEventListener("resize", function() {
+    google.charts.setOnLoadCallback(drawChart);
+    google.charts.setOnLoadCallback(drawChart2);
+  });
+</script>
+<script>
+'use strict';
+
+
+
+</script>
+  </body>
+</html>
