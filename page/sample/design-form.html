@@ -6,149 +6,294 @@
     <meta name="description" content="디노웍스 관리시스템 샘플 Form" />
   </head>
   <body class="sub design form">
-    <div id="wrapper" class="light">
+    <div id="wrapper">
       <?php include '../../include/header.html'; ?>
 
       <main id="main">
-        <h2>Form 샘플</h2>
-        <p>폼 샘플 : The most complete user interface framework that can be used to create stunning admin dashboards and presentation websites.</p>
 
         <section class="container type-1">
           <section>
-            <h3>기본 폼</h3>
-            <ul class="form-box">
-              <li><input type="text" name="" id="" class="text" placeholder="아이디 입력" value="" /></li>
-              <li><input type="text" name="" id="" class="text error" placeholder="error" value="" /></li>
-              <li><input type="text" name="" id="" class="text" placeholder="readonly" value="2022-03-15" readonly="readonly" /></li>
-              <li><input type="text" name="" id="" class="text" placeholder="disabled" value="" disabled="disabled" /></li>
-              <li>
-                <select name="" id="">
-                  <option value="">-옵션선택-</option>
-                  <option value="c1">선택1</option>
-                  <option value="c2" selected="selected">선택2</option>
-                  <option value="c3">선택3</option>
-                  <option value="c4">선택선택선택4</option>
-                </select>
-              </li>
-              <li><textarea name="" id="" placeholder="기타사항 입력"></textarea></li>
-              <li>
-                <ul class="input-list">
-                  <li><input type="radio" name="user_type" id="user-type-1" value="user-1" /><label for="user-type-1">회원구분1</label></li>
-                  <li><input type="radio" name="user_type" id="user-type-2" value="user-2" /><label for="user-type-2">회원구분2</label></li>
-                  <li><input type="radio" name="user_type" id="user-type-3" value="user-3" checked="checked" /><label for="user-type-3">회원구분3</label></li>
-                  <li><input type="radio" name="user_type" id="user-type-4" value="user-4" /><label for="user-type-4">회원구분4</label></li>
-                  <li><input type="radio" name="user_type" id="user-type-5" value="user-5" /><label for="user-type-5">회원구분5</label></li>
-                  <li><input type="radio" name="user_type" id="user-type-6" value="user-6" /><label for="user-type-6">회원구분6</label></li>
-                  <li><input type="radio" name="user_type" id="user-type-7" value="user-7" /><label for="user-type-7">회원구분7</label></li>
-                  <li><input type="radio" name="user_type" id="user-type-8" value="user-8" /><label for="user-type-8">회원구분8</label></li>
-                  <li><input type="radio" name="user_type" id="user-type-9" value="user-9" /><label for="user-type-9">회원구분9</label></li>
-                  <li><input type="radio" name="user_type" id="user-type-10" value="user-10" /><label for="user-type-10">회원구분10</label></li>
-                  <li><input type="radio" name="user_type" id="user-type-11" value="user-11" /><label for="user-type-11">회원구분11</label></li>
-                  <li><input type="radio" name="user_type" id="user-type-12" value="user-12" /><label for="user-type-12">회원구분12</label></li>
-                  <li><input type="radio" name="user_type" id="user-type-13" value="user-13" /><label for="user-type-13">회원구분13</label></li>
-                  <li><input type="radio" name="user_type" id="user-type-14" value="user-14" /><label for="user-type-14">회원구분14</label></li>
-                  <li><input type="radio" name="user_type" id="user-type-15" value="user-15" /><label for="user-type-15">회원구분15</label></li>
-                  <li><input type="radio" name="user_type" id="user-type-16" value="user-16" /><label for="user-type-16">회원구분16</label></li>
-                  <li><input type="radio" name="user_type" id="user-type-17" value="user-17" /><label for="user-type-17">회원구분17</label></li>
-                  <li><input type="radio" name="user_type" id="user-type-18" value="user-18" /><label for="user-type-18">회원구분18</label></li>
-                  <li><input type="radio" name="user_type" id="user-type-19" value="user-19" /><label for="user-type-19">회원구분19</label></li>
-                </ul>
-              </li>
-              <li>
-                <ul class="input-list">
-                  <li><input type="checkbox" name="interest[]" id="interest-1" value="int-1" /><label for="interest-1">관심분야1</label></li>
-                  <li><input type="checkbox" name="interest[]" id="interest-2" value="int-2" /><label for="interest-2">관심분야2</label></li>
-                  <li><input type="checkbox" name="interest[]" id="interest-3" value="int-3" checked="checked" /><label for="interest-3">관심분야3</label></li>
-                  <li><input type="checkbox" name="interest[]" id="interest-4" value="int-4" /><label for="interest-4">관심분야4</label></li>
-                </ul>
-              </li>
-              <li>
-                <input type="text" name="" id="" class="text" />
-                <ul class="input-list">
-                  <li><input type="radio" name="unit" id="unit-1" value="won" /><label for="unit-1">원</label></li>
-                  <li><input type="radio" name="unit" id="unit-2" value="dollar" /><label for="unit-2">달러</label></li>
-                  <li><input type="radio" name="unit" id="unit-3" value="euro" /><label for="unit-3">유로</label></li>
-                  <li><input type="radio" name="unit" id="unit-4" value="yen" /><label for="unit-4">엔</label></li>
-                </ul>
-              </li>
-            </ul>
+            <h3>Input Types</h3>
+            <p>Most common form control, text-based input fields. Includes support for all HTML5 types: <span class="code">text, password, datetime, datetime-local, date, month, time, week, number, email, url, search, tel, and color</span>. <span class="code">&lt;label&gt;</span> elements in <span class="code">.top</span></p>
+
+            <div class="tabview border">
+              <ul class="tab">
+                <li><a href="#">Preview</a></li>
+                <li><a href="#">Code</a></li>
+              </ul>
+              <ul class="tab-content">
+                <li>
+                  <div class="form-box type-2">
+                    <div>
+                      <label for="text" class="top">Text</label>
+                      <input type="text" name="" id="text" class="text full" value="" />
+
+                      <label for="placeholder" class="top">Placeholder</label>
+                      <input type="text" name="" id="placeholder" class="text full" placeholder="Placeholder" value="" />
+
+                      <label for="password" class="top">Password</label>
+                      <input type="text" name="" id="password" class="text full" value="" />
+                      
+                      <label for="error" class="top">Error</label>
+                      <input type="text" name="" id="error" class="text full error" placeholder="error" value="" />
+                      
+                      <label for="s-h-password" class="top">Show/Hide Password</label>
+                      <div class="input-group full toggle-box">
+                        <input type="password" name="" id="s-h-password" class="text full-icon" value="" />
+                        <span class="label btn-eye"></span>
+                      </div>
+                      
+                      <label for="textarea" class="top">Textarea</label>
+                      <textarea name="" id="textarea" placeholder="Textarea"></textarea>
+                      
+                      <label for="readonly" class="top">Readonly</label>
+                      <input type="text" name="" id="readonly" class="text" placeholder="readonly" value="" readonly="readonly" />
+                      
+                      <label for="disabled" class="top">Disabled</label>
+                      <input type="text" name="" id="disabled" class="text" placeholder="disabled" value="" disabled="disabled" />
+                    </div>
+                    <div>
+                      <label for="select" class="top">Input Select</label>
+                      <select name="" id="select" class="full">
+                        <option value="">-select option-</option>
+                        <option value="c1">1</option>
+                        <option value="c2" selected="selected">2</option>
+                        <option value="c3">3</option>
+                        <option value="c4">4</option>
+                      </select>
+
+                      <label for="multiple-select" class="top">Multiple Select</label>
+                      <select name="" id="multiple-select" multiple class="full custom-scroll fixed">
+                        <option value="">- select option -</option>
+                        <option value="c1">1</option>
+                        <option value="c2" selected="selected">2</option>
+                        <option value="c3">3</option>
+                        <option value="c4">4</option>
+                        <option value="c5">5</option>
+                      </select>
+                      
+                      <label for="file" class="top">Default file input</label>
+                      <input type="file" name="" id="file" class="file full" value="" />
+                      
+                      <label for="date" class="top">Date</label>
+                      <div class="input-group full">
+                        <input type="date" name="" id="date" class="text date full-icon" readonly="readonly" data-view="days" />
+                        <span class="label"><i class="fa-regular fa-calendar"><span>일자선택</span></i></span>
+                      </div>
+
+                      <label for="month" class="top">Month</label>
+                      <div class="input-group full">
+                        <input type="month" name="" id="month" class="text date full-icon" readonly="readonly" data-min-view="months" data-view="months" data-date-format="yyyy-mm" />
+                        <span class="label"><i class="fa-regular fa-calendar"><span>월 선택</span></i></span>
+                      </div>
+                      
+                      <!-- <label for="week" class="top">Week</label>
+                      <div class="input-group full">
+                        <input type="week" name="" id="week" class="text date full-icon" readonly="readonly" data-view="months" />
+                        <a href="#" class="btn regular blue icon"><i class="fa-regular fa-calendar"><span>주 선택</span></i></a>
+                      </div>
+                      
+                      <label for="time" class="top">Time</label>
+                      <div class="input-group full">
+                        <input type="time" name="" id="time" class="text date full-icon" readonly="readonly" data-view="months" />
+                        <a href="#" class="btn regular blue icon"><i class="fa-regular fa-calendar"><span>시간 선택</span></i></a>
+                      </div> -->
+                      
+                      <label for="color" class="top">Color</label>
+                      <input type="color" name="" id="color" class="color" value="#EE9B00" />
+                    
+                      <!-- <label for="range" class="top">Range</label>
+                      <input type="range" name="" id="range" min="0" max="100" list="tickmarks" class="range full" />
+                      <datalist id="tickmarks" class="range-list">
+                      <option value="0" label="0%"></option>
+                      <option value="10" label="10%"></option>
+                      <option value="20" label="20%"></option>
+                      <option value="30" label="30%"></option>
+                      <option value="40" label="40%"></option>
+                      <option value="50" label="50%"></option>
+                      <option value="60" label="60%"></option>
+                      <option value="70" label="70%"></option>
+                      <option value="80" label="80%"></option>
+                      <option value="90" label="90%"></option>
+                      <option value="100" label="100%"></option>
+                      </datalist>
+
+                      <label for="range-vertical" class="top">Range - vertical</label>
+                      <p>Use only chrome.</p>
+                      <input type="range" name="" id="range-vertical" min="0" max="16" step="4" list="tickmarks-vertical" class="range full vertical" />
+                      <datalist id="tickmarks-vertical" class="range-list">
+                      <option value="0" label="0%"></option>
+                      <option value="2"></option>
+                      <option value="4"></option>
+                      <option value="6"></option>
+                      <option value="8" label="50%"></option>
+                      <option value="10"></option>
+                      <option value="12"></option>
+                      <option value="14"></option>
+                      <option value="16" label="100%"></option>
+                      </datalist> -->
+                    </div>
+                  </div>
+                </li>
+                <li>
+<div class="code-box custom-scroll">
+<pre>
+<span style="color: #000080">&lt;div</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;form-box type-2&quot;</span><span style="color: #000080">&gt;</span>
+  <span style="color: #000080">&lt;div&gt;</span>
+  <span style="color: #000080">&lt;label</span> <span style="color: #008080">for=</span><span style="color: #bb8844">&quot;text&quot;</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;top&quot;</span><span style="color: #000080">&gt;</span>Text<span style="color: #000080">&lt;/label&gt;</span>
+  <span style="color: #000080">&lt;input</span> <span style="color: #008080">type=</span><span style="color: #bb8844">&quot;text&quot;</span> <span style="color: #008080">name=</span><span style="color: #bb8844">&quot;&quot;</span> <span style="color: #008080">id=</span><span style="color: #bb8844">&quot;text&quot;</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;text full&quot;</span> <span style="color: #008080">value=</span><span style="color: #bb8844">&quot;&quot;</span> <span style="color: #000080">/&gt;</span>
+
+  <span style="color: #000080">&lt;label</span> <span style="color: #008080">for=</span><span style="color: #bb8844">&quot;placeholder&quot;</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;top&quot;</span><span style="color: #000080">&gt;</span>Placeholder<span style="color: #000080">&lt;/label&gt;</span>
+  <span style="color: #000080">&lt;input</span> <span style="color: #008080">type=</span><span style="color: #bb8844">&quot;text&quot;</span> <span style="color: #008080">name=</span><span style="color: #bb8844">&quot;&quot;</span> <span style="color: #008080">id=</span><span style="color: #bb8844">&quot;placeholder&quot;</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;text full&quot;</span> <span style="color: #008080">placeholder=</span><span style="color: #bb8844">&quot;Placeholder&quot;</span> <span style="color: #008080">value=</span><span style="color: #bb8844">&quot;&quot;</span> <span style="color: #000080">/&gt;</span>
+
+  <span style="color: #000080">&lt;label</span> <span style="color: #008080">for=</span><span style="color: #bb8844">&quot;password&quot;</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;top&quot;</span><span style="color: #000080">&gt;</span>Password<span style="color: #000080">&lt;/label&gt;</span>
+  <span style="color: #000080">&lt;input</span> <span style="color: #008080">type=</span><span style="color: #bb8844">&quot;text&quot;</span> <span style="color: #008080">name=</span><span style="color: #bb8844">&quot;&quot;</span> <span style="color: #008080">id=</span><span style="color: #bb8844">&quot;password&quot;</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;text full&quot;</span> <span style="color: #008080">value=</span><span style="color: #bb8844">&quot;&quot;</span> <span style="color: #000080">/&gt;</span>
+  
+  <span style="color: #000080">&lt;label</span> <span style="color: #008080">for=</span><span style="color: #bb8844">&quot;error&quot;</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;top&quot;</span><span style="color: #000080">&gt;</span>Error<span style="color: #000080">&lt;/label&gt;</span>
+  <span style="color: #000080">&lt;input</span> <span style="color: #008080">type=</span><span style="color: #bb8844">&quot;text&quot;</span> <span style="color: #008080">name=</span><span style="color: #bb8844">&quot;&quot;</span> <span style="color: #008080">id=</span><span style="color: #bb8844">&quot;error&quot;</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;text full error&quot;</span> <span style="color: #008080">placeholder=</span><span style="color: #bb8844">&quot;error&quot;</span> <span style="color: #008080">value=</span><span style="color: #bb8844">&quot;&quot;</span> <span style="color: #000080">/&gt;</span>
+  
+  <span style="color: #000080">&lt;label</span> <span style="color: #008080">for=</span><span style="color: #bb8844">&quot;s-h-password&quot;</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;top&quot;</span><span style="color: #000080">&gt;</span>Show/Hide Password<span style="color: #000080">&lt;/label&gt;</span>
+  <span style="color: #000080">&lt;div</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;input-group full toggle-box&quot;</span><span style="color: #000080">&gt;</span>
+    <span style="color: #000080">&lt;input</span> <span style="color: #008080">type=</span><span style="color: #bb8844">&quot;password&quot;</span> <span style="color: #008080">name=</span><span style="color: #bb8844">&quot;&quot;</span> <span style="color: #008080">id=</span><span style="color: #bb8844">&quot;s-h-password&quot;</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;text full-icon&quot;</span> <span style="color: #008080">value=</span><span style="color: #bb8844">&quot;&quot;</span> <span style="color: #000080">/&gt;</span>
+    <span style="color: #000080">&lt;span</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;label btn-eye&quot;</span><span style="color: #000080">&gt;&lt;/span&gt;</span>
+  <span style="color: #000080">&lt;/div&gt;</span>
+  
+  <span style="color: #000080">&lt;label</span> <span style="color: #008080">for=</span><span style="color: #bb8844">&quot;textarea&quot;</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;top&quot;</span><span style="color: #000080">&gt;</span>Textarea<span style="color: #000080">&lt;/label&gt;</span>
+  <span style="color: #000080">&lt;textarea</span> <span style="color: #008080">name=</span><span style="color: #bb8844">&quot;&quot;</span> <span style="color: #008080">id=</span><span style="color: #bb8844">&quot;textarea&quot;</span> <span style="color: #008080">placeholder=</span><span style="color: #bb8844">&quot;Textarea&quot;</span><span style="color: #000080">&gt;&lt;/textarea&gt;</span>
+  
+  <span style="color: #000080">&lt;label</span> <span style="color: #008080">for=</span><span style="color: #bb8844">&quot;readonly&quot;</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;top&quot;</span><span style="color: #000080">&gt;</span>Readonly<span style="color: #000080">&lt;/label&gt;</span>
+  <span style="color: #000080">&lt;input</span> <span style="color: #008080">type=</span><span style="color: #bb8844">&quot;text&quot;</span> <span style="color: #008080">name=</span><span style="color: #bb8844">&quot;&quot;</span> <span style="color: #008080">id=</span><span style="color: #bb8844">&quot;readonly&quot;</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;text&quot;</span> <span style="color: #008080">placeholder=</span><span style="color: #bb8844">&quot;readonly&quot;</span> <span style="color: #008080">value=</span><span style="color: #bb8844">&quot;&quot;</span> <span style="color: #008080">readonly=</span><span style="color: #bb8844">&quot;readonly&quot;</span> <span style="color: #000080">/&gt;</span>
+  
+  <span style="color: #000080">&lt;label</span> <span style="color: #008080">for=</span><span style="color: #bb8844">&quot;disabled&quot;</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;top&quot;</span><span style="color: #000080">&gt;</span>Disabled<span style="color: #000080">&lt;/label&gt;</span>
+  <span style="color: #000080">&lt;input</span> <span style="color: #008080">type=</span><span style="color: #bb8844">&quot;text&quot;</span> <span style="color: #008080">name=</span><span style="color: #bb8844">&quot;&quot;</span> <span style="color: #008080">id=</span><span style="color: #bb8844">&quot;disabled&quot;</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;text&quot;</span> <span style="color: #008080">placeholder=</span><span style="color: #bb8844">&quot;disabled&quot;</span> <span style="color: #008080">value=</span><span style="color: #bb8844">&quot;&quot;</span> <span style="color: #008080">disabled=</span><span style="color: #bb8844">&quot;disabled&quot;</span> <span style="color: #000080">/&gt;</span>
+<span style="color: #000080">&lt;/div&gt;</span>
+<span style="color: #000080">&lt;div&gt;</span>
+  <span style="color: #000080">&lt;label</span> <span style="color: #008080">for=</span><span style="color: #bb8844">&quot;select&quot;</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;top&quot;</span><span style="color: #000080">&gt;</span>Input Select<span style="color: #000080">&lt;/label&gt;</span>
+  <span style="color: #000080">&lt;select</span> <span style="color: #008080">name=</span><span style="color: #bb8844">&quot;&quot;</span> <span style="color: #008080">id=</span><span style="color: #bb8844">&quot;select&quot;</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;full&quot;</span><span style="color: #000080">&gt;</span>
+    <span style="color: #000080">&lt;option</span> <span style="color: #008080">value=</span><span style="color: #bb8844">&quot;&quot;</span><span style="color: #000080">&gt;</span>-select option-<span style="color: #000080">&lt;/option&gt;</span>
+    <span style="color: #000080">&lt;option</span> <span style="color: #008080">value=</span><span style="color: #bb8844">&quot;c1&quot;</span><span style="color: #000080">&gt;</span>1<span style="color: #000080">&lt;/option&gt;</span>
+    <span style="color: #000080">&lt;option</span> <span style="color: #008080">value=</span><span style="color: #bb8844">&quot;c2&quot;</span> <span style="color: #008080">selected=</span><span style="color: #bb8844">&quot;selected&quot;</span><span style="color: #000080">&gt;</span>2<span style="color: #000080">&lt;/option&gt;</span>
+    <span style="color: #000080">&lt;option</span> <span style="color: #008080">value=</span><span style="color: #bb8844">&quot;c3&quot;</span><span style="color: #000080">&gt;</span>3<span style="color: #000080">&lt;/option&gt;</span>
+    <span style="color: #000080">&lt;option</span> <span style="color: #008080">value=</span><span style="color: #bb8844">&quot;c4&quot;</span><span style="color: #000080">&gt;</span>4<span style="color: #000080">&lt;/option&gt;</span>
+  <span style="color: #000080">&lt;/select&gt;</span>
+
+  <span style="color: #000080">&lt;label</span> <span style="color: #008080">for=</span><span style="color: #bb8844">&quot;multiple-select&quot;</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;top&quot;</span><span style="color: #000080">&gt;</span>Multiple Select<span style="color: #000080">&lt;/label&gt;</span>
+  <span style="color: #000080">&lt;select</span> <span style="color: #008080">name=</span><span style="color: #bb8844">&quot;&quot;</span> <span style="color: #008080">id=</span><span style="color: #bb8844">&quot;multiple-select&quot;</span> <span style="color: #008080">multiple</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;full custom-scroll fixed&quot;</span><span style="color: #000080">&gt;</span>
+    <span style="color: #000080">&lt;option</span> <span style="color: #008080">value=</span><span style="color: #bb8844">&quot;&quot;</span><span style="color: #000080">&gt;</span>- select option -<span style="color: #000080">&lt;/option&gt;</span>
+    <span style="color: #000080">&lt;option</span> <span style="color: #008080">value=</span><span style="color: #bb8844">&quot;c1&quot;</span><span style="color: #000080">&gt;</span>1<span style="color: #000080">&lt;/option&gt;</span>
+    <span style="color: #000080">&lt;option</span> <span style="color: #008080">value=</span><span style="color: #bb8844">&quot;c2&quot;</span> <span style="color: #008080">selected=</span><span style="color: #bb8844">&quot;selected&quot;</span><span style="color: #000080">&gt;</span>2<span style="color: #000080">&lt;/option&gt;</span>
+    <span style="color: #000080">&lt;option</span> <span style="color: #008080">value=</span><span style="color: #bb8844">&quot;c3&quot;</span><span style="color: #000080">&gt;</span>3<span style="color: #000080">&lt;/option&gt;</span>
+    <span style="color: #000080">&lt;option</span> <span style="color: #008080">value=</span><span style="color: #bb8844">&quot;c4&quot;</span><span style="color: #000080">&gt;</span>4<span style="color: #000080">&lt;/option&gt;</span>
+    <span style="color: #000080">&lt;option</span> <span style="color: #008080">value=</span><span style="color: #bb8844">&quot;c5&quot;</span><span style="color: #000080">&gt;</span>5<span style="color: #000080">&lt;/option&gt;</span>
+  <span style="color: #000080">&lt;/select&gt;</span>
+  
+  <span style="color: #000080">&lt;label</span> <span style="color: #008080">for=</span><span style="color: #bb8844">&quot;file&quot;</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;top&quot;</span><span style="color: #000080">&gt;</span>Default file input<span style="color: #000080">&lt;/label&gt;</span>
+  <span style="color: #000080">&lt;input</span> <span style="color: #008080">type=</span><span style="color: #bb8844">&quot;file&quot;</span> <span style="color: #008080">name=</span><span style="color: #bb8844">&quot;&quot;</span> <span style="color: #008080">id=</span><span style="color: #bb8844">&quot;file&quot;</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;file full&quot;</span> <span style="color: #008080">value=</span><span style="color: #bb8844">&quot;&quot;</span> <span style="color: #000080">/&gt;</span>
+  
+  <span style="color: #000080">&lt;label</span> <span style="color: #008080">for=</span><span style="color: #bb8844">&quot;date&quot;</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;top&quot;</span><span style="color: #000080">&gt;</span>Date<span style="color: #000080">&lt;/label&gt;</span>
+  <span style="color: #000080">&lt;div</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;input-group full&quot;</span><span style="color: #000080">&gt;</span>
+    <span style="color: #000080">&lt;input</span> <span style="color: #008080">type=</span><span style="color: #bb8844">&quot;date&quot;</span> <span style="color: #008080">name=</span><span style="color: #bb8844">&quot;&quot;</span> <span style="color: #008080">id=</span><span style="color: #bb8844">&quot;date&quot;</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;text date full-icon&quot;</span> <span style="color: #008080">readonly=</span><span style="color: #bb8844">&quot;readonly&quot;</span> <span style="color: #008080">data-view=</span><span style="color: #bb8844">&quot;days&quot;</span> <span style="color: #000080">/&gt;</span>
+    <span style="color: #000080">&lt;span</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;label&quot;</span><span style="color: #000080">&gt;&lt;i</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;fa-regular fa-calendar&quot;</span><span style="color: #000080">&gt;&lt;span&gt;</span>일자선택<span style="color: #000080">&lt;/span&gt;&lt;/i&gt;&lt;/span&gt;</span>
+  <span style="color: #000080">&lt;/div&gt;</span>
+
+  <span style="color: #000080">&lt;label</span> <span style="color: #008080">for=</span><span style="color: #bb8844">&quot;month&quot;</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;top&quot;</span><span style="color: #000080">&gt;</span>Month<span style="color: #000080">&lt;/label&gt;</span>
+  <span style="color: #000080">&lt;div</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;input-group full&quot;</span><span style="color: #000080">&gt;</span>
+    <span style="color: #000080">&lt;input</span> <span style="color: #008080">type=</span><span style="color: #bb8844">&quot;month&quot;</span> <span style="color: #008080">name=</span><span style="color: #bb8844">&quot;&quot;</span> <span style="color: #008080">id=</span><span style="color: #bb8844">&quot;month&quot;</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;text date full-icon&quot;</span> <span style="color: #008080">readonly=</span><span style="color: #bb8844">&quot;readonly&quot;</span> <span style="color: #008080">data-min-view=</span><span style="color: #bb8844">&quot;months&quot;</span> <span style="color: #008080">data-view=</span><span style="color: #bb8844">&quot;months&quot;</span> <span style="color: #008080">data-date-format=</span><span style="color: #bb8844">&quot;yyyy-mm&quot;</span> <span style="color: #000080">/&gt;</span>
+    <span style="color: #000080">&lt;span</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;label&quot;</span><span style="color: #000080">&gt;&lt;i</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;fa-regular fa-calendar&quot;</span><span style="color: #000080">&gt;&lt;span&gt;</span>월 선택<span style="color: #000080">&lt;/span&gt;&lt;/i&gt;&lt;/span&gt;</span>
+  <span style="color: #000080">&lt;/div&gt;</span>
+  
+  <span style="color: #000080">&lt;label</span> <span style="color: #008080">for=</span><span style="color: #bb8844">&quot;color&quot;</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;top&quot;</span><span style="color: #000080">&gt;</span>Color<span style="color: #000080">&lt;/label&gt;</span>
+  <span style="color: #000080">&lt;input</span> <span style="color: #008080">type=</span><span style="color: #bb8844">&quot;color&quot;</span> <span style="color: #008080">name=</span><span style="color: #bb8844">&quot;&quot;</span> <span style="color: #008080">id=</span><span style="color: #bb8844">&quot;color&quot;</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;color&quot;</span> <span style="color: #008080">value=</span><span style="color: #bb8844">&quot;#EE9B00&quot;</span> <span style="color: #000080">/&gt;</span>
+  <span style="color: #000080">&lt;/div&gt;</span>
+<span style="color: #000080">&lt;/div&gt;</span>
+</pre></div>
+                </li>
+              </ul>
+            </div>
           </section>
         </section>
 
-        <section class="container type-2">
+        <section class="container type-1">
           <section>
-            <h3>예제1</h3>
-            <ul class="form-box">
-              <li>
-                <div class="input-group">
-                  <label for="user-id"><i class="fa-solid fa-user"><span>아이디</span></i></label>
-                  <input type="text" name="user_id" id="user-id" class="text" />
-                </div>
-              </li>
-              <li>
-                <div class="input-group">
-                  <label for="user-id">아이디</label>
-                  <input type="text" name="user_id" id="user-id" class="text" />
-                </div>
-              </li>
-              <li>
-                <div class="input-group">
-                  <input type="text" name="user_id" id="user-id" class="text" />
-                  <a href="#" class="btn regular blue icon"><i class="fa-solid fa-search"><span>검색</span></i></a>
-                </div>
-              </li>
-              <li>
-                <div class="input-group">
-                  <input type="text" name="user_id" id="user-id" class="text" />
-                  <a href="#" class="btn regular blue">중복확인</a>
-                </div>
-              </li>
-              <li>
-                <div class="input-group">
-                  <label for="">통합검색</label>
-                  <select name="" id="">
-                    <option value="">-검색구분-</option>
-                    <option value="">제목</option>
-                    <option value="">내용</option>
-                    <option value="">제목+내용</option>
-                  </select>
-                  <input type="text" name="user_id" id="user-id" class="text" />
-                  <a href="#" class="btn regular blue">검색</a>
-                </div>
-              </li>
-              <li>
-                <div class="input-group">
-                  <input type="text" name="user_id" id="user-id" class="text" />
-                  <span class="label">달러</span>
-                </div>
-              </li>
-              <li>
-                <div class="input-group">
-                  <label for=""><i class="fa-regular fa-clock"><span>예약시간</span></i></label>
-                  <input type="text" name="" id="" class="text" />
-                  <a href="#" class="btn regular blue icon"><i class="fa-regular fa-calendar"><span>검색</span></i></a>
-                  <select name="" id="">
-                    <option value="00">00</option>
-                    <option value="00">00</option>
-                    <option value="00">00</option>
-                    <option value="00">00</option>
-                    <option value="00">00</option>
-                  </select>
-                  <span class="label">시</span>
-                  <select name="" id="">
-                    <option value="00">00</option>
-                    <option value="00">00</option>
-                    <option value="00">00</option>
-                    <option value="00">00</option>
-                    <option value="00">00</option>
-                  </select>
-                  <span class="label">분</span>
-                </div>
-              </li>
-            </ul>
-          </section>
-          <section>
-            <h3>박스2</h3>
+            <h3>Floating Labels</h3>
+            <p>Wrap a pair of <span class="code">&lt;div class="input-group"&gt;</span> and <span class="code">&lt;label&gt;</span> elements in <span class="code">.floating</span> to enable floating labels with Bootstrap’s textual form fields. A <span class="code">placeholder</span> is required on each <span class="code">&lt;input&gt;</span> as our method of CSS-only floating labels uses the <span class="code">:placeholder-shown</span> pseudo-element. Also note that the <span class="code">&lt;input&gt;</span> must come first so we can utilize a sibling selector (e.g., ~).</p>
+
+
+
+            <div class="tabview border">
+              <ul class="tab">
+                <li><a href="#">Preview</a></li>
+                <li><a href="#">Code</a></li>
+              </ul>
+              <ul class="tab-content">
+                <li>
+                  <div class="form-box type-2">
+                    <div>
+                      
+                      <p class="title">Email</p>
+                      <div class="input-group full floating">
+                        <input type="email" name="" id="float-email" class="text full" placeholder="Email Placeholder" value="" />
+                        <label for="float-email">Email Label</label>
+                      </div>
+
+                      <p class="title">Password</p>
+                      <div class="input-group full floating">
+                        <input type="password" name="" id="float-password" class="text full" value="" />
+                        <label for="password">Password Label</label>
+                      </div>
+                      
+                      <p class="title">Textarea</p>
+                      <div class="input-group full floating">
+                        <textarea name="" id="float-textarea" placeholder="Textarea Placeholder"></textarea>
+                        <label for="textarea">Textarea Label</label>
+                      </div>
+                      
+                    </div>
+                    <div>
+                      <p class="title">Select</p>
+                      <div class="input-group full floating">
+                        <select name="" id="float-select" class="full">
+                          <option value="">-select option-</option>
+                          <option value="fc1">1</option>
+                          <option value="fc2" selected="selected">2</option>
+                          <option value="fc3">3</option>
+                          <option value="fc4">4</option>
+                        </select>
+                        <label for="float-select" class="floating">Select Label</label>
+                      </div>
+                      
+                      <p class="title">Layout</p>
+                      <ul class="input-list">
+                        <li>
+                          <div class="input-group floating">
+                            <input type="email" name="" id="float-layout-email" class="text" placeholder="abc@gmail.com" value="" />
+                            <label for="floa-layoutt-email">Email Label</label>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="input-group floating">
+                            <select name="" id="float-layout-select">
+                              <option value="">-select option-</option>
+                              <option value="flc1">1</option>
+                              <option value="flc2">2</option>
+                              <option value="flc3" selected="selected">3</option>
+                              <option value="flc4">4</option>
+                            </select>
+                            <label for="float-layout-select" class="floating">Select Label</label>
+                          </div>
+                        </li>
+                      </ul>
+
+                    </div>
+                  </div>
+                </li>
+                <li>
+<div class="code-box custom-scroll">
+<pre>
+</pre></div>
+                </li>
+              </ul>
+            </div>
 
           </section>
         </section>
@@ -157,34 +302,294 @@
           <section>
             <h3>폼 테이블</h3>
 
-            <table class="form-box">
-              <tbody>
-                <tr>
-                  <td class="th"><label for="user-id"><em>*</em>아이디</label></td>
-                  <td><input type="text" name="" id="user-id" class="text" value="" /></td>
-                  <td class="th"><label for="user-pw">비밀번호</label></td>
-                  <td><input type="password" name="" id="user-pw" class="text" value="" /></td>
-                </tr>
-                <tr>
-                  <td class="th"><label for="user-id">아이디</label></td>
-                  <td><input type="text" name="" id="user-id" class="text" value="" /></td>
-                  <td class="th"><label for="user-pw">비밀번호</label></td>
-                  <td><input type="password" name="" id="user-pw" class="text" value="" /></td>
-                </tr>
-                <tr>
-                  <td class="th"><label for="user-id">아이디</label></td>
-                  <td><input type="text" name="" id="user-id" class="text" value="" /></td>
-                  <td class="th"><label for="user-pw">비밀번호</label></td>
-                  <td><input type="password" name="" id="user-pw" class="text" value="" /></td>
-                </tr>
-                <tr>
-                  <td class="th"><label for="user-id">아이디</label></td>
-                  <td><input type="text" name="" id="user-id" class="text" value="" /></td>
-                  <td class="th"><label for="user-pw">비밀번호</label></td>
-                  <td><input type="password" name="" id="user-pw" class="text" value="" /></td>
-                </tr>
-              </tbody>
-            </table>
+            <div class="tabview border">
+              <ul class="tab">
+                <li><a href="#">Preview</a></li>
+                <li><a href="#">Code</a></li>
+              </ul>
+              <ul class="tab-content">
+                <li>
+                  <div class="form-box type-2">
+                    <div>
+
+                    </div>
+
+                    <div>
+                    </div>
+                  </div>
+                </li>
+                <li>
+<div class="code-box custom-scroll">
+<pre>
+</pre></div>
+                </li>
+              </ul>
+            </div>
+
+          </section>
+        </section>
+
+        <section class="container type-1">
+          <section>
+            <h3>폼 테이블</h3>
+
+            <div class="tabview border">
+              <ul class="tab">
+                <li><a href="#">Preview</a></li>
+                <li><a href="#">Code</a></li>
+              </ul>
+              <ul class="tab-content">
+                <li>
+                  <div class="form-box type-2">
+                    <div>
+
+                    </div>
+                    <div></div>
+                  </div>
+                </li>
+                <li>
+<div class="code-box custom-scroll">
+<pre>
+</pre></div>
+                </li>
+              </ul>
+            </div>
+
+          </section>
+        </section>
+
+
+        <section class="container type-1">
+          <section>
+            <h3>폼 테이블</h3>
+
+            <div class="tabview border">
+              <ul class="tab">
+                <li><a href="#">Preview</a></li>
+                <li><a href="#">Code</a></li>
+              </ul>
+              <ul class="tab-content">
+                <li>
+                  <div class="form-box type-2">
+                    <div>
+                      
+                      <div class="input-group">
+                        <label for="user-id"><i class="fa-solid fa-user"><span>아이디</span></i></label>
+                        <input type="text" name="user_id" id="user-id" class="text" />
+                      </div>
+                      
+                      <div class="input-group">
+                        <label for="user-id">아이디</label>
+                        <input type="text" name="user_id" id="user-id" class="text" />
+                      </div>
+                      
+                      <div class="input-group">
+                        <input type="text" name="user_id" id="user-id" class="text" />
+                        <a href="#" class="btn regular blue icon"><i class="fa-solid fa-search"><span>검색</span></i></a>
+                      </div>
+                      
+                      <div class="input-group">
+                        <input type="text" name="user_id" id="user-id" class="text" />
+                        <a href="#" class="btn regular blue">중복확인</a>
+                      </div>
+                      
+                      <div class="input-group">
+                        <label for="">통합검색</label>
+                        <select name="" id="">
+                          <option value="">-검색구분-</option>
+                          <option value="">제목</option>
+                          <option value="">내용</option>
+                          <option value="">제목+내용</option>
+                        </select>
+                        <input type="text" name="user_id" id="user-id" class="text" />
+                        <a href="#" class="btn regular blue">검색</a>
+                      </div>
+                      
+                      <div class="input-group">
+                        <input type="text" name="user_id" id="user-id" class="text" />
+                        <span class="label">달러</span>
+                      </div>
+                      
+                      <div class="input-group">
+                        <label for=""><i class="fa-regular fa-clock"><span>예약시간</span></i></label>
+                        <input type="text" name="" id="" class="text" />
+                        <a href="#" class="btn regular blue icon"><i class="fa-regular fa-calendar"><span>검색</span></i></a>
+                        <select name="" id="">
+                          <option value="00">00</option>
+                          <option value="00">00</option>
+                          <option value="00">00</option>
+                          <option value="00">00</option>
+                          <option value="00">00</option>
+                        </select>
+                        <span class="label">시</span>
+                        <select name="" id="">
+                          <option value="00">00</option>
+                          <option value="00">00</option>
+                          <option value="00">00</option>
+                          <option value="00">00</option>
+                          <option value="00">00</option>
+                        </select>
+                        <span class="label">분</span>
+                      </div>
+                      
+                      <div class="input-group">
+                        <input type="text" name="user_id" id="user-id" class="text" />
+                        <a href="#" class="btn regular blue icon"><i class="fa-solid fa-search"><span>검색</span></i></a>
+                      </div>
+                      
+                      <div class="input-group">
+                        <input type="text" name="user_id" id="user-id" class="text" />
+                        <a href="#" class="btn regular blue">중복확인</a>
+                      </div>
+                      
+                      <div class="input-group">
+                        <label for="">통합검색</label>
+                        <select name="" id="">
+                          <option value="">-검색구분-</option>
+                          <option value="">제목</option>
+                          <option value="">내용</option>
+                          <option value="">제목+내용</option>
+                        </select>
+                        <input type="text" name="user_id" id="user-id" class="text" />
+                        <a href="#" class="btn regular blue">검색</a>
+                      </div>
+                      
+                      <div class="input-group">
+                        <input type="text" name="user_id" id="user-id" class="text" />
+                        <span class="label">달러</span>
+                      </div>
+                      
+                      <div class="input-group">
+                        <label for=""><i class="fa-regular fa-clock"><span>예약시간</span></i></label>
+                        <input type="text" name="" id="" class="text" />
+                        <a href="#" class="btn regular blue icon"><i class="fa-regular fa-calendar"><span>검색</span></i></a>
+                        <select name="" id="">
+                          <option value="00">00</option>
+                          <option value="00">00</option>
+                          <option value="00">00</option>
+                          <option value="00">00</option>
+                          <option value="00">00</option>
+                        </select>
+                        <span class="label">시</span>
+                        <select name="" id="">
+                          <option value="00">00</option>
+                          <option value="00">00</option>
+                          <option value="00">00</option>
+                          <option value="00">00</option>
+                          <option value="00">00</option>
+                        </select>
+                        <span class="label">분</span>
+                      </div>
+                      
+                      <ul class="input-list">
+                        <li><input type="radio" name="user_type" id="user-type-1" value="user-1" /><label for="user-type-1">회원구분1</label></li>
+                        <li><input type="radio" name="user_type" id="user-type-2" value="user-2" /><label for="user-type-2">회원구분2</label></li>
+                        <li><input type="radio" name="user_type" id="user-type-3" value="user-3" checked="checked" /><label for="user-type-3">회원구분3</label></li>
+                        <li><input type="radio" name="user_type" id="user-type-4" value="user-4" /><label for="user-type-4">회원구분4</label></li>
+                        <li><input type="radio" name="user_type" id="user-type-5" value="user-5" /><label for="user-type-5">회원구분5</label></li>
+                        <li><input type="radio" name="user_type" id="user-type-6" value="user-6" /><label for="user-type-6">회원구분6</label></li>
+                        <li><input type="radio" name="user_type" id="user-type-7" value="user-7" /><label for="user-type-7">회원구분7</label></li>
+                        <li><input type="radio" name="user_type" id="user-type-8" value="user-8" /><label for="user-type-8">회원구분8</label></li>
+                        <li><input type="radio" name="user_type" id="user-type-9" value="user-9" /><label for="user-type-9">회원구분9</label></li>
+                        <li><input type="radio" name="user_type" id="user-type-10" value="user-10" /><label for="user-type-10">회원구분10</label></li>
+                        <li><input type="radio" name="user_type" id="user-type-11" value="user-11" /><label for="user-type-11">회원구분11</label></li>
+                        <li><input type="radio" name="user_type" id="user-type-12" value="user-12" /><label for="user-type-12">회원구분12</label></li>
+                        <li><input type="radio" name="user_type" id="user-type-13" value="user-13" /><label for="user-type-13">회원구분13</label></li>
+                        <li><input type="radio" name="user_type" id="user-type-14" value="user-14" /><label for="user-type-14">회원구분14</label></li>
+                        <li><input type="radio" name="user_type" id="user-type-15" value="user-15" /><label for="user-type-15">회원구분15</label></li>
+                        <li><input type="radio" name="user_type" id="user-type-16" value="user-16" /><label for="user-type-16">회원구분16</label></li>
+                        <li><input type="radio" name="user_type" id="user-type-17" value="user-17" /><label for="user-type-17">회원구분17</label></li>
+                        <li><input type="radio" name="user_type" id="user-type-18" value="user-18" /><label for="user-type-18">회원구분18</label></li>
+                        <li><input type="radio" name="user_type" id="user-type-19" value="user-19" /><label for="user-type-19">회원구분19</label></li>
+                      </ul>
+                      
+                      <ul class="input-list">
+                        <li><input type="checkbox" name="interest[]" id="interest-1" value="int-1" /><label for="interest-1">관심분야1</label></li>
+                        <li><input type="checkbox" name="interest[]" id="interest-2" value="int-2" /><label for="interest-2">관심분야2</label></li>
+                        <li><input type="checkbox" name="interest[]" id="interest-3" value="int-3" checked="checked" /><label for="interest-3">관심분야3</label></li>
+                        <li><input type="checkbox" name="interest[]" id="interest-4" value="int-4" /><label for="interest-4">관심분야4</label></li>
+                      </ul>
+                      
+                      <input type="text" name="" id="" class="text" />
+                      <ul class="input-list">
+                        <li><input type="radio" name="unit" id="unit-1" value="won" /><label for="unit-1">원</label></li>
+                        <li><input type="radio" name="unit" id="unit-2" value="dollar" /><label for="unit-2">달러</label></li>
+                        <li><input type="radio" name="unit" id="unit-3" value="euro" /><label for="unit-3">유로</label></li>
+                        <li><input type="radio" name="unit" id="unit-4" value="yen" /><label for="unit-4">엔</label></li>
+                      </ul>
+
+                    </div>
+                    <div></div>
+                  </div>
+                </li>
+                <li>
+<div class="code-box custom-scroll">
+<pre>
+</pre></div>
+                </li>
+              </ul>
+            </div>
+            
+
+
+          </section>
+        </section>
+
+        <section class="container type-1">
+          <section>
+            <h3>폼 테이블</h3>
+
+            
+            <div class="tabview border">
+              <ul class="tab">
+                <li><a href="#">Preview</a></li>
+                <li><a href="#">Code</a></li>
+              </ul>
+              <ul class="tab-content">
+                <li>
+                  <div class="form-box type-2">
+                    <div>
+                      <table class="form-box">
+                        <tbody>
+                          <tr>
+                            <td class="th"><label for="user-id"><em>*</em>아이디</label></td>
+                            <td><input type="text" name="" id="user-id" class="text" value="" /></td>
+                            <td class="th"><label for="user-pw">비밀번호</label></td>
+                            <td><input type="password" name="" id="user-pw" class="text" value="" /></td>
+                          </tr>
+                          <tr>
+                            <td class="th"><label for="user-id">아이디</label></td>
+                            <td><input type="text" name="" id="user-id" class="text" value="" /></td>
+                            <td class="th"><label for="user-pw">비밀번호</label></td>
+                            <td><input type="password" name="" id="user-pw" class="text" value="" /></td>
+                          </tr>
+                          <tr>
+                            <td class="th"><label for="user-id">아이디</label></td>
+                            <td><input type="text" name="" id="user-id" class="text" value="" /></td>
+                            <td class="th"><label for="user-pw">비밀번호</label></td>
+                            <td><input type="password" name="" id="user-pw" class="text" value="" /></td>
+                          </tr>
+                          <tr>
+                            <td class="th"><label for="user-id">아이디</label></td>
+                            <td><input type="text" name="" id="user-id" class="text" value="" /></td>
+                            <td class="th"><label for="user-pw">비밀번호</label></td>
+                            <td><input type="password" name="" id="user-pw" class="text" value="" /></td>
+                          </tr>
+                        </tbody>
+                      </table>
+
+                    </div>
+                    <div></div>
+                  </div>
+                </li>
+                <li>
+<div class="code-box custom-scroll">
+<pre>
+</pre></div>
+                </li>
+              </ul>
+            </div>
+            
 
 
           </section>
@@ -200,6 +605,7 @@
 
 <script>
 'use strict';
+setTitle('Form');
 
 
 

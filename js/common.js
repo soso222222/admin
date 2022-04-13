@@ -3,9 +3,9 @@ $(document).ready(function() {
   preventDefaultAnchor();
   setToggleUI();
   setHeader();
-  setTabview();
   setCurrent();
-
+  setTabview();
+  setDatepiker();
 });
 
 
@@ -25,8 +25,8 @@ function setHeader() {
     var modeName = (index === 1) ? 'dark' : 'light';
     $('#header ul.mode > li').removeClass('on');
     $('#header ul.mode > li:eq(' + index + ')').addClass('on');
-    $('#wrapper').removeClass();
-    $('#wrapper').addClass(modeName);
+    // $('html').removeClass();
+    // $('html').addClass(modeName);
   });
   $('#header ul.user > li.right-menu > a').on('click', function(e) {
     $(this).siblings('.tabview').css({'right': '-50px'});
@@ -58,6 +58,42 @@ function setTabview() {
       $tabview.css({'right': '-370px'});
     });
   });
+}
+function setTogglePW() {
+  $('.toggle-box').each(function(i) {
+    $(this).addClass('hide');
+  });
+
+  $('.toggle-box > .btn-eye').on('click', function(e) {
+    var $toggleBtn = $(this);
+    var $toggleInput = $(this).siblings('input');
+    var $toggleBox = $(this).parent();
+    var isToggle = false;
+    var toggleType = '';
+    var toggleClass = '';
+
+    isToggle = ($toggleInput.attr('type') === 'password') ? isToggle = true : isToggle = false;
+    $toggleBox.removeClass('show hide');
+
+    if(isToggle === true) {
+      toggleType = 'text';
+      toggleClass = 'show';
+    } else {
+      toggleType = 'password';
+      toggleClass = 'hide';
+    }
+
+    $toggleInput.attr('type', toggleType);
+    $toggleBox.addClass(toggleClass);
+  });
+}
+function setDatepiker() {
+  $('input.date').each(function(i) {
+    $(this).datepicker({
+      language: 'ko'
+    });
+  });
+
 }
 function setCurrent() {
   var bodyClass = $('body').attr('class');
@@ -108,4 +144,6 @@ function setToggleUI() {
       $(this).attr({'title': valueRight});
     }
   });
+
+  setTogglePW();
 }
