@@ -132,8 +132,12 @@ function setToggleUI() {
   });
 
   $('a.btn-toggle').on('click', function() {
+    var value = $(this).find('input').val();
     var valueLeft = $(this).find('input').attr('data-left');
     var valueRight = $(this).find('input').attr('data-right');
+    if($(this).hasClass('disabled') === true){
+      return false;
+    }
     if ($(this).hasClass('on') === true) {
       $(this).removeClass('on');
       $(this).find('input').val(valueLeft);

@@ -55,7 +55,7 @@
                     <div>
                       <label for="select" class="top">Input Select</label>
                       <select name="" id="select" class="full">
-                        <option value="">-select option-</option>
+                        <option value="">choose...</option>
                         <option value="c1">1</option>
                         <option value="c2" selected="selected">2</option>
                         <option value="c3">3</option>
@@ -73,7 +73,7 @@
                       </select>
                       
                       <label for="file" class="top">Default file input</label>
-                      <input type="file" name="" id="file" class="file full" value="" />
+                      <input type="file" name="" id="file" multiple class="file full" value="" />
                       
                       <label for="date" class="top">Date</label>
                       <div class="input-group full">
@@ -170,7 +170,7 @@
 <span style="color: #000080">&lt;div&gt;</span>
   <span style="color: #000080">&lt;label</span> <span style="color: #008080">for=</span><span style="color: #bb8844">&quot;select&quot;</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;top&quot;</span><span style="color: #000080">&gt;</span>Input Select<span style="color: #000080">&lt;/label&gt;</span>
   <span style="color: #000080">&lt;select</span> <span style="color: #008080">name=</span><span style="color: #bb8844">&quot;&quot;</span> <span style="color: #008080">id=</span><span style="color: #bb8844">&quot;select&quot;</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;full&quot;</span><span style="color: #000080">&gt;</span>
-    <span style="color: #000080">&lt;option</span> <span style="color: #008080">value=</span><span style="color: #bb8844">&quot;&quot;</span><span style="color: #000080">&gt;</span>-select option-<span style="color: #000080">&lt;/option&gt;</span>
+    <span style="color: #000080">&lt;option</span> <span style="color: #008080">value=</span><span style="color: #bb8844">&quot;&quot;</span><span style="color: #000080">&gt;</span>choose...<span style="color: #000080">&lt;/option&gt;</span>
     <span style="color: #000080">&lt;option</span> <span style="color: #008080">value=</span><span style="color: #bb8844">&quot;c1&quot;</span><span style="color: #000080">&gt;</span>1<span style="color: #000080">&lt;/option&gt;</span>
     <span style="color: #000080">&lt;option</span> <span style="color: #008080">value=</span><span style="color: #bb8844">&quot;c2&quot;</span> <span style="color: #008080">selected=</span><span style="color: #bb8844">&quot;selected&quot;</span><span style="color: #000080">&gt;</span>2<span style="color: #000080">&lt;/option&gt;</span>
     <span style="color: #000080">&lt;option</span> <span style="color: #008080">value=</span><span style="color: #bb8844">&quot;c3&quot;</span><span style="color: #000080">&gt;</span>3<span style="color: #000080">&lt;/option&gt;</span>
@@ -216,7 +216,7 @@
         <section class="container type-1">
           <section>
             <h3>Floating Labels</h3>
-            <p>Wrap a pair of <span class="code">&lt;div class="input-group"&gt;</span> and <span class="code">&lt;label&gt;</span> elements in <span class="code">.floating</span> to enable floating labels with Bootstrap’s textual form fields. A <span class="code">placeholder</span> is required on each <span class="code">&lt;input&gt;</span> as our method of CSS-only floating labels uses the <span class="code">:placeholder-shown</span> pseudo-element. Also note that the <span class="code">&lt;input&gt;</span> must come first so we can utilize a sibling selector (e.g., ~).</p>
+            <p>Wrap a pair of <span class="code">&lt;div class="input-group"&gt;</span> elements in <span class="code">.floating</span> to enable floating labels with Bootstrap’s textual form fields. A <span class="code">placeholder</span> is required on each <span class="code">&lt;input&gt;</span> as our method of CSS-only floating labels uses the <span class="code">:placeholder-shown</span> pseudo-element. Also note that the <span class="code">&lt;input&gt;</span> must come first so we can utilize a sibling selector (e.g., ~). The <span class="code">&lt;label&gt;</span> must always be behind the <span class="code">&lt;input&gt;</span> element.</p>
 
 
 
@@ -239,13 +239,13 @@
                       <p class="title">Password</p>
                       <div class="input-group full floating">
                         <input type="password" name="" id="float-password" class="text full" value="" />
-                        <label for="password">Password Label</label>
+                        <label for="float-password">Password Label</label>
                       </div>
                       
                       <p class="title">Textarea</p>
                       <div class="input-group full floating">
                         <textarea name="" id="float-textarea" placeholder="Textarea Placeholder"></textarea>
-                        <label for="textarea">Textarea Label</label>
+                        <label for="float-textarea">Textarea Label</label>
                       </div>
                       
                     </div>
@@ -253,36 +253,47 @@
                       <p class="title">Select</p>
                       <div class="input-group full floating">
                         <select name="" id="float-select" class="full">
-                          <option value="">-select option-</option>
+                          <option value="">choose...</option>
                           <option value="fc1">1</option>
                           <option value="fc2" selected="selected">2</option>
                           <option value="fc3">3</option>
                           <option value="fc4">4</option>
                         </select>
-                        <label for="float-select" class="floating">Select Label</label>
+                        <label for="float-select">Select Label</label>
+                      </div>
+
+                      <p class="title">Multiple Select</p>
+                      <div class="input-group full floating">
+                        <select name="" id="float-multiple-select" multiple class="full custom-scroll fixed">
+                          <option value="">-select option-</option>
+                          <option value="c1">1</option>
+                          <option value="c2" selected="selected">2</option>
+                          <option value="c3">3</option>
+                          <option value="c4">4</option>
+                          <option value="c5">5</option>
+                        </select>
+                        <label for="float-multiple-select" class="top">Multiple Select Label</label>
+                      </div>
+
+                      <p class="title">File</p>
+                      <div class="input-group full floating">
+                        <input type="file" name="" id="float-file" class="file full" value="" />
+                        <label for="float-file" class="top">Default file input Label</label>
                       </div>
                       
-                      <p class="title">Layout</p>
-                      <ul class="input-list">
-                        <li>
-                          <div class="input-group floating">
-                            <input type="email" name="" id="float-layout-email" class="text" placeholder="abc@gmail.com" value="" />
-                            <label for="floa-layoutt-email">Email Label</label>
-                          </div>
-                        </li>
-                        <li>
-                          <div class="input-group floating">
-                            <select name="" id="float-layout-select">
-                              <option value="">-select option-</option>
-                              <option value="flc1">1</option>
-                              <option value="flc2">2</option>
-                              <option value="flc3" selected="selected">3</option>
-                              <option value="flc4">4</option>
-                            </select>
-                            <label for="float-layout-select" class="floating">Select Label</label>
-                          </div>
-                        </li>
-                      </ul>
+                      <p class="title">Date</p>
+                      <div class="input-group full floating">
+                        <input type="date" name="" id="float-date" class="text date full-icon" readonly="readonly" data-view="days" />
+                        <span class="label"><i class="fa-regular fa-calendar"><span>일자선택</span></i></span>
+                        <label for="float-date" class="top">Date Label</label>
+                      </div>
+
+                      <p class="title">Month</p>
+                      <div class="input-group full floating">
+                        <input type="month" name="" id="float-month" class="text date full-icon" readonly="readonly" data-min-view="months" data-view="months" data-date-format="yyyy-mm" />
+                        <a href="#" class="btn regular dark-purple icon"><i class="fa-regular fa-calendar"><span>월 선택</span></i></a>
+                        <label for="float-month" class="top">Month Label</label>
+                      </div>
 
                     </div>
                   </div>
@@ -290,6 +301,76 @@
                 <li>
 <div class="code-box custom-scroll">
 <pre>
+<span style="color: #000080">&lt;div</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;form-box type-2&quot;</span><span style="color: #000080">&gt;</span>
+  <span style="color: #000080">&lt;div&gt;</span>
+      
+  <span style="color: #000080">&lt;p</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;title&quot;</span><span style="color: #000080">&gt;</span>Email<span style="color: #000080">&lt;/p&gt;</span>
+  <span style="color: #000080">&lt;div</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;input-group full floating&quot;</span><span style="color: #000080">&gt;</span>
+    <span style="color: #000080">&lt;input</span> <span style="color: #008080">type=</span><span style="color: #bb8844">&quot;email&quot;</span> <span style="color: #008080">name=</span><span style="color: #bb8844">&quot;&quot;</span> <span style="color: #008080">id=</span><span style="color: #bb8844">&quot;float-email&quot;</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;text full&quot;</span> <span style="color: #008080">placeholder=</span><span style="color: #bb8844">&quot;Email Placeholder&quot;</span> <span style="color: #008080">value=</span><span style="color: #bb8844">&quot;&quot;</span> <span style="color: #000080">/&gt;</span>
+    <span style="color: #000080">&lt;label</span> <span style="color: #008080">for=</span><span style="color: #bb8844">&quot;float-email&quot;</span><span style="color: #000080">&gt;</span>Email Label<span style="color: #000080">&lt;/label&gt;</span>
+  <span style="color: #000080">&lt;/div&gt;</span>
+
+  <span style="color: #000080">&lt;p</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;title&quot;</span><span style="color: #000080">&gt;</span>Password<span style="color: #000080">&lt;/p&gt;</span>
+  <span style="color: #000080">&lt;div</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;input-group full floating&quot;</span><span style="color: #000080">&gt;</span>
+    <span style="color: #000080">&lt;input</span> <span style="color: #008080">type=</span><span style="color: #bb8844">&quot;password&quot;</span> <span style="color: #008080">name=</span><span style="color: #bb8844">&quot;&quot;</span> <span style="color: #008080">id=</span><span style="color: #bb8844">&quot;float-password&quot;</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;text full&quot;</span> <span style="color: #008080">value=</span><span style="color: #bb8844">&quot;&quot;</span> <span style="color: #000080">/&gt;</span>
+    <span style="color: #000080">&lt;label</span> <span style="color: #008080">for=</span><span style="color: #bb8844">&quot;float-password&quot;</span><span style="color: #000080">&gt;</span>Password Label<span style="color: #000080">&lt;/label&gt;</span>
+  <span style="color: #000080">&lt;/div&gt;</span>
+  
+  <span style="color: #000080">&lt;p</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;title&quot;</span><span style="color: #000080">&gt;</span>Textarea<span style="color: #000080">&lt;/p&gt;</span>
+  <span style="color: #000080">&lt;div</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;input-group full floating&quot;</span><span style="color: #000080">&gt;</span>
+    <span style="color: #000080">&lt;textarea</span> <span style="color: #008080">name=</span><span style="color: #bb8844">&quot;&quot;</span> <span style="color: #008080">id=</span><span style="color: #bb8844">&quot;float-textarea&quot;</span> <span style="color: #008080">placeholder=</span><span style="color: #bb8844">&quot;Textarea Placeholder&quot;</span><span style="color: #000080">&gt;&lt;/textarea&gt;</span>
+    <span style="color: #000080">&lt;label</span> <span style="color: #008080">for=</span><span style="color: #bb8844">&quot;float-textarea&quot;</span><span style="color: #000080">&gt;</span>Textarea Label<span style="color: #000080">&lt;/label&gt;</span>
+  <span style="color: #000080">&lt;/div&gt;</span>
+  
+<span style="color: #000080">&lt;/div&gt;</span>
+<span style="color: #000080">&lt;div&gt;</span>
+  <span style="color: #000080">&lt;p</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;title&quot;</span><span style="color: #000080">&gt;</span>Select<span style="color: #000080">&lt;/p&gt;</span>
+  <span style="color: #000080">&lt;div</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;input-group full floating&quot;</span><span style="color: #000080">&gt;</span>
+    <span style="color: #000080">&lt;select</span> <span style="color: #008080">name=</span><span style="color: #bb8844">&quot;&quot;</span> <span style="color: #008080">id=</span><span style="color: #bb8844">&quot;float-select&quot;</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;full&quot;</span><span style="color: #000080">&gt;</span>
+      <span style="color: #000080">&lt;option</span> <span style="color: #008080">value=</span><span style="color: #bb8844">&quot;&quot;</span><span style="color: #000080">&gt;</span>choose...<span style="color: #000080">&lt;/option&gt;</span>
+      <span style="color: #000080">&lt;option</span> <span style="color: #008080">value=</span><span style="color: #bb8844">&quot;fc1&quot;</span><span style="color: #000080">&gt;</span>1<span style="color: #000080">&lt;/option&gt;</span>
+      <span style="color: #000080">&lt;option</span> <span style="color: #008080">value=</span><span style="color: #bb8844">&quot;fc2&quot;</span> <span style="color: #008080">selected=</span><span style="color: #bb8844">&quot;selected&quot;</span><span style="color: #000080">&gt;</span>2<span style="color: #000080">&lt;/option&gt;</span>
+      <span style="color: #000080">&lt;option</span> <span style="color: #008080">value=</span><span style="color: #bb8844">&quot;fc3&quot;</span><span style="color: #000080">&gt;</span>3<span style="color: #000080">&lt;/option&gt;</span>
+      <span style="color: #000080">&lt;option</span> <span style="color: #008080">value=</span><span style="color: #bb8844">&quot;fc4&quot;</span><span style="color: #000080">&gt;</span>4<span style="color: #000080">&lt;/option&gt;</span>
+    <span style="color: #000080">&lt;/select&gt;</span>
+    <span style="color: #000080">&lt;label</span> <span style="color: #008080">for=</span><span style="color: #bb8844">&quot;float-select&quot;</span><span style="color: #000080">&gt;</span>Select Label<span style="color: #000080">&lt;/label&gt;</span>
+  <span style="color: #000080">&lt;/div&gt;</span>
+
+  <span style="color: #000080">&lt;p</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;title&quot;</span><span style="color: #000080">&gt;</span>Multiple Select<span style="color: #000080">&lt;/p&gt;</span>
+  <span style="color: #000080">&lt;div</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;input-group full floating&quot;</span><span style="color: #000080">&gt;</span>
+    <span style="color: #000080">&lt;select</span> <span style="color: #008080">name=</span><span style="color: #bb8844">&quot;&quot;</span> <span style="color: #008080">id=</span><span style="color: #bb8844">&quot;float-multiple-select&quot;</span> <span style="color: #008080">multiple</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;full custom-scroll fixed&quot;</span><span style="color: #000080">&gt;</span>
+      <span style="color: #000080">&lt;option</span> <span style="color: #008080">value=</span><span style="color: #bb8844">&quot;&quot;</span><span style="color: #000080">&gt;</span>- select option -<span style="color: #000080">&lt;/option&gt;</span>
+      <span style="color: #000080">&lt;option</span> <span style="color: #008080">value=</span><span style="color: #bb8844">&quot;c1&quot;</span><span style="color: #000080">&gt;</span>1<span style="color: #000080">&lt;/option&gt;</span>
+      <span style="color: #000080">&lt;option</span> <span style="color: #008080">value=</span><span style="color: #bb8844">&quot;c2&quot;</span> <span style="color: #008080">selected=</span><span style="color: #bb8844">&quot;selected&quot;</span><span style="color: #000080">&gt;</span>2<span style="color: #000080">&lt;/option&gt;</span>
+      <span style="color: #000080">&lt;option</span> <span style="color: #008080">value=</span><span style="color: #bb8844">&quot;c3&quot;</span><span style="color: #000080">&gt;</span>3<span style="color: #000080">&lt;/option&gt;</span>
+      <span style="color: #000080">&lt;option</span> <span style="color: #008080">value=</span><span style="color: #bb8844">&quot;c4&quot;</span><span style="color: #000080">&gt;</span>4<span style="color: #000080">&lt;/option&gt;</span>
+      <span style="color: #000080">&lt;option</span> <span style="color: #008080">value=</span><span style="color: #bb8844">&quot;c5&quot;</span><span style="color: #000080">&gt;</span>5<span style="color: #000080">&lt;/option&gt;</span>
+    <span style="color: #000080">&lt;/select&gt;</span>
+    <span style="color: #000080">&lt;label</span> <span style="color: #008080">for=</span><span style="color: #bb8844">&quot;float-multiple-select&quot;</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;top&quot;</span><span style="color: #000080">&gt;</span>Multiple Select Label<span style="color: #000080">&lt;/label&gt;</span>
+  <span style="color: #000080">&lt;/div&gt;</span>
+
+  <span style="color: #000080">&lt;p</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;title&quot;</span><span style="color: #000080">&gt;</span>File<span style="color: #000080">&lt;/p&gt;</span>
+  <span style="color: #000080">&lt;div</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;input-group full floating&quot;</span><span style="color: #000080">&gt;</span>
+    <span style="color: #000080">&lt;input</span> <span style="color: #008080">type=</span><span style="color: #bb8844">&quot;file&quot;</span> <span style="color: #008080">name=</span><span style="color: #bb8844">&quot;&quot;</span> <span style="color: #008080">id=</span><span style="color: #bb8844">&quot;float-file&quot;</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;file full&quot;</span> <span style="color: #008080">value=</span><span style="color: #bb8844">&quot;&quot;</span> <span style="color: #000080">/&gt;</span>
+    <span style="color: #000080">&lt;label</span> <span style="color: #008080">for=</span><span style="color: #bb8844">&quot;float-file&quot;</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;top&quot;</span><span style="color: #000080">&gt;</span>Default file input Label<span style="color: #000080">&lt;/label&gt;</span>
+  <span style="color: #000080">&lt;/div&gt;</span>
+  
+  <span style="color: #000080">&lt;p</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;title&quot;</span><span style="color: #000080">&gt;</span>Date<span style="color: #000080">&lt;/p&gt;</span>
+  <span style="color: #000080">&lt;div</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;input-group full floating&quot;</span><span style="color: #000080">&gt;</span>
+    <span style="color: #000080">&lt;input</span> <span style="color: #008080">type=</span><span style="color: #bb8844">&quot;date&quot;</span> <span style="color: #008080">name=</span><span style="color: #bb8844">&quot;&quot;</span> <span style="color: #008080">id=</span><span style="color: #bb8844">&quot;float-date&quot;</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;text date full-icon&quot;</span> <span style="color: #008080">readonly=</span><span style="color: #bb8844">&quot;readonly&quot;</span> <span style="color: #008080">data-view=</span><span style="color: #bb8844">&quot;days&quot;</span> <span style="color: #000080">/&gt;</span>
+    <span style="color: #000080">&lt;span</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;label&quot;</span><span style="color: #000080">&gt;&lt;i</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;fa-regular fa-calendar&quot;</span><span style="color: #000080">&gt;&lt;span&gt;</span>일자선택<span style="color: #000080">&lt;/span&gt;&lt;/i&gt;&lt;/span&gt;</span>
+    <span style="color: #000080">&lt;label</span> <span style="color: #008080">for=</span><span style="color: #bb8844">&quot;float-date&quot;</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;top&quot;</span><span style="color: #000080">&gt;</span>Date Label<span style="color: #000080">&lt;/label&gt;</span>
+  <span style="color: #000080">&lt;/div&gt;</span>
+
+  <span style="color: #000080">&lt;p</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;title&quot;</span><span style="color: #000080">&gt;</span>Month<span style="color: #000080">&lt;/p&gt;</span>
+  <span style="color: #000080">&lt;div</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;input-group full floating&quot;</span><span style="color: #000080">&gt;</span>
+    <span style="color: #000080">&lt;input</span> <span style="color: #008080">type=</span><span style="color: #bb8844">&quot;month&quot;</span> <span style="color: #008080">name=</span><span style="color: #bb8844">&quot;&quot;</span> <span style="color: #008080">id=</span><span style="color: #bb8844">&quot;float-month&quot;</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;text date full-icon&quot;</span> <span style="color: #008080">readonly=</span><span style="color: #bb8844">&quot;readonly&quot;</span> <span style="color: #008080">data-min-view=</span><span style="color: #bb8844">&quot;months&quot;</span> <span style="color: #008080">data-view=</span><span style="color: #bb8844">&quot;months&quot;</span> <span style="color: #008080">data-date-format=</span><span style="color: #bb8844">&quot;yyyy-mm&quot;</span> <span style="color: #000080">/&gt;</span>
+    <span style="color: #000080">&lt;a</span> <span style="color: #008080">href=</span><span style="color: #bb8844">&quot;#&quot;</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;btn regular dark-purple icon&quot;</span><span style="color: #000080">&gt;&lt;i</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;fa-regular fa-calendar&quot;</span><span style="color: #000080">&gt;&lt;span&gt;</span>월 선택<span style="color: #000080">&lt;/span&gt;&lt;/i&gt;&lt;/a&gt;</span>
+    <span style="color: #000080">&lt;label</span> <span style="color: #008080">for=</span><span style="color: #bb8844">&quot;float-month&quot;</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;top&quot;</span><span style="color: #000080">&gt;</span>Month Label<span style="color: #000080">&lt;/label&gt;</span>
+  <span style="color: #000080">&lt;/div&gt;</span>
+
+  <span style="color: #000080">&lt;/div&gt;</span>
+<span style="color: #000080">&lt;/div&gt;</span>
 </pre></div>
                 </li>
               </ul>
@@ -298,9 +379,10 @@
           </section>
         </section>
 
-        <section class="container type-1">
+        <section class="container type-2">
           <section>
-            <h3>폼 테이블</h3>
+            <h3>Input with Button</h3>
+            <p>Wrap a pair of <span class="code">&lt;div class="input-group"&gt;</span> element in <span class="code">&lt;a&gt;</span>, <span class="code">&lt;button&gt;</span>, or <span class="code">&lt;input&gt;</span>.</p>
 
             <div class="tabview border">
               <ul class="tab">
@@ -309,228 +391,454 @@
               </ul>
               <ul class="tab-content">
                 <li>
-                  <div class="form-box type-2">
-                    <div>
-
+                  <div class="form-box">
+                    <p class="title">label &amp; input</p>
+                    <div class="input-group">
+                      <label for="sample-id"><i class="fa-solid fa-user"><span>아이디</span></i></label>
+                      <input type="text" name="user_id" id="sample-id" class="text" />
+                    </div>
+                    
+                    <p class="title">label &amp; input</p>
+                    <div class="input-group">
+                      <label for="sample-id2">아이디</label>
+                      <input type="text" name="user_id2" id="sample-id2" class="text" />
+                    </div>
+                    
+                    <div class="input-group">
+                      <input type="text" name="sample_currency" id="sample-currency" class="text" />
+                      <span class="label">달러</span>
                     </div>
 
-                    <div>
+                    <p class="title">input &amp; a</p>
+                    <div class="input-group">
+                      <input type="text" name="sample_keyword" id="sample-keyword" class="text" />
+                      <a href="#" class="btn regular sub1 icon"><i class="fa-solid fa-search"><span>검색</span></i></a>
                     </div>
-                  </div>
-                </li>
-                <li>
-<div class="code-box custom-scroll">
-<pre>
-</pre></div>
-                </li>
-              </ul>
-            </div>
-
-          </section>
-        </section>
-
-        <section class="container type-1">
-          <section>
-            <h3>폼 테이블</h3>
-
-            <div class="tabview border">
-              <ul class="tab">
-                <li><a href="#">Preview</a></li>
-                <li><a href="#">Code</a></li>
-              </ul>
-              <ul class="tab-content">
-                <li>
-                  <div class="form-box type-2">
-                    <div>
-
+                    
+                    <p class="title">input &amp; button</p>
+                    <div class="input-group">
+                      <input type="text" name="check" id="sample-check" class="text" />
+                      <button href="#" class="btn regular main">중복확인</button>
                     </div>
-                    <div></div>
-                  </div>
-                </li>
-                <li>
-<div class="code-box custom-scroll">
-<pre>
-</pre></div>
-                </li>
-              </ul>
-            </div>
-
-          </section>
-        </section>
-
-
-        <section class="container type-1">
-          <section>
-            <h3>폼 테이블</h3>
-
-            <div class="tabview border">
-              <ul class="tab">
-                <li><a href="#">Preview</a></li>
-                <li><a href="#">Code</a></li>
-              </ul>
-              <ul class="tab-content">
-                <li>
-                  <div class="form-box type-2">
-                    <div>
-                      
-                      <div class="input-group">
-                        <label for="user-id"><i class="fa-solid fa-user"><span>아이디</span></i></label>
-                        <input type="text" name="user_id" id="user-id" class="text" />
-                      </div>
-                      
-                      <div class="input-group">
-                        <label for="user-id">아이디</label>
-                        <input type="text" name="user_id" id="user-id" class="text" />
-                      </div>
-                      
-                      <div class="input-group">
-                        <input type="text" name="user_id" id="user-id" class="text" />
-                        <a href="#" class="btn regular blue icon"><i class="fa-solid fa-search"><span>검색</span></i></a>
-                      </div>
-                      
-                      <div class="input-group">
-                        <input type="text" name="user_id" id="user-id" class="text" />
-                        <a href="#" class="btn regular blue">중복확인</a>
-                      </div>
-                      
-                      <div class="input-group">
-                        <label for="">통합검색</label>
-                        <select name="" id="">
-                          <option value="">-검색구분-</option>
-                          <option value="">제목</option>
-                          <option value="">내용</option>
-                          <option value="">제목+내용</option>
-                        </select>
-                        <input type="text" name="user_id" id="user-id" class="text" />
-                        <a href="#" class="btn regular blue">검색</a>
-                      </div>
-                      
-                      <div class="input-group">
-                        <input type="text" name="user_id" id="user-id" class="text" />
-                        <span class="label">달러</span>
-                      </div>
-                      
-                      <div class="input-group">
-                        <label for=""><i class="fa-regular fa-clock"><span>예약시간</span></i></label>
-                        <input type="text" name="" id="" class="text" />
-                        <a href="#" class="btn regular blue icon"><i class="fa-regular fa-calendar"><span>검색</span></i></a>
-                        <select name="" id="">
-                          <option value="00">00</option>
-                          <option value="00">00</option>
-                          <option value="00">00</option>
-                          <option value="00">00</option>
-                          <option value="00">00</option>
-                        </select>
-                        <span class="label">시</span>
-                        <select name="" id="">
-                          <option value="00">00</option>
-                          <option value="00">00</option>
-                          <option value="00">00</option>
-                          <option value="00">00</option>
-                          <option value="00">00</option>
-                        </select>
-                        <span class="label">분</span>
-                      </div>
-                      
-                      <div class="input-group">
-                        <input type="text" name="user_id" id="user-id" class="text" />
-                        <a href="#" class="btn regular blue icon"><i class="fa-solid fa-search"><span>검색</span></i></a>
-                      </div>
-                      
-                      <div class="input-group">
-                        <input type="text" name="user_id" id="user-id" class="text" />
-                        <a href="#" class="btn regular blue">중복확인</a>
-                      </div>
-                      
-                      <div class="input-group">
-                        <label for="">통합검색</label>
-                        <select name="" id="">
-                          <option value="">-검색구분-</option>
-                          <option value="">제목</option>
-                          <option value="">내용</option>
-                          <option value="">제목+내용</option>
-                        </select>
-                        <input type="text" name="user_id" id="user-id" class="text" />
-                        <a href="#" class="btn regular blue">검색</a>
-                      </div>
-                      
-                      <div class="input-group">
-                        <input type="text" name="user_id" id="user-id" class="text" />
-                        <span class="label">달러</span>
-                      </div>
-                      
-                      <div class="input-group">
-                        <label for=""><i class="fa-regular fa-clock"><span>예약시간</span></i></label>
-                        <input type="text" name="" id="" class="text" />
-                        <a href="#" class="btn regular blue icon"><i class="fa-regular fa-calendar"><span>검색</span></i></a>
-                        <select name="" id="">
-                          <option value="00">00</option>
-                          <option value="00">00</option>
-                          <option value="00">00</option>
-                          <option value="00">00</option>
-                          <option value="00">00</option>
-                        </select>
-                        <span class="label">시</span>
-                        <select name="" id="">
-                          <option value="00">00</option>
-                          <option value="00">00</option>
-                          <option value="00">00</option>
-                          <option value="00">00</option>
-                          <option value="00">00</option>
-                        </select>
-                        <span class="label">분</span>
-                      </div>
-                      
-                      <ul class="input-list">
-                        <li><input type="radio" name="user_type" id="user-type-1" value="user-1" /><label for="user-type-1">회원구분1</label></li>
-                        <li><input type="radio" name="user_type" id="user-type-2" value="user-2" /><label for="user-type-2">회원구분2</label></li>
-                        <li><input type="radio" name="user_type" id="user-type-3" value="user-3" checked="checked" /><label for="user-type-3">회원구분3</label></li>
-                        <li><input type="radio" name="user_type" id="user-type-4" value="user-4" /><label for="user-type-4">회원구분4</label></li>
-                        <li><input type="radio" name="user_type" id="user-type-5" value="user-5" /><label for="user-type-5">회원구분5</label></li>
-                        <li><input type="radio" name="user_type" id="user-type-6" value="user-6" /><label for="user-type-6">회원구분6</label></li>
-                        <li><input type="radio" name="user_type" id="user-type-7" value="user-7" /><label for="user-type-7">회원구분7</label></li>
-                        <li><input type="radio" name="user_type" id="user-type-8" value="user-8" /><label for="user-type-8">회원구분8</label></li>
-                        <li><input type="radio" name="user_type" id="user-type-9" value="user-9" /><label for="user-type-9">회원구분9</label></li>
-                        <li><input type="radio" name="user_type" id="user-type-10" value="user-10" /><label for="user-type-10">회원구분10</label></li>
-                        <li><input type="radio" name="user_type" id="user-type-11" value="user-11" /><label for="user-type-11">회원구분11</label></li>
-                        <li><input type="radio" name="user_type" id="user-type-12" value="user-12" /><label for="user-type-12">회원구분12</label></li>
-                        <li><input type="radio" name="user_type" id="user-type-13" value="user-13" /><label for="user-type-13">회원구분13</label></li>
-                        <li><input type="radio" name="user_type" id="user-type-14" value="user-14" /><label for="user-type-14">회원구분14</label></li>
-                        <li><input type="radio" name="user_type" id="user-type-15" value="user-15" /><label for="user-type-15">회원구분15</label></li>
-                        <li><input type="radio" name="user_type" id="user-type-16" value="user-16" /><label for="user-type-16">회원구분16</label></li>
-                        <li><input type="radio" name="user_type" id="user-type-17" value="user-17" /><label for="user-type-17">회원구분17</label></li>
-                        <li><input type="radio" name="user_type" id="user-type-18" value="user-18" /><label for="user-type-18">회원구분18</label></li>
-                        <li><input type="radio" name="user_type" id="user-type-19" value="user-19" /><label for="user-type-19">회원구분19</label></li>
-                      </ul>
-                      
-                      <ul class="input-list">
-                        <li><input type="checkbox" name="interest[]" id="interest-1" value="int-1" /><label for="interest-1">관심분야1</label></li>
-                        <li><input type="checkbox" name="interest[]" id="interest-2" value="int-2" /><label for="interest-2">관심분야2</label></li>
-                        <li><input type="checkbox" name="interest[]" id="interest-3" value="int-3" checked="checked" /><label for="interest-3">관심분야3</label></li>
-                        <li><input type="checkbox" name="interest[]" id="interest-4" value="int-4" /><label for="interest-4">관심분야4</label></li>
-                      </ul>
-                      
+                    
+                    <p class="title">Search example</p>
+                    <div class="input-group">
+                      <label for="sample-category">통합검색</label>
+                      <select name="" id="sample-category">
+                        <option value="">-검색구분-</option>
+                        <option value="">제목</option>
+                        <option value="">내용</option>
+                        <option value="">제목+내용</option>
+                      </select>
                       <input type="text" name="" id="" class="text" />
-                      <ul class="input-list">
-                        <li><input type="radio" name="unit" id="unit-1" value="won" /><label for="unit-1">원</label></li>
-                        <li><input type="radio" name="unit" id="unit-2" value="dollar" /><label for="unit-2">달러</label></li>
-                        <li><input type="radio" name="unit" id="unit-3" value="euro" /><label for="unit-3">유로</label></li>
-                        <li><input type="radio" name="unit" id="unit-4" value="yen" /><label for="unit-4">엔</label></li>
-                      </ul>
-
+                      <a href="#" class="btn regular light-orange">검색</a>
                     </div>
-                    <div></div>
+                    
+                    <p class="title">Date example</p>
+                    <div class="input-group">
+                      <label for=""><i class="fa-regular fa-clock"><span>예약시간</span></i></label>
+                      <input type="date" name="" id="sample-date" class="text date" readonly="readonly" data-view="days" />
+                      <a href="#" class="btn regular dark-green icon"><i class="fa-regular fa-calendar"><span>검색</span></i></a>
+                      <select name="" id="sample-hour">
+                        <option value="00">01</option>
+                        <option value="00">02</option>
+                        <option value="00">03</option>
+                        <option value="00">04</option>
+                        <option value="00">05</option>
+                      </select>
+                      <span class="label">시</span>
+                      <select name="" id="sample-minute">
+                        <option value="00">00</option>
+                        <option value="00">10</option>
+                        <option value="00">20</option>
+                        <option value="00">30</option>
+                        <option value="00">40</option>
+                      </select>
+                      <span class="label">분</span>
+                    </div>
                   </div>
                 </li>
                 <li>
 <div class="code-box custom-scroll">
 <pre>
+<span style="color: #000080">&lt;div</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;form-box&quot;</span><span style="color: #000080">&gt;</span>
+  <span style="color: #000080">&lt;p</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;title&quot;</span><span style="color: #000080">&gt;</span>label <span style="color: #800080">&amp;amp;</span> input<span style="color: #000080">&lt;/p&gt;</span>
+  <span style="color: #000080">&lt;div</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;input-group&quot;</span><span style="color: #000080">&gt;</span>
+    <span style="color: #000080">&lt;label</span> <span style="color: #008080">for=</span><span style="color: #bb8844">&quot;sample-id&quot;</span><span style="color: #000080">&gt;&lt;i</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;fa-solid fa-user&quot;</span><span style="color: #000080">&gt;&lt;span&gt;</span>아이디<span style="color: #000080">&lt;/span&gt;&lt;/i&gt;&lt;/label&gt;</span>
+    <span style="color: #000080">&lt;input</span> <span style="color: #008080">type=</span><span style="color: #bb8844">&quot;text&quot;</span> <span style="color: #008080">name=</span><span style="color: #bb8844">&quot;user_id&quot;</span> <span style="color: #008080">id=</span><span style="color: #bb8844">&quot;sample-id&quot;</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;text&quot;</span> <span style="color: #000080">/&gt;</span>
+  <span style="color: #000080">&lt;/div&gt;</span>
+  
+  <span style="color: #000080">&lt;p</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;title&quot;</span><span style="color: #000080">&gt;</span>label <span style="color: #800080">&amp;amp;</span> input<span style="color: #000080">&lt;/p&gt;</span>
+  <span style="color: #000080">&lt;div</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;input-group&quot;</span><span style="color: #000080">&gt;</span>
+    <span style="color: #000080">&lt;label</span> <span style="color: #008080">for=</span><span style="color: #bb8844">&quot;sample-id2&quot;</span><span style="color: #000080">&gt;</span>아이디<span style="color: #000080">&lt;/label&gt;</span>
+    <span style="color: #000080">&lt;input</span> <span style="color: #008080">type=</span><span style="color: #bb8844">&quot;text&quot;</span> <span style="color: #008080">name=</span><span style="color: #bb8844">&quot;user_id2&quot;</span> <span style="color: #008080">id=</span><span style="color: #bb8844">&quot;sample-id2&quot;</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;text&quot;</span> <span style="color: #000080">/&gt;</span>
+  <span style="color: #000080">&lt;/div&gt;</span>
+  
+  <span style="color: #000080">&lt;div</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;input-group&quot;</span><span style="color: #000080">&gt;</span>
+    <span style="color: #000080">&lt;input</span> <span style="color: #008080">type=</span><span style="color: #bb8844">&quot;text&quot;</span> <span style="color: #008080">name=</span><span style="color: #bb8844">&quot;sample_currency&quot;</span> <span style="color: #008080">id=</span><span style="color: #bb8844">&quot;sample-currency&quot;</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;text&quot;</span> <span style="color: #000080">/&gt;</span>
+    <span style="color: #000080">&lt;span</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;label&quot;</span><span style="color: #000080">&gt;</span>달러<span style="color: #000080">&lt;/span&gt;</span>
+  <span style="color: #000080">&lt;/div&gt;</span>
+
+  <span style="color: #000080">&lt;p</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;title&quot;</span><span style="color: #000080">&gt;</span>input <span style="color: #800080">&amp;amp;</span> a<span style="color: #000080">&lt;/p&gt;</span>
+  <span style="color: #000080">&lt;div</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;input-group&quot;</span><span style="color: #000080">&gt;</span>
+    <span style="color: #000080">&lt;input</span> <span style="color: #008080">type=</span><span style="color: #bb8844">&quot;text&quot;</span> <span style="color: #008080">name=</span><span style="color: #bb8844">&quot;sample_keyword&quot;</span> <span style="color: #008080">id=</span><span style="color: #bb8844">&quot;sample-keyword&quot;</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;text&quot;</span> <span style="color: #000080">/&gt;</span>
+    <span style="color: #000080">&lt;a</span> <span style="color: #008080">href=</span><span style="color: #bb8844">&quot;#&quot;</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;btn regular sub1 icon&quot;</span><span style="color: #000080">&gt;&lt;i</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;fa-solid fa-search&quot;</span><span style="color: #000080">&gt;&lt;span&gt;</span>검색<span style="color: #000080">&lt;/span&gt;&lt;/i&gt;&lt;/a&gt;</span>
+  <span style="color: #000080">&lt;/div&gt;</span>
+  
+  <span style="color: #000080">&lt;p</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;title&quot;</span><span style="color: #000080">&gt;</span>input <span style="color: #800080">&amp;amp;</span> button<span style="color: #000080">&lt;/p&gt;</span>
+  <span style="color: #000080">&lt;div</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;input-group&quot;</span><span style="color: #000080">&gt;</span>
+    <span style="color: #000080">&lt;input</span> <span style="color: #008080">type=</span><span style="color: #bb8844">&quot;text&quot;</span> <span style="color: #008080">name=</span><span style="color: #bb8844">&quot;check&quot;</span> <span style="color: #008080">id=</span><span style="color: #bb8844">&quot;sample-check&quot;</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;text&quot;</span> <span style="color: #000080">/&gt;</span>
+    <span style="color: #000080">&lt;button</span> <span style="color: #008080">href=</span><span style="color: #bb8844">&quot;#&quot;</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;btn regular main&quot;</span><span style="color: #000080">&gt;</span>중복확인<span style="color: #000080">&lt;/button&gt;</span>
+  <span style="color: #000080">&lt;/div&gt;</span>
+  
+  <span style="color: #000080">&lt;p</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;title&quot;</span><span style="color: #000080">&gt;</span>Search example<span style="color: #000080">&lt;/p&gt;</span>
+  <span style="color: #000080">&lt;div</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;input-group&quot;</span><span style="color: #000080">&gt;</span>
+    <span style="color: #000080">&lt;label</span> <span style="color: #008080">for=</span><span style="color: #bb8844">&quot;sample-category&quot;</span><span style="color: #000080">&gt;</span>통합검색<span style="color: #000080">&lt;/label&gt;</span>
+    <span style="color: #000080">&lt;select</span> <span style="color: #008080">name=</span><span style="color: #bb8844">&quot;&quot;</span> <span style="color: #008080">id=</span><span style="color: #bb8844">&quot;sample-category&quot;</span><span style="color: #000080">&gt;</span>
+      <span style="color: #000080">&lt;option</span> <span style="color: #008080">value=</span><span style="color: #bb8844">&quot;&quot;</span><span style="color: #000080">&gt;</span>-검색구분-<span style="color: #000080">&lt;/option&gt;</span>
+      <span style="color: #000080">&lt;option</span> <span style="color: #008080">value=</span><span style="color: #bb8844">&quot;&quot;</span><span style="color: #000080">&gt;</span>제목<span style="color: #000080">&lt;/option&gt;</span>
+      <span style="color: #000080">&lt;option</span> <span style="color: #008080">value=</span><span style="color: #bb8844">&quot;&quot;</span><span style="color: #000080">&gt;</span>내용<span style="color: #000080">&lt;/option&gt;</span>
+      <span style="color: #000080">&lt;option</span> <span style="color: #008080">value=</span><span style="color: #bb8844">&quot;&quot;</span><span style="color: #000080">&gt;</span>제목+내용<span style="color: #000080">&lt;/option&gt;</span>
+    <span style="color: #000080">&lt;/select&gt;</span>
+    <span style="color: #000080">&lt;input</span> <span style="color: #008080">type=</span><span style="color: #bb8844">&quot;text&quot;</span> <span style="color: #008080">name=</span><span style="color: #bb8844">&quot;&quot;</span> <span style="color: #008080">id=</span><span style="color: #bb8844">&quot;&quot;</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;text&quot;</span> <span style="color: #000080">/&gt;</span>
+    <span style="color: #000080">&lt;a</span> <span style="color: #008080">href=</span><span style="color: #bb8844">&quot;#&quot;</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;btn regular light-orange&quot;</span><span style="color: #000080">&gt;</span>검색<span style="color: #000080">&lt;/a&gt;</span>
+  <span style="color: #000080">&lt;/div&gt;</span>
+  
+  <span style="color: #000080">&lt;p</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;title&quot;</span><span style="color: #000080">&gt;</span>Date example<span style="color: #000080">&lt;/p&gt;</span>
+  <span style="color: #000080">&lt;div</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;input-group&quot;</span><span style="color: #000080">&gt;</span>
+    <span style="color: #000080">&lt;label</span> <span style="color: #008080">for=</span><span style="color: #bb8844">&quot;&quot;</span><span style="color: #000080">&gt;&lt;i</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;fa-regular fa-clock&quot;</span><span style="color: #000080">&gt;&lt;span&gt;</span>예약시간<span style="color: #000080">&lt;/span&gt;&lt;/i&gt;&lt;/label&gt;</span>
+    <span style="color: #000080">&lt;input</span> <span style="color: #008080">type=</span><span style="color: #bb8844">&quot;date&quot;</span> <span style="color: #008080">name=</span><span style="color: #bb8844">&quot;&quot;</span> <span style="color: #008080">id=</span><span style="color: #bb8844">&quot;sample-date&quot;</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;text date&quot;</span> <span style="color: #008080">readonly=</span><span style="color: #bb8844">&quot;readonly&quot;</span> <span style="color: #008080">data-view=</span><span style="color: #bb8844">&quot;days&quot;</span> <span style="color: #000080">/&gt;</span>
+    <span style="color: #000080">&lt;a</span> <span style="color: #008080">href=</span><span style="color: #bb8844">&quot;#&quot;</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;btn regular dark-green icon&quot;</span><span style="color: #000080">&gt;&lt;i</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;fa-regular fa-calendar&quot;</span><span style="color: #000080">&gt;&lt;span&gt;</span>검색<span style="color: #000080">&lt;/span&gt;&lt;/i&gt;&lt;/a&gt;</span>
+    <span style="color: #000080">&lt;select</span> <span style="color: #008080">name=</span><span style="color: #bb8844">&quot;&quot;</span> <span style="color: #008080">id=</span><span style="color: #bb8844">&quot;sample-hour&quot;</span><span style="color: #000080">&gt;</span>
+      <span style="color: #000080">&lt;option</span> <span style="color: #008080">value=</span><span style="color: #bb8844">&quot;00&quot;</span><span style="color: #000080">&gt;</span>01<span style="color: #000080">&lt;/option&gt;</span>
+      <span style="color: #000080">&lt;option</span> <span style="color: #008080">value=</span><span style="color: #bb8844">&quot;00&quot;</span><span style="color: #000080">&gt;</span>02<span style="color: #000080">&lt;/option&gt;</span>
+      <span style="color: #000080">&lt;option</span> <span style="color: #008080">value=</span><span style="color: #bb8844">&quot;00&quot;</span><span style="color: #000080">&gt;</span>03<span style="color: #000080">&lt;/option&gt;</span>
+      <span style="color: #000080">&lt;option</span> <span style="color: #008080">value=</span><span style="color: #bb8844">&quot;00&quot;</span><span style="color: #000080">&gt;</span>04<span style="color: #000080">&lt;/option&gt;</span>
+      <span style="color: #000080">&lt;option</span> <span style="color: #008080">value=</span><span style="color: #bb8844">&quot;00&quot;</span><span style="color: #000080">&gt;</span>05<span style="color: #000080">&lt;/option&gt;</span>
+    <span style="color: #000080">&lt;/select&gt;</span>
+    <span style="color: #000080">&lt;span</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;label&quot;</span><span style="color: #000080">&gt;</span>시<span style="color: #000080">&lt;/span&gt;</span>
+    <span style="color: #000080">&lt;select</span> <span style="color: #008080">name=</span><span style="color: #bb8844">&quot;&quot;</span> <span style="color: #008080">id=</span><span style="color: #bb8844">&quot;sample-minute&quot;</span><span style="color: #000080">&gt;</span>
+      <span style="color: #000080">&lt;option</span> <span style="color: #008080">value=</span><span style="color: #bb8844">&quot;00&quot;</span><span style="color: #000080">&gt;</span>00<span style="color: #000080">&lt;/option&gt;</span>
+      <span style="color: #000080">&lt;option</span> <span style="color: #008080">value=</span><span style="color: #bb8844">&quot;00&quot;</span><span style="color: #000080">&gt;</span>10<span style="color: #000080">&lt;/option&gt;</span>
+      <span style="color: #000080">&lt;option</span> <span style="color: #008080">value=</span><span style="color: #bb8844">&quot;00&quot;</span><span style="color: #000080">&gt;</span>20<span style="color: #000080">&lt;/option&gt;</span>
+      <span style="color: #000080">&lt;option</span> <span style="color: #008080">value=</span><span style="color: #bb8844">&quot;00&quot;</span><span style="color: #000080">&gt;</span>30<span style="color: #000080">&lt;/option&gt;</span>
+      <span style="color: #000080">&lt;option</span> <span style="color: #008080">value=</span><span style="color: #bb8844">&quot;00&quot;</span><span style="color: #000080">&gt;</span>40<span style="color: #000080">&lt;/option&gt;</span>
+    <span style="color: #000080">&lt;/select&gt;</span>
+    <span style="color: #000080">&lt;span</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;label&quot;</span><span style="color: #000080">&gt;</span>분<span style="color: #000080">&lt;/span&gt;</span>
+  <span style="color: #000080">&lt;/div&gt;</span>
+<span style="color: #000080">&lt;/div&gt;</span>
 </pre></div>
                 </li>
               </ul>
             </div>
-            
 
+          </section>
+
+          <section>
+            <h3>Switches</h3>
+            <p>A switch has the markup of a custom. uses <span class="code">&lt;a class="btn-toggle"&gt;</span> class to render a toggle switch. Switches also support the disabled class.</p>
+
+            <div class="tabview border">
+              <ul class="tab">
+                <li><a href="#">Preview</a></li>
+                <li><a href="#">Code</a></li>
+              </ul>
+              <ul class="tab-content">
+                <li>
+                  <p class="title">Toggle this switch element</p>
+                  <a href="#" class="btn-toggle">
+                    <label for="">toggle</label>
+                    <input type="hidden" name="" id="" data-left="N" data-right="Y" value="N" />
+                  </a>
+                  <p class="title">Disabled switch element</p>
+                  <a href="#" class="btn-toggle disabled">
+                    <label for="">Disabled toggle</label>
+                    <input type="hidden" name="" id="" data-left="OFF" data-right="ON" value="OFF" />
+                  </a>
+                </li>
+                <li>
+<div class="code-box custom-scroll">
+<pre>
+<span style="color: #000080">&lt;a</span> <span style="color: #008080">href=</span><span style="color: #bb8844">&quot;#&quot;</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;btn-toggle&quot;</span><span style="color: #000080">&gt;</span>
+  <span style="color: #000080">&lt;label</span> <span style="color: #008080">for=</span><span style="color: #bb8844">&quot;&quot;</span><span style="color: #000080">&gt;</span>toggle<span style="color: #000080">&lt;/label&gt;</span>
+  <span style="color: #000080">&lt;input</span> <span style="color: #008080">type=</span><span style="color: #bb8844">&quot;hidden&quot;</span> <span style="color: #008080">name=</span><span style="color: #bb8844">&quot;&quot;</span> <span style="color: #008080">id=</span><span style="color: #bb8844">&quot;&quot;</span> <span style="color: #008080">data-left=</span><span style="color: #bb8844">&quot;N&quot;</span> <span style="color: #008080">data-right=</span><span style="color: #bb8844">&quot;Y&quot;</span> <span style="color: #008080">value=</span><span style="color: #bb8844">&quot;N&quot;</span> <span style="color: #000080">/&gt;</span>
+<span style="color: #000080">&lt;/a&gt;</span>
+<span style="color: #000080">&lt;a</span> <span style="color: #008080">href=</span><span style="color: #bb8844">&quot;#&quot;</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;btn-toggle disabled&quot;</span><span style="color: #000080">&gt;</span>
+  <span style="color: #000080">&lt;label</span> <span style="color: #008080">for=</span><span style="color: #bb8844">&quot;&quot;</span><span style="color: #000080">&gt;</span>Disabled toggle<span style="color: #000080">&lt;/label&gt;</span>
+  <span style="color: #000080">&lt;input</span> <span style="color: #008080">type=</span><span style="color: #bb8844">&quot;hidden&quot;</span> <span style="color: #008080">name=</span><span style="color: #bb8844">&quot;&quot;</span> <span style="color: #008080">id=</span><span style="color: #bb8844">&quot;&quot;</span> <span style="color: #008080">data-left=</span><span style="color: #bb8844">&quot;OFF&quot;</span> <span style="color: #008080">data-right=</span><span style="color: #bb8844">&quot;ON&quot;</span> <span style="color: #008080">value=</span><span style="color: #bb8844">&quot;OFF&quot;</span> <span style="color: #000080">/&gt;</span>
+<span style="color: #000080">&lt;/a&gt;</span>
+</pre></div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+
+        <section class="container type-2">
+          <section>
+            <h3>Radios</h3>
+            <p>Each checkbox and radio <span class="code">&lt;input&gt;</span> and <span class="code">&lt;label&gt;</span> pairing is wrapped in a <span class="code">&lt;div&gt;</span> to create our custom control. Structurally, this is the same approach as our default .form-check.</p>
+
+            <div class="tabview border">
+              <ul class="tab">
+                <li><a href="#">Preview</a></li>
+                <li><a href="#">Code</a></li>
+              </ul>
+              <ul class="tab-content">
+                <li>
+                  <div class="form-box">
+                    <p class="title">default</p>
+                    <ul class="input-list">
+                      <li><input type="radio" name="sample_radio" id="sample-radio-1" value="sample-radio-1" /><label for="sample-radio-type-1">구분1</label></li>
+                      <li><input type="radio" name="sample_radio" id="sample-radio-2" value="sample-radio-2" /><label for="sample-radio-type-2">구분2</label></li>
+                      <li><input type="radio" name="sample_radio" id="sample-radio-3" value="sample-radio-3" checked="checked" /><label for="sample-radio-type-3">구분3</label></li>
+                      <li><input type="radio" name="sample_radio" id="sample-radio-4" value="sample-radio-4" /><label for="sample-radio-type-4">구분4</label></li>
+                    </ul>
+
+                    <p class="title">inline</p>
+                    <ul class="input-list inline">
+                      <li><input type="radio" name="sample_radio2" id="sample-radio2-1" value="1" /><label for="sample-radio2-1">구분1</label></li>
+                      <li><input type="radio" name="sample_radio2" id="sample-radio2-2" value="2" /><label for="sample-radio2-2">구분2</label></li>
+                      <li><input type="radio" name="sample_radio2" id="sample-radio2-3" value="3" checked="checked" /><label for="sample-radio2-3">구분3</label></li>
+                      <li><input type="radio" name="sample_radio2" id="sample-radio2-4" value="4" /><label for="sample-radio2-4">구분4</label></li>
+                      <li><input type="radio" name="sample_radio2" id="sample-radio2-5" value="5" /><label for="sample-radio2-5">구분5</label></li>
+                      <li><input type="radio" name="sample_radio2" id="sample-radio2-6" value="6" /><label for="sample-radio2-6">구분6</label></li>
+                      <li><input type="radio" name="sample_radio2" id="sample-radio2-7" value="7" /><label for="sample-radio2-7">구분7</label></li>
+                      <li><input type="radio" name="sample_radio2" id="sample-radio2-8" value="8" /><label for="sample-radio2-8">구분8</label></li>
+                      <li><input type="radio" name="sample_radio2" id="sample-radio2-9" value="9" /><label for="sample-radio2-9">구분9</label></li>
+                      <li><input type="radio" name="sample_radio2" id="sample-radio2-10" value="10" /><label for="sample-radio2-10">구분10</label></li>
+                      <li><input type="radio" name="sample_radio2" id="sample-radio2-11" value="11" /><label for="sample-radio2-11">구분11</label></li>
+                      <li><input type="radio" name="sample_radio2" id="sample-radio2-12" value="12" /><label for="sample-radio2-12">구분12</label></li>
+                      <li><input type="radio" name="sample_radio2" id="sample-radio2-13" value="13" /><label for="sample-radio2-13">구분13</label></li>
+                      <li><input type="radio" name="sample_radio2" id="sample-radio2-14" value="14" /><label for="sample-radio2-14">구분14</label></li>
+                      <li><input type="radio" name="sample_radio2" id="sample-radio2-15" value="15" /><label for="sample-radio2-15">구분15</label></li>
+                    </ul>
+                    
+                    <p class="title">Disabled</p>
+                    <ul class="input-list">
+                      <li><input type="radio" name="sample_radio3" id="sample-radio3-1" value="sample-checkbo3-1" disabled="disabled" /><label for="sample-radio3-type-1">구분1</label></li>
+                      <li><input type="radio" name="sample_radio3" id="sample-radio3-2" value="sample-radio3-2" disabled="disabled" checked="checked" /><label for="sample-radio3-type-2">구분2</label></li>
+                    </ul>
+                    
+                    <p class="title">Colors</p>
+                    <ul class="input-list inline">
+                      <li><input type="radio" name="sample_radio4" id="sample-radio4-1" value="light-red" class="light-red" /><label for="sample-radio4-1">light red</label></li>
+                      <li><input type="radio" name="sample_radio4" id="sample-radio4-2" value="red" class="red" /><label for="sample-radio4-2">red</label></li>
+                      <li><input type="radio" name="sample_radio4" id="sample-radio4-3" value="dark-red" checked="checked" class="dark-red" /><label for="sample-radio4-3">dark red</label></li>
+                      <li><input type="radio" name="sample_radio4" id="sample-radio4-4" value="light-pink" class="light-pink" /><label for="sample-radio4-4">light pink</label></li>
+                      <li><input type="radio" name="sample_radio4" id="sample-radio4-5" value="pink" class="pink" /><label for="sample-radio4-5">pink</label></li>
+                      <li><input type="radio" name="sample_radio4" id="sample-radio4-6" value="sand" class="sand" /><label for="sample-radio4-6">sand</label></li>
+                      <li><input type="radio" name="sample_radio4" id="sample-radio4-7" value="yellow" class="yellow" /><label for="sample-radio4-7">yellow</label></li>
+                      <li><input type="radio" name="sample_radio4" id="sample-radio4-8" value="light-orange" class="light-orange" /><label for="sample-radio4-8">light orange</label></li>
+                      <li><input type="radio" name="sample_radio4" id="sample-radio4-9" value="orange" class="orange" /><label for="sample-radio4-9">orange</label></li>
+                      <li><input type="radio" name="sample_radio4" id="sample-radio4-10" value="light-green" class="light-green" /><label for="sample-radio4-10">light green</label></li>
+                      <li><input type="radio" name="sample_radio4" id="sample-radio4-11" value="green" class="green" /><label for="sample-radio4-11">green</label></li>
+                      <li><input type="radio" name="sample_radio4" id="sample-radio4-12" value="dark-green" class="dark-green" /><label for="sample-radio4-12">dark green</label></li>
+                      <li><input type="radio" name="sample_radio4" id="sample-radio4-13" value="light-purple" class="light-purple" /><label for="sample-radio4-13">light purple</label></li>
+                      <li><input type="radio" name="sample_radio4" id="sample-radio4-14" value="purple" class="purple" /><label for="sample-radio4-14">purple</label></li>
+                      <li><input type="radio" name="sample_radio4" id="sample-radio4-15" value="dark-purple" class="dark-purple" /><label for="sample-radio4-15">dark purple</label></li>
+                      <li><input type="radio" name="sample_radio4" id="sample-radio4-16" value="gray" class="gray" /><label for="sample-radio4-16">gray</label></li>
+                      <li><input type="radio" name="sample_radio4" id="sample-radio4-17" value="user-17" class="white" /><label for="sample-radio4-17">white</label></li>
+                      <li><input type="radio" name="sample_radio4" id="sample-radio4-18" value="black" class="black" /><label for="sample-radio4-18">black</label></li>
+                    </ul>
+                  </div>
+                </li>
+                <li>
+<div class="code-box custom-scroll">
+<pre>
+<span style="color: #000080">&lt;div</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;form-box&quot;</span><span style="color: #000080">&gt;</span>
+  <span style="color: #000080">&lt;p</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;title&quot;</span><span style="color: #000080">&gt;</span>default<span style="color: #000080">&lt;/p&gt;</span>
+  <span style="color: #000080">&lt;ul</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;input-list&quot;</span><span style="color: #000080">&gt;</span>
+    <span style="color: #000080">&lt;li&gt;&lt;input</span> <span style="color: #008080">type=</span><span style="color: #bb8844">&quot;radio&quot;</span> <span style="color: #008080">name=</span><span style="color: #bb8844">&quot;sample_radio&quot;</span> <span style="color: #008080">id=</span><span style="color: #bb8844">&quot;sample-radio-1&quot;</span> <span style="color: #008080">value=</span><span style="color: #bb8844">&quot;sample-radio-1&quot;</span> <span style="color: #000080">/&gt;&lt;label</span> <span style="color: #008080">for=</span><span style="color: #bb8844">&quot;sample-radio-type-1&quot;</span><span style="color: #000080">&gt;</span>구분1<span style="color: #000080">&lt;/label&gt;&lt;/li&gt;</span>
+    <span style="color: #000080">&lt;li&gt;&lt;input</span> <span style="color: #008080">type=</span><span style="color: #bb8844">&quot;radio&quot;</span> <span style="color: #008080">name=</span><span style="color: #bb8844">&quot;sample_radio&quot;</span> <span style="color: #008080">id=</span><span style="color: #bb8844">&quot;sample-radio-2&quot;</span> <span style="color: #008080">value=</span><span style="color: #bb8844">&quot;sample-radio-2&quot;</span> <span style="color: #000080">/&gt;&lt;label</span> <span style="color: #008080">for=</span><span style="color: #bb8844">&quot;sample-radio-type-2&quot;</span><span style="color: #000080">&gt;</span>구분2<span style="color: #000080">&lt;/label&gt;&lt;/li&gt;</span>
+    <span style="color: #000080">&lt;li&gt;&lt;input</span> <span style="color: #008080">type=</span><span style="color: #bb8844">&quot;radio&quot;</span> <span style="color: #008080">name=</span><span style="color: #bb8844">&quot;sample_radio&quot;</span> <span style="color: #008080">id=</span><span style="color: #bb8844">&quot;sample-radio-3&quot;</span> <span style="color: #008080">value=</span><span style="color: #bb8844">&quot;sample-radio-3&quot;</span> <span style="color: #008080">checked=</span><span style="color: #bb8844">&quot;checked&quot;</span> <span style="color: #000080">/&gt;&lt;label</span> <span style="color: #008080">for=</span><span style="color: #bb8844">&quot;sample-radio-type-3&quot;</span><span style="color: #000080">&gt;</span>구분3<span style="color: #000080">&lt;/label&gt;&lt;/li&gt;</span>
+    <span style="color: #000080">&lt;li&gt;&lt;input</span> <span style="color: #008080">type=</span><span style="color: #bb8844">&quot;radio&quot;</span> <span style="color: #008080">name=</span><span style="color: #bb8844">&quot;sample_radio&quot;</span> <span style="color: #008080">id=</span><span style="color: #bb8844">&quot;sample-radio-4&quot;</span> <span style="color: #008080">value=</span><span style="color: #bb8844">&quot;sample-radio-4&quot;</span> <span style="color: #000080">/&gt;&lt;label</span> <span style="color: #008080">for=</span><span style="color: #bb8844">&quot;sample-radio-type-4&quot;</span><span style="color: #000080">&gt;</span>구분4<span style="color: #000080">&lt;/label&gt;&lt;/li&gt;</span>
+  <span style="color: #000080">&lt;/ul&gt;</span>
+
+  <span style="color: #000080">&lt;p</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;title&quot;</span><span style="color: #000080">&gt;</span>inline<span style="color: #000080">&lt;/p&gt;</span>
+  <span style="color: #000080">&lt;ul</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;input-list inline&quot;</span><span style="color: #000080">&gt;</span>
+    <span style="color: #000080">&lt;li&gt;&lt;input</span> <span style="color: #008080">type=</span><span style="color: #bb8844">&quot;radio&quot;</span> <span style="color: #008080">name=</span><span style="color: #bb8844">&quot;sample_radio2&quot;</span> <span style="color: #008080">id=</span><span style="color: #bb8844">&quot;sample-radio2-1&quot;</span> <span style="color: #008080">value=</span><span style="color: #bb8844">&quot;1&quot;</span> <span style="color: #000080">/&gt;&lt;label</span> <span style="color: #008080">for=</span><span style="color: #bb8844">&quot;sample-radio2-1&quot;</span><span style="color: #000080">&gt;</span>구분1<span style="color: #000080">&lt;/label&gt;&lt;/li&gt;</span>
+    <span style="color: #000080">&lt;li&gt;&lt;input</span> <span style="color: #008080">type=</span><span style="color: #bb8844">&quot;radio&quot;</span> <span style="color: #008080">name=</span><span style="color: #bb8844">&quot;sample_radio2&quot;</span> <span style="color: #008080">id=</span><span style="color: #bb8844">&quot;sample-radio2-2&quot;</span> <span style="color: #008080">value=</span><span style="color: #bb8844">&quot;2&quot;</span> <span style="color: #000080">/&gt;&lt;label</span> <span style="color: #008080">for=</span><span style="color: #bb8844">&quot;sample-radio2-2&quot;</span><span style="color: #000080">&gt;</span>구분2<span style="color: #000080">&lt;/label&gt;&lt;/li&gt;</span>
+    <span style="color: #000080">&lt;li&gt;&lt;input</span> <span style="color: #008080">type=</span><span style="color: #bb8844">&quot;radio&quot;</span> <span style="color: #008080">name=</span><span style="color: #bb8844">&quot;sample_radio2&quot;</span> <span style="color: #008080">id=</span><span style="color: #bb8844">&quot;sample-radio2-3&quot;</span> <span style="color: #008080">value=</span><span style="color: #bb8844">&quot;3&quot;</span> <span style="color: #008080">checked=</span><span style="color: #bb8844">&quot;checked&quot;</span> <span style="color: #000080">/&gt;&lt;label</span> <span style="color: #008080">for=</span><span style="color: #bb8844">&quot;sample-radio2-3&quot;</span><span style="color: #000080">&gt;</span>구분3<span style="color: #000080">&lt;/label&gt;&lt;/li&gt;</span>
+    <span style="color: #000080">&lt;li&gt;&lt;input</span> <span style="color: #008080">type=</span><span style="color: #bb8844">&quot;radio&quot;</span> <span style="color: #008080">name=</span><span style="color: #bb8844">&quot;sample_radio2&quot;</span> <span style="color: #008080">id=</span><span style="color: #bb8844">&quot;sample-radio2-4&quot;</span> <span style="color: #008080">value=</span><span style="color: #bb8844">&quot;4&quot;</span> <span style="color: #000080">/&gt;&lt;label</span> <span style="color: #008080">for=</span><span style="color: #bb8844">&quot;sample-radio2-4&quot;</span><span style="color: #000080">&gt;</span>구분4<span style="color: #000080">&lt;/label&gt;&lt;/li&gt;</span>
+    <span style="color: #000080">&lt;li&gt;&lt;input</span> <span style="color: #008080">type=</span><span style="color: #bb8844">&quot;radio&quot;</span> <span style="color: #008080">name=</span><span style="color: #bb8844">&quot;sample_radio2&quot;</span> <span style="color: #008080">id=</span><span style="color: #bb8844">&quot;sample-radio2-5&quot;</span> <span style="color: #008080">value=</span><span style="color: #bb8844">&quot;5&quot;</span> <span style="color: #000080">/&gt;&lt;label</span> <span style="color: #008080">for=</span><span style="color: #bb8844">&quot;sample-radio2-5&quot;</span><span style="color: #000080">&gt;</span>구분5<span style="color: #000080">&lt;/label&gt;&lt;/li&gt;</span>
+    <span style="color: #000080">&lt;li&gt;&lt;input</span> <span style="color: #008080">type=</span><span style="color: #bb8844">&quot;radio&quot;</span> <span style="color: #008080">name=</span><span style="color: #bb8844">&quot;sample_radio2&quot;</span> <span style="color: #008080">id=</span><span style="color: #bb8844">&quot;sample-radio2-6&quot;</span> <span style="color: #008080">value=</span><span style="color: #bb8844">&quot;6&quot;</span> <span style="color: #000080">/&gt;&lt;label</span> <span style="color: #008080">for=</span><span style="color: #bb8844">&quot;sample-radio2-6&quot;</span><span style="color: #000080">&gt;</span>구분6<span style="color: #000080">&lt;/label&gt;&lt;/li&gt;</span>
+    <span style="color: #000080">&lt;li&gt;&lt;input</span> <span style="color: #008080">type=</span><span style="color: #bb8844">&quot;radio&quot;</span> <span style="color: #008080">name=</span><span style="color: #bb8844">&quot;sample_radio2&quot;</span> <span style="color: #008080">id=</span><span style="color: #bb8844">&quot;sample-radio2-7&quot;</span> <span style="color: #008080">value=</span><span style="color: #bb8844">&quot;7&quot;</span> <span style="color: #000080">/&gt;&lt;label</span> <span style="color: #008080">for=</span><span style="color: #bb8844">&quot;sample-radio2-7&quot;</span><span style="color: #000080">&gt;</span>구분7<span style="color: #000080">&lt;/label&gt;&lt;/li&gt;</span>
+    <span style="color: #000080">&lt;li&gt;&lt;input</span> <span style="color: #008080">type=</span><span style="color: #bb8844">&quot;radio&quot;</span> <span style="color: #008080">name=</span><span style="color: #bb8844">&quot;sample_radio2&quot;</span> <span style="color: #008080">id=</span><span style="color: #bb8844">&quot;sample-radio2-8&quot;</span> <span style="color: #008080">value=</span><span style="color: #bb8844">&quot;8&quot;</span> <span style="color: #000080">/&gt;&lt;label</span> <span style="color: #008080">for=</span><span style="color: #bb8844">&quot;sample-radio2-8&quot;</span><span style="color: #000080">&gt;</span>구분8<span style="color: #000080">&lt;/label&gt;&lt;/li&gt;</span>
+    <span style="color: #000080">&lt;li&gt;&lt;input</span> <span style="color: #008080">type=</span><span style="color: #bb8844">&quot;radio&quot;</span> <span style="color: #008080">name=</span><span style="color: #bb8844">&quot;sample_radio2&quot;</span> <span style="color: #008080">id=</span><span style="color: #bb8844">&quot;sample-radio2-9&quot;</span> <span style="color: #008080">value=</span><span style="color: #bb8844">&quot;9&quot;</span> <span style="color: #000080">/&gt;&lt;label</span> <span style="color: #008080">for=</span><span style="color: #bb8844">&quot;sample-radio2-9&quot;</span><span style="color: #000080">&gt;</span>구분9<span style="color: #000080">&lt;/label&gt;&lt;/li&gt;</span>
+    <span style="color: #000080">&lt;li&gt;&lt;input</span> <span style="color: #008080">type=</span><span style="color: #bb8844">&quot;radio&quot;</span> <span style="color: #008080">name=</span><span style="color: #bb8844">&quot;sample_radio2&quot;</span> <span style="color: #008080">id=</span><span style="color: #bb8844">&quot;sample-radio2-10&quot;</span> <span style="color: #008080">value=</span><span style="color: #bb8844">&quot;10&quot;</span> <span style="color: #000080">/&gt;&lt;label</span> <span style="color: #008080">for=</span><span style="color: #bb8844">&quot;sample-radio2-10&quot;</span><span style="color: #000080">&gt;</span>구분10<span style="color: #000080">&lt;/label&gt;&lt;/li&gt;</span>
+    <span style="color: #000080">&lt;li&gt;&lt;input</span> <span style="color: #008080">type=</span><span style="color: #bb8844">&quot;radio&quot;</span> <span style="color: #008080">name=</span><span style="color: #bb8844">&quot;sample_radio2&quot;</span> <span style="color: #008080">id=</span><span style="color: #bb8844">&quot;sample-radio2-11&quot;</span> <span style="color: #008080">value=</span><span style="color: #bb8844">&quot;11&quot;</span> <span style="color: #000080">/&gt;&lt;label</span> <span style="color: #008080">for=</span><span style="color: #bb8844">&quot;sample-radio2-11&quot;</span><span style="color: #000080">&gt;</span>구분11<span style="color: #000080">&lt;/label&gt;&lt;/li&gt;</span>
+    <span style="color: #000080">&lt;li&gt;&lt;input</span> <span style="color: #008080">type=</span><span style="color: #bb8844">&quot;radio&quot;</span> <span style="color: #008080">name=</span><span style="color: #bb8844">&quot;sample_radio2&quot;</span> <span style="color: #008080">id=</span><span style="color: #bb8844">&quot;sample-radio2-12&quot;</span> <span style="color: #008080">value=</span><span style="color: #bb8844">&quot;12&quot;</span> <span style="color: #000080">/&gt;&lt;label</span> <span style="color: #008080">for=</span><span style="color: #bb8844">&quot;sample-radio2-12&quot;</span><span style="color: #000080">&gt;</span>구분12<span style="color: #000080">&lt;/label&gt;&lt;/li&gt;</span>
+    <span style="color: #000080">&lt;li&gt;&lt;input</span> <span style="color: #008080">type=</span><span style="color: #bb8844">&quot;radio&quot;</span> <span style="color: #008080">name=</span><span style="color: #bb8844">&quot;sample_radio2&quot;</span> <span style="color: #008080">id=</span><span style="color: #bb8844">&quot;sample-radio2-13&quot;</span> <span style="color: #008080">value=</span><span style="color: #bb8844">&quot;13&quot;</span> <span style="color: #000080">/&gt;&lt;label</span> <span style="color: #008080">for=</span><span style="color: #bb8844">&quot;sample-radio2-13&quot;</span><span style="color: #000080">&gt;</span>구분13<span style="color: #000080">&lt;/label&gt;&lt;/li&gt;</span>
+    <span style="color: #000080">&lt;li&gt;&lt;input</span> <span style="color: #008080">type=</span><span style="color: #bb8844">&quot;radio&quot;</span> <span style="color: #008080">name=</span><span style="color: #bb8844">&quot;sample_radio2&quot;</span> <span style="color: #008080">id=</span><span style="color: #bb8844">&quot;sample-radio2-14&quot;</span> <span style="color: #008080">value=</span><span style="color: #bb8844">&quot;14&quot;</span> <span style="color: #000080">/&gt;&lt;label</span> <span style="color: #008080">for=</span><span style="color: #bb8844">&quot;sample-radio2-14&quot;</span><span style="color: #000080">&gt;</span>구분14<span style="color: #000080">&lt;/label&gt;&lt;/li&gt;</span>
+    <span style="color: #000080">&lt;li&gt;&lt;input</span> <span style="color: #008080">type=</span><span style="color: #bb8844">&quot;radio&quot;</span> <span style="color: #008080">name=</span><span style="color: #bb8844">&quot;sample_radio2&quot;</span> <span style="color: #008080">id=</span><span style="color: #bb8844">&quot;sample-radio2-15&quot;</span> <span style="color: #008080">value=</span><span style="color: #bb8844">&quot;15&quot;</span> <span style="color: #000080">/&gt;&lt;label</span> <span style="color: #008080">for=</span><span style="color: #bb8844">&quot;sample-radio2-15&quot;</span><span style="color: #000080">&gt;</span>구분15<span style="color: #000080">&lt;/label&gt;&lt;/li&gt;</span>
+  <span style="color: #000080">&lt;/ul&gt;</span>
+  
+  <span style="color: #000080">&lt;p</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;title&quot;</span><span style="color: #000080">&gt;</span>Disabled<span style="color: #000080">&lt;/p&gt;</span>
+  <span style="color: #000080">&lt;ul</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;input-list&quot;</span><span style="color: #000080">&gt;</span>
+    <span style="color: #000080">&lt;li&gt;&lt;input</span> <span style="color: #008080">type=</span><span style="color: #bb8844">&quot;radio&quot;</span> <span style="color: #008080">name=</span><span style="color: #bb8844">&quot;sample_radio3&quot;</span> <span style="color: #008080">id=</span><span style="color: #bb8844">&quot;sample-radio3-1&quot;</span> <span style="color: #008080">value=</span><span style="color: #bb8844">&quot;sample-checkbo3-1&quot;</span> <span style="color: #008080">disabled=</span><span style="color: #bb8844">&quot;disabled&quot;</span> <span style="color: #000080">/&gt;&lt;label</span> <span style="color: #008080">for=</span><span style="color: #bb8844">&quot;sample-radio3-type-1&quot;</span><span style="color: #000080">&gt;</span>구분1<span style="color: #000080">&lt;/label&gt;&lt;/li&gt;</span>
+    <span style="color: #000080">&lt;li&gt;&lt;input</span> <span style="color: #008080">type=</span><span style="color: #bb8844">&quot;radio&quot;</span> <span style="color: #008080">name=</span><span style="color: #bb8844">&quot;sample_radio3&quot;</span> <span style="color: #008080">id=</span><span style="color: #bb8844">&quot;sample-radio3-2&quot;</span> <span style="color: #008080">value=</span><span style="color: #bb8844">&quot;sample-radio3-2&quot;</span> <span style="color: #008080">disabled=</span><span style="color: #bb8844">&quot;disabled&quot;</span> <span style="color: #008080">checked=</span><span style="color: #bb8844">&quot;checked&quot;</span> <span style="color: #000080">/&gt;&lt;label</span> <span style="color: #008080">for=</span><span style="color: #bb8844">&quot;sample-radio3-type-2&quot;</span><span style="color: #000080">&gt;</span>구분2<span style="color: #000080">&lt;/label&gt;&lt;/li&gt;</span>
+  <span style="color: #000080">&lt;/ul&gt;</span>
+  
+  <span style="color: #000080">&lt;p</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;title&quot;</span><span style="color: #000080">&gt;</span>Colors<span style="color: #000080">&lt;/p&gt;</span>
+  <span style="color: #000080">&lt;ul</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;input-list inline&quot;</span><span style="color: #000080">&gt;</span>
+    <span style="color: #000080">&lt;li&gt;&lt;input</span> <span style="color: #008080">type=</span><span style="color: #bb8844">&quot;radio&quot;</span> <span style="color: #008080">name=</span><span style="color: #bb8844">&quot;sample_radio4&quot;</span> <span style="color: #008080">id=</span><span style="color: #bb8844">&quot;sample-radio4-1&quot;</span> <span style="color: #008080">value=</span><span style="color: #bb8844">&quot;light-red&quot;</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;light-red&quot;</span> <span style="color: #000080">/&gt;&lt;label</span> <span style="color: #008080">for=</span><span style="color: #bb8844">&quot;sample-radio4-1&quot;</span><span style="color: #000080">&gt;</span>light red<span style="color: #000080">&lt;/label&gt;&lt;/li&gt;</span>
+    <span style="color: #000080">&lt;li&gt;&lt;input</span> <span style="color: #008080">type=</span><span style="color: #bb8844">&quot;radio&quot;</span> <span style="color: #008080">name=</span><span style="color: #bb8844">&quot;sample_radio4&quot;</span> <span style="color: #008080">id=</span><span style="color: #bb8844">&quot;sample-radio4-2&quot;</span> <span style="color: #008080">value=</span><span style="color: #bb8844">&quot;red&quot;</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;red&quot;</span> <span style="color: #000080">/&gt;&lt;label</span> <span style="color: #008080">for=</span><span style="color: #bb8844">&quot;sample-radio4-2&quot;</span><span style="color: #000080">&gt;</span>red<span style="color: #000080">&lt;/label&gt;&lt;/li&gt;</span>
+    <span style="color: #000080">&lt;li&gt;&lt;input</span> <span style="color: #008080">type=</span><span style="color: #bb8844">&quot;radio&quot;</span> <span style="color: #008080">name=</span><span style="color: #bb8844">&quot;sample_radio4&quot;</span> <span style="color: #008080">id=</span><span style="color: #bb8844">&quot;sample-radio4-3&quot;</span> <span style="color: #008080">value=</span><span style="color: #bb8844">&quot;dark-red&quot;</span> <span style="color: #008080">checked=</span><span style="color: #bb8844">&quot;checked&quot;</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;dark-red&quot;</span> <span style="color: #000080">/&gt;&lt;label</span> <span style="color: #008080">for=</span><span style="color: #bb8844">&quot;sample-radio4-3&quot;</span><span style="color: #000080">&gt;</span>dark red<span style="color: #000080">&lt;/label&gt;&lt;/li&gt;</span>
+    <span style="color: #000080">&lt;li&gt;&lt;input</span> <span style="color: #008080">type=</span><span style="color: #bb8844">&quot;radio&quot;</span> <span style="color: #008080">name=</span><span style="color: #bb8844">&quot;sample_radio4&quot;</span> <span style="color: #008080">id=</span><span style="color: #bb8844">&quot;sample-radio4-4&quot;</span> <span style="color: #008080">value=</span><span style="color: #bb8844">&quot;light-pink&quot;</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;light-pink&quot;</span> <span style="color: #000080">/&gt;&lt;label</span> <span style="color: #008080">for=</span><span style="color: #bb8844">&quot;sample-radio4-4&quot;</span><span style="color: #000080">&gt;</span>light pink<span style="color: #000080">&lt;/label&gt;&lt;/li&gt;</span>
+    <span style="color: #000080">&lt;li&gt;&lt;input</span> <span style="color: #008080">type=</span><span style="color: #bb8844">&quot;radio&quot;</span> <span style="color: #008080">name=</span><span style="color: #bb8844">&quot;sample_radio4&quot;</span> <span style="color: #008080">id=</span><span style="color: #bb8844">&quot;sample-radio4-5&quot;</span> <span style="color: #008080">value=</span><span style="color: #bb8844">&quot;pink&quot;</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;pink&quot;</span> <span style="color: #000080">/&gt;&lt;label</span> <span style="color: #008080">for=</span><span style="color: #bb8844">&quot;sample-radio4-5&quot;</span><span style="color: #000080">&gt;</span>pink<span style="color: #000080">&lt;/label&gt;&lt;/li&gt;</span>
+    <span style="color: #000080">&lt;li&gt;&lt;input</span> <span style="color: #008080">type=</span><span style="color: #bb8844">&quot;radio&quot;</span> <span style="color: #008080">name=</span><span style="color: #bb8844">&quot;sample_radio4&quot;</span> <span style="color: #008080">id=</span><span style="color: #bb8844">&quot;sample-radio4-6&quot;</span> <span style="color: #008080">value=</span><span style="color: #bb8844">&quot;sand&quot;</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;sand&quot;</span> <span style="color: #000080">/&gt;&lt;label</span> <span style="color: #008080">for=</span><span style="color: #bb8844">&quot;sample-radio4-6&quot;</span><span style="color: #000080">&gt;</span>sand<span style="color: #000080">&lt;/label&gt;&lt;/li&gt;</span>
+    <span style="color: #000080">&lt;li&gt;&lt;input</span> <span style="color: #008080">type=</span><span style="color: #bb8844">&quot;radio&quot;</span> <span style="color: #008080">name=</span><span style="color: #bb8844">&quot;sample_radio4&quot;</span> <span style="color: #008080">id=</span><span style="color: #bb8844">&quot;sample-radio4-7&quot;</span> <span style="color: #008080">value=</span><span style="color: #bb8844">&quot;yellow&quot;</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;yellow&quot;</span> <span style="color: #000080">/&gt;&lt;label</span> <span style="color: #008080">for=</span><span style="color: #bb8844">&quot;sample-radio4-7&quot;</span><span style="color: #000080">&gt;</span>yellow<span style="color: #000080">&lt;/label&gt;&lt;/li&gt;</span>
+    <span style="color: #000080">&lt;li&gt;&lt;input</span> <span style="color: #008080">type=</span><span style="color: #bb8844">&quot;radio&quot;</span> <span style="color: #008080">name=</span><span style="color: #bb8844">&quot;sample_radio4&quot;</span> <span style="color: #008080">id=</span><span style="color: #bb8844">&quot;sample-radio4-8&quot;</span> <span style="color: #008080">value=</span><span style="color: #bb8844">&quot;light-orange&quot;</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;light-orange&quot;</span> <span style="color: #000080">/&gt;&lt;label</span> <span style="color: #008080">for=</span><span style="color: #bb8844">&quot;sample-radio4-8&quot;</span><span style="color: #000080">&gt;</span>light orange<span style="color: #000080">&lt;/label&gt;&lt;/li&gt;</span>
+    <span style="color: #000080">&lt;li&gt;&lt;input</span> <span style="color: #008080">type=</span><span style="color: #bb8844">&quot;radio&quot;</span> <span style="color: #008080">name=</span><span style="color: #bb8844">&quot;sample_radio4&quot;</span> <span style="color: #008080">id=</span><span style="color: #bb8844">&quot;sample-radio4-9&quot;</span> <span style="color: #008080">value=</span><span style="color: #bb8844">&quot;orange&quot;</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;orange&quot;</span> <span style="color: #000080">/&gt;&lt;label</span> <span style="color: #008080">for=</span><span style="color: #bb8844">&quot;sample-radio4-9&quot;</span><span style="color: #000080">&gt;</span>orange<span style="color: #000080">&lt;/label&gt;&lt;/li&gt;</span>
+    <span style="color: #000080">&lt;li&gt;&lt;input</span> <span style="color: #008080">type=</span><span style="color: #bb8844">&quot;radio&quot;</span> <span style="color: #008080">name=</span><span style="color: #bb8844">&quot;sample_radio4&quot;</span> <span style="color: #008080">id=</span><span style="color: #bb8844">&quot;sample-radio4-10&quot;</span> <span style="color: #008080">value=</span><span style="color: #bb8844">&quot;light-green&quot;</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;light-green&quot;</span> <span style="color: #000080">/&gt;&lt;label</span> <span style="color: #008080">for=</span><span style="color: #bb8844">&quot;sample-radio4-10&quot;</span><span style="color: #000080">&gt;</span>light green<span style="color: #000080">&lt;/label&gt;&lt;/li&gt;</span>
+    <span style="color: #000080">&lt;li&gt;&lt;input</span> <span style="color: #008080">type=</span><span style="color: #bb8844">&quot;radio&quot;</span> <span style="color: #008080">name=</span><span style="color: #bb8844">&quot;sample_radio4&quot;</span> <span style="color: #008080">id=</span><span style="color: #bb8844">&quot;sample-radio4-11&quot;</span> <span style="color: #008080">value=</span><span style="color: #bb8844">&quot;green&quot;</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;green&quot;</span> <span style="color: #000080">/&gt;&lt;label</span> <span style="color: #008080">for=</span><span style="color: #bb8844">&quot;sample-radio4-11&quot;</span><span style="color: #000080">&gt;</span>green<span style="color: #000080">&lt;/label&gt;&lt;/li&gt;</span>
+    <span style="color: #000080">&lt;li&gt;&lt;input</span> <span style="color: #008080">type=</span><span style="color: #bb8844">&quot;radio&quot;</span> <span style="color: #008080">name=</span><span style="color: #bb8844">&quot;sample_radio4&quot;</span> <span style="color: #008080">id=</span><span style="color: #bb8844">&quot;sample-radio4-12&quot;</span> <span style="color: #008080">value=</span><span style="color: #bb8844">&quot;dark-green&quot;</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;dark-green&quot;</span> <span style="color: #000080">/&gt;&lt;label</span> <span style="color: #008080">for=</span><span style="color: #bb8844">&quot;sample-radio4-12&quot;</span><span style="color: #000080">&gt;</span>dark green<span style="color: #000080">&lt;/label&gt;&lt;/li&gt;</span>
+    <span style="color: #000080">&lt;li&gt;&lt;input</span> <span style="color: #008080">type=</span><span style="color: #bb8844">&quot;radio&quot;</span> <span style="color: #008080">name=</span><span style="color: #bb8844">&quot;sample_radio4&quot;</span> <span style="color: #008080">id=</span><span style="color: #bb8844">&quot;sample-radio4-13&quot;</span> <span style="color: #008080">value=</span><span style="color: #bb8844">&quot;light-purple&quot;</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;light-purple&quot;</span> <span style="color: #000080">/&gt;&lt;label</span> <span style="color: #008080">for=</span><span style="color: #bb8844">&quot;sample-radio4-13&quot;</span><span style="color: #000080">&gt;</span>light purple<span style="color: #000080">&lt;/label&gt;&lt;/li&gt;</span>
+    <span style="color: #000080">&lt;li&gt;&lt;input</span> <span style="color: #008080">type=</span><span style="color: #bb8844">&quot;radio&quot;</span> <span style="color: #008080">name=</span><span style="color: #bb8844">&quot;sample_radio4&quot;</span> <span style="color: #008080">id=</span><span style="color: #bb8844">&quot;sample-radio4-14&quot;</span> <span style="color: #008080">value=</span><span style="color: #bb8844">&quot;purple&quot;</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;purple&quot;</span> <span style="color: #000080">/&gt;&lt;label</span> <span style="color: #008080">for=</span><span style="color: #bb8844">&quot;sample-radio4-14&quot;</span><span style="color: #000080">&gt;</span>purple<span style="color: #000080">&lt;/label&gt;&lt;/li&gt;</span>
+    <span style="color: #000080">&lt;li&gt;&lt;input</span> <span style="color: #008080">type=</span><span style="color: #bb8844">&quot;radio&quot;</span> <span style="color: #008080">name=</span><span style="color: #bb8844">&quot;sample_radio4&quot;</span> <span style="color: #008080">id=</span><span style="color: #bb8844">&quot;sample-radio4-15&quot;</span> <span style="color: #008080">value=</span><span style="color: #bb8844">&quot;dark-purple&quot;</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;dark-purple&quot;</span> <span style="color: #000080">/&gt;&lt;label</span> <span style="color: #008080">for=</span><span style="color: #bb8844">&quot;sample-radio4-15&quot;</span><span style="color: #000080">&gt;</span>dark purple<span style="color: #000080">&lt;/label&gt;&lt;/li&gt;</span>
+    <span style="color: #000080">&lt;li&gt;&lt;input</span> <span style="color: #008080">type=</span><span style="color: #bb8844">&quot;radio&quot;</span> <span style="color: #008080">name=</span><span style="color: #bb8844">&quot;sample_radio4&quot;</span> <span style="color: #008080">id=</span><span style="color: #bb8844">&quot;sample-radio4-16&quot;</span> <span style="color: #008080">value=</span><span style="color: #bb8844">&quot;gray&quot;</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;gray&quot;</span> <span style="color: #000080">/&gt;&lt;label</span> <span style="color: #008080">for=</span><span style="color: #bb8844">&quot;sample-radio4-16&quot;</span><span style="color: #000080">&gt;</span>gray<span style="color: #000080">&lt;/label&gt;&lt;/li&gt;</span>
+    <span style="color: #000080">&lt;li&gt;&lt;input</span> <span style="color: #008080">type=</span><span style="color: #bb8844">&quot;radio&quot;</span> <span style="color: #008080">name=</span><span style="color: #bb8844">&quot;sample_radio4&quot;</span> <span style="color: #008080">id=</span><span style="color: #bb8844">&quot;sample-radio4-17&quot;</span> <span style="color: #008080">value=</span><span style="color: #bb8844">&quot;user-17&quot;</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;white&quot;</span> <span style="color: #000080">/&gt;&lt;label</span> <span style="color: #008080">for=</span><span style="color: #bb8844">&quot;sample-radio4-17&quot;</span><span style="color: #000080">&gt;</span>white<span style="color: #000080">&lt;/label&gt;&lt;/li&gt;</span>
+    <span style="color: #000080">&lt;li&gt;&lt;input</span> <span style="color: #008080">type=</span><span style="color: #bb8844">&quot;radio&quot;</span> <span style="color: #008080">name=</span><span style="color: #bb8844">&quot;sample_radio4&quot;</span> <span style="color: #008080">id=</span><span style="color: #bb8844">&quot;sample-radio4-18&quot;</span> <span style="color: #008080">value=</span><span style="color: #bb8844">&quot;black&quot;</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;black&quot;</span> <span style="color: #000080">/&gt;&lt;label</span> <span style="color: #008080">for=</span><span style="color: #bb8844">&quot;sample-radio4-18&quot;</span><span style="color: #000080">&gt;</span>black<span style="color: #000080">&lt;/label&gt;&lt;/li&gt;</span>
+  <span style="color: #000080">&lt;/ul&gt;</span>
+<span style="color: #000080">&lt;/div&gt;</span>
+</pre></div>
+                </li>
+              </ul>
+            </div>
+
+          </section>
+          <section>
+            <h3>Checkboxes</h3>
+            <p>Each checkbox and radio <span class="code">&lt;input&gt;</span> and <span class="code">&lt;label&gt;</span> pairing is wrapped in a <span class="code">&lt;div&gt;</span> to create our custom control. Structurally, this is the same approach as our default .form-check.</p>
+
+            <div class="tabview border">
+              <ul class="tab">
+                <li><a href="#">Preview</a></li>
+                <li><a href="#">Code</a></li>
+              </ul>
+              <ul class="tab-content">
+                <li>
+                  <div class="form-box">
+                    <p class="title">default</p>
+                    <ul class="input-list">
+                      <li><input type="checkbox" name="sample_checkbox[]" id="sample-checkbox-1" value="1" /><label for="sample-checkbox-1">구분1</label></li>
+                      <li><input type="checkbox" name="sample_checkbox[]" id="sample-checkbox-2" value="2" /><label for="sample-checkbox-2">구분2</label></li>
+                      <li><input type="checkbox" name="sample_checkbox[]" id="sample-checkbox-3" value="3" checked="checked" /><label for="sample-checkbox-3">구분3</label></li>
+                      <li><input type="checkbox" name="sample_checkbox[]" id="sample-checkbox-4" value="4" /><label for="sample-checkbox-4">구분4</label></li>
+                    </ul>
+
+                    <p class="title">inline</p>
+                    <ul class="input-list inline">
+                      <li><input type="checkbox" name="sample_checkbox2[]" id="sample-checkbox2-1" value="1" /><label for="sample-checkbox2-1">구분1</label></li>
+                      <li><input type="checkbox" name="sample_checkbox2[]" id="sample-checkbox2-2" value="2" /><label for="sample-checkbox2-2">구분2</label></li>
+                      <li><input type="checkbox" name="sample_checkbox2[]" id="sample-checkbox2-3" value="3" checked="checked" /><label for="sample-checkbox2-3">구분3</label></li>
+                      <li><input type="checkbox" name="sample_checkbox2[]" id="sample-checkbox2-4" value="4" /><label for="sample-checkbox2-4">구분4</label></li>
+                      <li><input type="checkbox" name="sample_checkbox2[]" id="sample-checkbox2-5" value="5" /><label for="sample-checkbox2-5">구분5</label></li>
+                      <li><input type="checkbox" name="sample_checkbox2[]" id="sample-checkbox2-6" value="6" /><label for="sample-checkbox2-6">구분6</label></li>
+                      <li><input type="checkbox" name="sample_checkbox2[]" id="sample-checkbox2-7" value="7" /><label for="sample-checkbox2-7">구분7</label></li>
+                      <li><input type="checkbox" name="sample_checkbox2[]" id="sample-checkbox2-8" value="8" /><label for="sample-checkbox2-8">구분8</label></li>
+                      <li><input type="checkbox" name="sample_checkbox2[]" id="sample-checkbox2-9" value="9" /><label for="sample-checkbox2-9">구분9</label></li>
+                      <li><input type="checkbox" name="sample_checkbox2[]" id="sample-checkbox2-10" value="10" /><label for="sample-checkbox2-10">구분10</label></li>
+                      <li><input type="checkbox" name="sample_checkbox2[]" id="sample-checkbox2-11" value="11" /><label for="sample-checkbox2-11">구분11</label></li>
+                      <li><input type="checkbox" name="sample_checkbox2[]" id="sample-checkbox2-12" value="12" /><label for="sample-checkbox2-12">구분12</label></li>
+                      <li><input type="checkbox" name="sample_checkbox2[]" id="sample-checkbox2-13" value="13" /><label for="sample-checkbox2-13">구분13</label></li>
+                      <li><input type="checkbox" name="sample_checkbox2[]" id="sample-checkbox2-14" value="14" /><label for="sample-checkbox2-14">구분14</label></li>
+                      <li><input type="checkbox" name="sample_checkbox2[]" id="sample-checkbox2-15" value="15" /><label for="sample-checkbox2-15">구분15</label></li>
+                    </ul>
+                    
+                    <p class="title">Disabled</p>
+                    <ul class="input-list">
+                      <li><input type="checkbox" name="sample_checkbox3[]" id="sample-checkbox3-1" value="sample-checkbo3-1" disabled="disabled" /><label for="sample-checkbox3-type-1">구분1</label></li>
+                      <li><input type="checkbox" name="sample_checkbox3[]" id="sample-checkbox3-2" value="sample-radio3-2" disabled="disabled" checked="checked" /><label for="sample-checkbox3-type-2">구분2</label></li>
+                    </ul>
+                    
+                    <p class="title">Colors</p>
+                    <ul class="input-list inline">
+                      <li><input type="checkbox" name="sample_checkbox4[]" id="sample-checkbox4-1" value="light-red" class="light-red" /><label for="sample-checkbox4-1">light red</label></li>
+                      <li><input type="checkbox" name="sample_checkbox4[]" id="sample-checkbox4-2" value="red" class="red" /><label for="sample-checkbox4-2">red</label></li>
+                      <li><input type="checkbox" name="sample_checkbox4[]" id="sample-checkbox4-3" value="dark-red" checked="checked" class="dark-red" /><label for="sample-checkbox4-3">dark red</label></li>
+                      <li><input type="checkbox" name="sample_checkbox4[]" id="sample-checkbox4-4" value="light-pink" class="light-pink" /><label for="sample-checkbox4-4">light pink</label></li>
+                      <li><input type="checkbox" name="sample_checkbox4[]" id="sample-checkbox4-5" value="pink" class="pink" /><label for="sample-checkbox4-5">pink</label></li>
+                      <li><input type="checkbox" name="sample_checkbox4[]" id="sample-checkbox4-6" value="sand" class="sand" /><label for="sample-checkbox4-6">sand</label></li>
+                      <li><input type="checkbox" name="sample_checkbox4[]" id="sample-checkbox4-7" value="yellow" class="yellow" /><label for="sample-checkbox4-7">yellow</label></li>
+                      <li><input type="checkbox" name="sample_checkbox4[]" id="sample-checkbox4-8" value="light-orange" class="light-orange" /><label for="sample-checkbox4-8">light orange</label></li>
+                      <li><input type="checkbox" name="sample_checkbox4[]" id="sample-checkbox4-9" value="orange" class="orange" /><label for="sample-checkbox4-9">orange</label></li>
+                      <li><input type="checkbox" name="sample_checkbox4[]" id="sample-checkbox4-10" value="light-green" class="light-green" /><label for="sample-checkbox4-10">light green</label></li>
+                      <li><input type="checkbox" name="sample_checkbox4[]" id="sample-checkbox4-11" value="green" class="green" /><label for="sample-checkbox4-11">green</label></li>
+                      <li><input type="checkbox" name="sample_checkbox4[]" id="sample-checkbox4-12" value="dark-green" class="dark-green" /><label for="sample-checkbox4-12">dark green</label></li>
+                      <li><input type="checkbox" name="sample_checkbox4[]" id="sample-checkbox4-13" value="light-purple" class="light-purple" /><label for="sample-checkbox4-13">light purple</label></li>
+                      <li><input type="checkbox" name="sample_checkbox4[]" id="sample-checkbox4-14" value="purple" class="purple" /><label for="sample-checkbox4-14">purple</label></li>
+                      <li><input type="checkbox" name="sample_checkbox4[]" id="sample-checkbox4-15" value="dark-purple" class="dark-purple" /><label for="sample-checkbox4-15">dark purple</label></li>
+                      <li><input type="checkbox" name="sample_checkbox4[]" id="sample-checkbox4-16" value="gray" class="gray" /><label for="sample-checkbox4-16">gray</label></li>
+                      <li><input type="checkbox" name="sample_checkbox4[]" id="sample-checkbox4-17" value="user-17" class="white" /><label for="sample-checkbox4-17">white</label></li>
+                      <li><input type="checkbox" name="sample_checkbox4[]" id="sample-checkbox4-18" value="bg-black" class="black" /><label for="sample-checkbox4-18">black</label></li>
+                    </ul>
+                  </div>
+                </li>
+                <li>
+<div class="code-box custom-scroll">
+<pre>
+<span style="color: #000080">&lt;div</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;form-box&quot;</span><span style="color: #000080">&gt;</span>
+  <span style="color: #000080">&lt;p</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;title&quot;</span><span style="color: #000080">&gt;</span>default<span style="color: #000080">&lt;/p&gt;</span>
+  <span style="color: #000080">&lt;ul</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;input-list&quot;</span><span style="color: #000080">&gt;</span>
+    <span style="color: #000080">&lt;li&gt;&lt;input</span> <span style="color: #008080">type=</span><span style="color: #bb8844">&quot;checkbox&quot;</span> <span style="color: #008080">name=</span><span style="color: #bb8844">&quot;sample_checkbox[]&quot;</span> <span style="color: #008080">id=</span><span style="color: #bb8844">&quot;sample-checkbox-1&quot;</span> <span style="color: #008080">value=</span><span style="color: #bb8844">&quot;1&quot;</span> <span style="color: #000080">/&gt;&lt;label</span> <span style="color: #008080">for=</span><span style="color: #bb8844">&quot;sample-checkbox-1&quot;</span><span style="color: #000080">&gt;</span>구분1<span style="color: #000080">&lt;/label&gt;&lt;/li&gt;</span>
+    <span style="color: #000080">&lt;li&gt;&lt;input</span> <span style="color: #008080">type=</span><span style="color: #bb8844">&quot;checkbox&quot;</span> <span style="color: #008080">name=</span><span style="color: #bb8844">&quot;sample_checkbox[]&quot;</span> <span style="color: #008080">id=</span><span style="color: #bb8844">&quot;sample-checkbox-2&quot;</span> <span style="color: #008080">value=</span><span style="color: #bb8844">&quot;2&quot;</span> <span style="color: #000080">/&gt;&lt;label</span> <span style="color: #008080">for=</span><span style="color: #bb8844">&quot;sample-checkbox-2&quot;</span><span style="color: #000080">&gt;</span>구분2<span style="color: #000080">&lt;/label&gt;&lt;/li&gt;</span>
+    <span style="color: #000080">&lt;li&gt;&lt;input</span> <span style="color: #008080">type=</span><span style="color: #bb8844">&quot;checkbox&quot;</span> <span style="color: #008080">name=</span><span style="color: #bb8844">&quot;sample_checkbox[]&quot;</span> <span style="color: #008080">id=</span><span style="color: #bb8844">&quot;sample-checkbox-3&quot;</span> <span style="color: #008080">value=</span><span style="color: #bb8844">&quot;3&quot;</span> <span style="color: #008080">checked=</span><span style="color: #bb8844">&quot;checked&quot;</span> <span style="color: #000080">/&gt;&lt;label</span> <span style="color: #008080">for=</span><span style="color: #bb8844">&quot;sample-checkbox-3&quot;</span><span style="color: #000080">&gt;</span>구분3<span style="color: #000080">&lt;/label&gt;&lt;/li&gt;</span>
+    <span style="color: #000080">&lt;li&gt;&lt;input</span> <span style="color: #008080">type=</span><span style="color: #bb8844">&quot;checkbox&quot;</span> <span style="color: #008080">name=</span><span style="color: #bb8844">&quot;sample_checkbox[]&quot;</span> <span style="color: #008080">id=</span><span style="color: #bb8844">&quot;sample-checkbox-4&quot;</span> <span style="color: #008080">value=</span><span style="color: #bb8844">&quot;4&quot;</span> <span style="color: #000080">/&gt;&lt;label</span> <span style="color: #008080">for=</span><span style="color: #bb8844">&quot;sample-checkbox-4&quot;</span><span style="color: #000080">&gt;</span>구분4<span style="color: #000080">&lt;/label&gt;&lt;/li&gt;</span>
+  <span style="color: #000080">&lt;/ul&gt;</span>
+
+  <span style="color: #000080">&lt;p</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;title&quot;</span><span style="color: #000080">&gt;</span>inline<span style="color: #000080">&lt;/p&gt;</span>
+  <span style="color: #000080">&lt;ul</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;input-list inline&quot;</span><span style="color: #000080">&gt;</span>
+    <span style="color: #000080">&lt;li&gt;&lt;input</span> <span style="color: #008080">type=</span><span style="color: #bb8844">&quot;checkbox&quot;</span> <span style="color: #008080">name=</span><span style="color: #bb8844">&quot;sample_checkbox2[]&quot;</span> <span style="color: #008080">id=</span><span style="color: #bb8844">&quot;sample-checkbox2-1&quot;</span> <span style="color: #008080">value=</span><span style="color: #bb8844">&quot;1&quot;</span> <span style="color: #000080">/&gt;&lt;label</span> <span style="color: #008080">for=</span><span style="color: #bb8844">&quot;sample-checkbox2-1&quot;</span><span style="color: #000080">&gt;</span>구분1<span style="color: #000080">&lt;/label&gt;&lt;/li&gt;</span>
+    <span style="color: #000080">&lt;li&gt;&lt;input</span> <span style="color: #008080">type=</span><span style="color: #bb8844">&quot;checkbox&quot;</span> <span style="color: #008080">name=</span><span style="color: #bb8844">&quot;sample_checkbox2[]&quot;</span> <span style="color: #008080">id=</span><span style="color: #bb8844">&quot;sample-checkbox2-2&quot;</span> <span style="color: #008080">value=</span><span style="color: #bb8844">&quot;2&quot;</span> <span style="color: #000080">/&gt;&lt;label</span> <span style="color: #008080">for=</span><span style="color: #bb8844">&quot;sample-checkbox2-2&quot;</span><span style="color: #000080">&gt;</span>구분2<span style="color: #000080">&lt;/label&gt;&lt;/li&gt;</span>
+    <span style="color: #000080">&lt;li&gt;&lt;input</span> <span style="color: #008080">type=</span><span style="color: #bb8844">&quot;checkbox&quot;</span> <span style="color: #008080">name=</span><span style="color: #bb8844">&quot;sample_checkbox2[]&quot;</span> <span style="color: #008080">id=</span><span style="color: #bb8844">&quot;sample-checkbox2-3&quot;</span> <span style="color: #008080">value=</span><span style="color: #bb8844">&quot;3&quot;</span> <span style="color: #008080">checked=</span><span style="color: #bb8844">&quot;checked&quot;</span> <span style="color: #000080">/&gt;&lt;label</span> <span style="color: #008080">for=</span><span style="color: #bb8844">&quot;sample-checkbox2-3&quot;</span><span style="color: #000080">&gt;</span>구분3<span style="color: #000080">&lt;/label&gt;&lt;/li&gt;</span>
+    <span style="color: #000080">&lt;li&gt;&lt;input</span> <span style="color: #008080">type=</span><span style="color: #bb8844">&quot;checkbox&quot;</span> <span style="color: #008080">name=</span><span style="color: #bb8844">&quot;sample_checkbox2[]&quot;</span> <span style="color: #008080">id=</span><span style="color: #bb8844">&quot;sample-checkbox2-4&quot;</span> <span style="color: #008080">value=</span><span style="color: #bb8844">&quot;4&quot;</span> <span style="color: #000080">/&gt;&lt;label</span> <span style="color: #008080">for=</span><span style="color: #bb8844">&quot;sample-checkbox2-4&quot;</span><span style="color: #000080">&gt;</span>구분4<span style="color: #000080">&lt;/label&gt;&lt;/li&gt;</span>
+    <span style="color: #000080">&lt;li&gt;&lt;input</span> <span style="color: #008080">type=</span><span style="color: #bb8844">&quot;checkbox&quot;</span> <span style="color: #008080">name=</span><span style="color: #bb8844">&quot;sample_checkbox2[]&quot;</span> <span style="color: #008080">id=</span><span style="color: #bb8844">&quot;sample-checkbox2-5&quot;</span> <span style="color: #008080">value=</span><span style="color: #bb8844">&quot;5&quot;</span> <span style="color: #000080">/&gt;&lt;label</span> <span style="color: #008080">for=</span><span style="color: #bb8844">&quot;sample-checkbox2-5&quot;</span><span style="color: #000080">&gt;</span>구분5<span style="color: #000080">&lt;/label&gt;&lt;/li&gt;</span>
+    <span style="color: #000080">&lt;li&gt;&lt;input</span> <span style="color: #008080">type=</span><span style="color: #bb8844">&quot;checkbox&quot;</span> <span style="color: #008080">name=</span><span style="color: #bb8844">&quot;sample_checkbox2[]&quot;</span> <span style="color: #008080">id=</span><span style="color: #bb8844">&quot;sample-checkbox2-6&quot;</span> <span style="color: #008080">value=</span><span style="color: #bb8844">&quot;6&quot;</span> <span style="color: #000080">/&gt;&lt;label</span> <span style="color: #008080">for=</span><span style="color: #bb8844">&quot;sample-checkbox2-6&quot;</span><span style="color: #000080">&gt;</span>구분6<span style="color: #000080">&lt;/label&gt;&lt;/li&gt;</span>
+    <span style="color: #000080">&lt;li&gt;&lt;input</span> <span style="color: #008080">type=</span><span style="color: #bb8844">&quot;checkbox&quot;</span> <span style="color: #008080">name=</span><span style="color: #bb8844">&quot;sample_checkbox2[]&quot;</span> <span style="color: #008080">id=</span><span style="color: #bb8844">&quot;sample-checkbox2-7&quot;</span> <span style="color: #008080">value=</span><span style="color: #bb8844">&quot;7&quot;</span> <span style="color: #000080">/&gt;&lt;label</span> <span style="color: #008080">for=</span><span style="color: #bb8844">&quot;sample-checkbox2-7&quot;</span><span style="color: #000080">&gt;</span>구분7<span style="color: #000080">&lt;/label&gt;&lt;/li&gt;</span>
+    <span style="color: #000080">&lt;li&gt;&lt;input</span> <span style="color: #008080">type=</span><span style="color: #bb8844">&quot;checkbox&quot;</span> <span style="color: #008080">name=</span><span style="color: #bb8844">&quot;sample_checkbox2[]&quot;</span> <span style="color: #008080">id=</span><span style="color: #bb8844">&quot;sample-checkbox2-8&quot;</span> <span style="color: #008080">value=</span><span style="color: #bb8844">&quot;8&quot;</span> <span style="color: #000080">/&gt;&lt;label</span> <span style="color: #008080">for=</span><span style="color: #bb8844">&quot;sample-checkbox2-8&quot;</span><span style="color: #000080">&gt;</span>구분8<span style="color: #000080">&lt;/label&gt;&lt;/li&gt;</span>
+    <span style="color: #000080">&lt;li&gt;&lt;input</span> <span style="color: #008080">type=</span><span style="color: #bb8844">&quot;checkbox&quot;</span> <span style="color: #008080">name=</span><span style="color: #bb8844">&quot;sample_checkbox2[]&quot;</span> <span style="color: #008080">id=</span><span style="color: #bb8844">&quot;sample-checkbox2-9&quot;</span> <span style="color: #008080">value=</span><span style="color: #bb8844">&quot;9&quot;</span> <span style="color: #000080">/&gt;&lt;label</span> <span style="color: #008080">for=</span><span style="color: #bb8844">&quot;sample-checkbox2-9&quot;</span><span style="color: #000080">&gt;</span>구분9<span style="color: #000080">&lt;/label&gt;&lt;/li&gt;</span>
+    <span style="color: #000080">&lt;li&gt;&lt;input</span> <span style="color: #008080">type=</span><span style="color: #bb8844">&quot;checkbox&quot;</span> <span style="color: #008080">name=</span><span style="color: #bb8844">&quot;sample_checkbox2[]&quot;</span> <span style="color: #008080">id=</span><span style="color: #bb8844">&quot;sample-checkbox2-10&quot;</span> <span style="color: #008080">value=</span><span style="color: #bb8844">&quot;10&quot;</span> <span style="color: #000080">/&gt;&lt;label</span> <span style="color: #008080">for=</span><span style="color: #bb8844">&quot;sample-checkbox2-10&quot;</span><span style="color: #000080">&gt;</span>구분10<span style="color: #000080">&lt;/label&gt;&lt;/li&gt;</span>
+    <span style="color: #000080">&lt;li&gt;&lt;input</span> <span style="color: #008080">type=</span><span style="color: #bb8844">&quot;checkbox&quot;</span> <span style="color: #008080">name=</span><span style="color: #bb8844">&quot;sample_checkbox2[]&quot;</span> <span style="color: #008080">id=</span><span style="color: #bb8844">&quot;sample-checkbox2-11&quot;</span> <span style="color: #008080">value=</span><span style="color: #bb8844">&quot;11&quot;</span> <span style="color: #000080">/&gt;&lt;label</span> <span style="color: #008080">for=</span><span style="color: #bb8844">&quot;sample-checkbox2-11&quot;</span><span style="color: #000080">&gt;</span>구분11<span style="color: #000080">&lt;/label&gt;&lt;/li&gt;</span>
+    <span style="color: #000080">&lt;li&gt;&lt;input</span> <span style="color: #008080">type=</span><span style="color: #bb8844">&quot;checkbox&quot;</span> <span style="color: #008080">name=</span><span style="color: #bb8844">&quot;sample_checkbox2[]&quot;</span> <span style="color: #008080">id=</span><span style="color: #bb8844">&quot;sample-checkbox2-12&quot;</span> <span style="color: #008080">value=</span><span style="color: #bb8844">&quot;12&quot;</span> <span style="color: #000080">/&gt;&lt;label</span> <span style="color: #008080">for=</span><span style="color: #bb8844">&quot;sample-checkbox2-12&quot;</span><span style="color: #000080">&gt;</span>구분12<span style="color: #000080">&lt;/label&gt;&lt;/li&gt;</span>
+    <span style="color: #000080">&lt;li&gt;&lt;input</span> <span style="color: #008080">type=</span><span style="color: #bb8844">&quot;checkbox&quot;</span> <span style="color: #008080">name=</span><span style="color: #bb8844">&quot;sample_checkbox2[]&quot;</span> <span style="color: #008080">id=</span><span style="color: #bb8844">&quot;sample-checkbox2-13&quot;</span> <span style="color: #008080">value=</span><span style="color: #bb8844">&quot;13&quot;</span> <span style="color: #000080">/&gt;&lt;label</span> <span style="color: #008080">for=</span><span style="color: #bb8844">&quot;sample-checkbox2-13&quot;</span><span style="color: #000080">&gt;</span>구분13<span style="color: #000080">&lt;/label&gt;&lt;/li&gt;</span>
+    <span style="color: #000080">&lt;li&gt;&lt;input</span> <span style="color: #008080">type=</span><span style="color: #bb8844">&quot;checkbox&quot;</span> <span style="color: #008080">name=</span><span style="color: #bb8844">&quot;sample_checkbox2[]&quot;</span> <span style="color: #008080">id=</span><span style="color: #bb8844">&quot;sample-checkbox2-14&quot;</span> <span style="color: #008080">value=</span><span style="color: #bb8844">&quot;14&quot;</span> <span style="color: #000080">/&gt;&lt;label</span> <span style="color: #008080">for=</span><span style="color: #bb8844">&quot;sample-checkbox2-14&quot;</span><span style="color: #000080">&gt;</span>구분14<span style="color: #000080">&lt;/label&gt;&lt;/li&gt;</span>
+    <span style="color: #000080">&lt;li&gt;&lt;input</span> <span style="color: #008080">type=</span><span style="color: #bb8844">&quot;checkbox&quot;</span> <span style="color: #008080">name=</span><span style="color: #bb8844">&quot;sample_checkbox2[]&quot;</span> <span style="color: #008080">id=</span><span style="color: #bb8844">&quot;sample-checkbox2-15&quot;</span> <span style="color: #008080">value=</span><span style="color: #bb8844">&quot;15&quot;</span> <span style="color: #000080">/&gt;&lt;label</span> <span style="color: #008080">for=</span><span style="color: #bb8844">&quot;sample-checkbox2-15&quot;</span><span style="color: #000080">&gt;</span>구분15<span style="color: #000080">&lt;/label&gt;&lt;/li&gt;</span>
+  <span style="color: #000080">&lt;/ul&gt;</span>
+  
+  <span style="color: #000080">&lt;p</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;title&quot;</span><span style="color: #000080">&gt;</span>Disabled<span style="color: #000080">&lt;/p&gt;</span>
+  <span style="color: #000080">&lt;ul</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;input-list&quot;</span><span style="color: #000080">&gt;</span>
+    <span style="color: #000080">&lt;li&gt;&lt;input</span> <span style="color: #008080">type=</span><span style="color: #bb8844">&quot;checkbox&quot;</span> <span style="color: #008080">name=</span><span style="color: #bb8844">&quot;sample_checkbox3[]&quot;</span> <span style="color: #008080">id=</span><span style="color: #bb8844">&quot;sample-checkbox3-1&quot;</span> <span style="color: #008080">value=</span><span style="color: #bb8844">&quot;sample-checkbo3-1&quot;</span> <span style="color: #008080">disabled=</span><span style="color: #bb8844">&quot;disabled&quot;</span> <span style="color: #000080">/&gt;&lt;label</span> <span style="color: #008080">for=</span><span style="color: #bb8844">&quot;sample-checkbox3-type-1&quot;</span><span style="color: #000080">&gt;</span>구분1<span style="color: #000080">&lt;/label&gt;&lt;/li&gt;</span>
+    <span style="color: #000080">&lt;li&gt;&lt;input</span> <span style="color: #008080">type=</span><span style="color: #bb8844">&quot;checkbox&quot;</span> <span style="color: #008080">name=</span><span style="color: #bb8844">&quot;sample_checkbox3[]&quot;</span> <span style="color: #008080">id=</span><span style="color: #bb8844">&quot;sample-checkbox3-2&quot;</span> <span style="color: #008080">value=</span><span style="color: #bb8844">&quot;sample-radio3-2&quot;</span> <span style="color: #008080">disabled=</span><span style="color: #bb8844">&quot;disabled&quot;</span> <span style="color: #008080">checked=</span><span style="color: #bb8844">&quot;checked&quot;</span> <span style="color: #000080">/&gt;&lt;label</span> <span style="color: #008080">for=</span><span style="color: #bb8844">&quot;sample-checkbox3-type-2&quot;</span><span style="color: #000080">&gt;</span>구분2<span style="color: #000080">&lt;/label&gt;&lt;/li&gt;</span>
+  <span style="color: #000080">&lt;/ul&gt;</span>
+  
+  <span style="color: #000080">&lt;p</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;title&quot;</span><span style="color: #000080">&gt;</span>Colors<span style="color: #000080">&lt;/p&gt;</span>
+  <span style="color: #000080">&lt;ul</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;input-list inline&quot;</span><span style="color: #000080">&gt;</span>
+    <span style="color: #000080">&lt;li&gt;&lt;input</span> <span style="color: #008080">type=</span><span style="color: #bb8844">&quot;checkbox&quot;</span> <span style="color: #008080">name=</span><span style="color: #bb8844">&quot;sample_checkbox4[]&quot;</span> <span style="color: #008080">id=</span><span style="color: #bb8844">&quot;sample-checkbox4-1&quot;</span> <span style="color: #008080">value=</span><span style="color: #bb8844">&quot;light-red&quot;</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;light-red&quot;</span> <span style="color: #000080">/&gt;&lt;label</span> <span style="color: #008080">for=</span><span style="color: #bb8844">&quot;sample-checkbox4-1&quot;</span><span style="color: #000080">&gt;</span>light red<span style="color: #000080">&lt;/label&gt;&lt;/li&gt;</span>
+    <span style="color: #000080">&lt;li&gt;&lt;input</span> <span style="color: #008080">type=</span><span style="color: #bb8844">&quot;checkbox&quot;</span> <span style="color: #008080">name=</span><span style="color: #bb8844">&quot;sample_checkbox4[]&quot;</span> <span style="color: #008080">id=</span><span style="color: #bb8844">&quot;sample-checkbox4-2&quot;</span> <span style="color: #008080">value=</span><span style="color: #bb8844">&quot;red&quot;</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;red&quot;</span> <span style="color: #000080">/&gt;&lt;label</span> <span style="color: #008080">for=</span><span style="color: #bb8844">&quot;sample-checkbox4-2&quot;</span><span style="color: #000080">&gt;</span>red<span style="color: #000080">&lt;/label&gt;&lt;/li&gt;</span>
+    <span style="color: #000080">&lt;li&gt;&lt;input</span> <span style="color: #008080">type=</span><span style="color: #bb8844">&quot;checkbox&quot;</span> <span style="color: #008080">name=</span><span style="color: #bb8844">&quot;sample_checkbox4[]&quot;</span> <span style="color: #008080">id=</span><span style="color: #bb8844">&quot;sample-checkbox4-3&quot;</span> <span style="color: #008080">value=</span><span style="color: #bb8844">&quot;dark-red&quot;</span> <span style="color: #008080">checked=</span><span style="color: #bb8844">&quot;checked&quot;</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;dark-red&quot;</span> <span style="color: #000080">/&gt;&lt;label</span> <span style="color: #008080">for=</span><span style="color: #bb8844">&quot;sample-checkbox4-3&quot;</span><span style="color: #000080">&gt;</span>dark red<span style="color: #000080">&lt;/label&gt;&lt;/li&gt;</span>
+    <span style="color: #000080">&lt;li&gt;&lt;input</span> <span style="color: #008080">type=</span><span style="color: #bb8844">&quot;checkbox&quot;</span> <span style="color: #008080">name=</span><span style="color: #bb8844">&quot;sample_checkbox4[]&quot;</span> <span style="color: #008080">id=</span><span style="color: #bb8844">&quot;sample-checkbox4-4&quot;</span> <span style="color: #008080">value=</span><span style="color: #bb8844">&quot;light-pink&quot;</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;light-pink&quot;</span> <span style="color: #000080">/&gt;&lt;label</span> <span style="color: #008080">for=</span><span style="color: #bb8844">&quot;sample-checkbox4-4&quot;</span><span style="color: #000080">&gt;</span>light pink<span style="color: #000080">&lt;/label&gt;&lt;/li&gt;</span>
+    <span style="color: #000080">&lt;li&gt;&lt;input</span> <span style="color: #008080">type=</span><span style="color: #bb8844">&quot;checkbox&quot;</span> <span style="color: #008080">name=</span><span style="color: #bb8844">&quot;sample_checkbox4[]&quot;</span> <span style="color: #008080">id=</span><span style="color: #bb8844">&quot;sample-checkbox4-5&quot;</span> <span style="color: #008080">value=</span><span style="color: #bb8844">&quot;pink&quot;</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;pink&quot;</span> <span style="color: #000080">/&gt;&lt;label</span> <span style="color: #008080">for=</span><span style="color: #bb8844">&quot;sample-checkbox4-5&quot;</span><span style="color: #000080">&gt;</span>pink<span style="color: #000080">&lt;/label&gt;&lt;/li&gt;</span>
+    <span style="color: #000080">&lt;li&gt;&lt;input</span> <span style="color: #008080">type=</span><span style="color: #bb8844">&quot;checkbox&quot;</span> <span style="color: #008080">name=</span><span style="color: #bb8844">&quot;sample_checkbox4[]&quot;</span> <span style="color: #008080">id=</span><span style="color: #bb8844">&quot;sample-checkbox4-6&quot;</span> <span style="color: #008080">value=</span><span style="color: #bb8844">&quot;sand&quot;</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;sand&quot;</span> <span style="color: #000080">/&gt;&lt;label</span> <span style="color: #008080">for=</span><span style="color: #bb8844">&quot;sample-checkbox4-6&quot;</span><span style="color: #000080">&gt;</span>sand<span style="color: #000080">&lt;/label&gt;&lt;/li&gt;</span>
+    <span style="color: #000080">&lt;li&gt;&lt;input</span> <span style="color: #008080">type=</span><span style="color: #bb8844">&quot;checkbox&quot;</span> <span style="color: #008080">name=</span><span style="color: #bb8844">&quot;sample_checkbox4[]&quot;</span> <span style="color: #008080">id=</span><span style="color: #bb8844">&quot;sample-checkbox4-7&quot;</span> <span style="color: #008080">value=</span><span style="color: #bb8844">&quot;yellow&quot;</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;yellow&quot;</span> <span style="color: #000080">/&gt;&lt;label</span> <span style="color: #008080">for=</span><span style="color: #bb8844">&quot;sample-checkbox4-7&quot;</span><span style="color: #000080">&gt;</span>yellow<span style="color: #000080">&lt;/label&gt;&lt;/li&gt;</span>
+    <span style="color: #000080">&lt;li&gt;&lt;input</span> <span style="color: #008080">type=</span><span style="color: #bb8844">&quot;checkbox&quot;</span> <span style="color: #008080">name=</span><span style="color: #bb8844">&quot;sample_checkbox4[]&quot;</span> <span style="color: #008080">id=</span><span style="color: #bb8844">&quot;sample-checkbox4-8&quot;</span> <span style="color: #008080">value=</span><span style="color: #bb8844">&quot;light-orange&quot;</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;light-orange&quot;</span> <span style="color: #000080">/&gt;&lt;label</span> <span style="color: #008080">for=</span><span style="color: #bb8844">&quot;sample-checkbox4-8&quot;</span><span style="color: #000080">&gt;</span>light orange<span style="color: #000080">&lt;/label&gt;&lt;/li&gt;</span>
+    <span style="color: #000080">&lt;li&gt;&lt;input</span> <span style="color: #008080">type=</span><span style="color: #bb8844">&quot;checkbox&quot;</span> <span style="color: #008080">name=</span><span style="color: #bb8844">&quot;sample_checkbox4[]&quot;</span> <span style="color: #008080">id=</span><span style="color: #bb8844">&quot;sample-checkbox4-9&quot;</span> <span style="color: #008080">value=</span><span style="color: #bb8844">&quot;orange&quot;</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;orange&quot;</span> <span style="color: #000080">/&gt;&lt;label</span> <span style="color: #008080">for=</span><span style="color: #bb8844">&quot;sample-checkbox4-9&quot;</span><span style="color: #000080">&gt;</span>orange<span style="color: #000080">&lt;/label&gt;&lt;/li&gt;</span>
+    <span style="color: #000080">&lt;li&gt;&lt;input</span> <span style="color: #008080">type=</span><span style="color: #bb8844">&quot;checkbox&quot;</span> <span style="color: #008080">name=</span><span style="color: #bb8844">&quot;sample_checkbox4[]&quot;</span> <span style="color: #008080">id=</span><span style="color: #bb8844">&quot;sample-checkbox4-10&quot;</span> <span style="color: #008080">value=</span><span style="color: #bb8844">&quot;light-green&quot;</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;light-green&quot;</span> <span style="color: #000080">/&gt;&lt;label</span> <span style="color: #008080">for=</span><span style="color: #bb8844">&quot;sample-checkbox4-10&quot;</span><span style="color: #000080">&gt;</span>light green<span style="color: #000080">&lt;/label&gt;&lt;/li&gt;</span>
+    <span style="color: #000080">&lt;li&gt;&lt;input</span> <span style="color: #008080">type=</span><span style="color: #bb8844">&quot;checkbox&quot;</span> <span style="color: #008080">name=</span><span style="color: #bb8844">&quot;sample_checkbox4[]&quot;</span> <span style="color: #008080">id=</span><span style="color: #bb8844">&quot;sample-checkbox4-11&quot;</span> <span style="color: #008080">value=</span><span style="color: #bb8844">&quot;green&quot;</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;green&quot;</span> <span style="color: #000080">/&gt;&lt;label</span> <span style="color: #008080">for=</span><span style="color: #bb8844">&quot;sample-checkbox4-11&quot;</span><span style="color: #000080">&gt;</span>green<span style="color: #000080">&lt;/label&gt;&lt;/li&gt;</span>
+    <span style="color: #000080">&lt;li&gt;&lt;input</span> <span style="color: #008080">type=</span><span style="color: #bb8844">&quot;checkbox&quot;</span> <span style="color: #008080">name=</span><span style="color: #bb8844">&quot;sample_checkbox4[]&quot;</span> <span style="color: #008080">id=</span><span style="color: #bb8844">&quot;sample-checkbox4-12&quot;</span> <span style="color: #008080">value=</span><span style="color: #bb8844">&quot;dark-green&quot;</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;dark-green&quot;</span> <span style="color: #000080">/&gt;&lt;label</span> <span style="color: #008080">for=</span><span style="color: #bb8844">&quot;sample-checkbox4-12&quot;</span><span style="color: #000080">&gt;</span>dark green<span style="color: #000080">&lt;/label&gt;&lt;/li&gt;</span>
+    <span style="color: #000080">&lt;li&gt;&lt;input</span> <span style="color: #008080">type=</span><span style="color: #bb8844">&quot;checkbox&quot;</span> <span style="color: #008080">name=</span><span style="color: #bb8844">&quot;sample_checkbox4[]&quot;</span> <span style="color: #008080">id=</span><span style="color: #bb8844">&quot;sample-checkbox4-13&quot;</span> <span style="color: #008080">value=</span><span style="color: #bb8844">&quot;light-purple&quot;</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;light-purple&quot;</span> <span style="color: #000080">/&gt;&lt;label</span> <span style="color: #008080">for=</span><span style="color: #bb8844">&quot;sample-checkbox4-13&quot;</span><span style="color: #000080">&gt;</span>light purple<span style="color: #000080">&lt;/label&gt;&lt;/li&gt;</span>
+    <span style="color: #000080">&lt;li&gt;&lt;input</span> <span style="color: #008080">type=</span><span style="color: #bb8844">&quot;checkbox&quot;</span> <span style="color: #008080">name=</span><span style="color: #bb8844">&quot;sample_checkbox4[]&quot;</span> <span style="color: #008080">id=</span><span style="color: #bb8844">&quot;sample-checkbox4-14&quot;</span> <span style="color: #008080">value=</span><span style="color: #bb8844">&quot;purple&quot;</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;purple&quot;</span> <span style="color: #000080">/&gt;&lt;label</span> <span style="color: #008080">for=</span><span style="color: #bb8844">&quot;sample-checkbox4-14&quot;</span><span style="color: #000080">&gt;</span>purple<span style="color: #000080">&lt;/label&gt;&lt;/li&gt;</span>
+    <span style="color: #000080">&lt;li&gt;&lt;input</span> <span style="color: #008080">type=</span><span style="color: #bb8844">&quot;checkbox&quot;</span> <span style="color: #008080">name=</span><span style="color: #bb8844">&quot;sample_checkbox4[]&quot;</span> <span style="color: #008080">id=</span><span style="color: #bb8844">&quot;sample-checkbox4-15&quot;</span> <span style="color: #008080">value=</span><span style="color: #bb8844">&quot;dark-purple&quot;</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;dark-purple&quot;</span> <span style="color: #000080">/&gt;&lt;label</span> <span style="color: #008080">for=</span><span style="color: #bb8844">&quot;sample-checkbox4-15&quot;</span><span style="color: #000080">&gt;</span>dark purple<span style="color: #000080">&lt;/label&gt;&lt;/li&gt;</span>
+    <span style="color: #000080">&lt;li&gt;&lt;input</span> <span style="color: #008080">type=</span><span style="color: #bb8844">&quot;checkbox&quot;</span> <span style="color: #008080">name=</span><span style="color: #bb8844">&quot;sample_checkbox4[]&quot;</span> <span style="color: #008080">id=</span><span style="color: #bb8844">&quot;sample-checkbox4-16&quot;</span> <span style="color: #008080">value=</span><span style="color: #bb8844">&quot;gray&quot;</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;gray&quot;</span> <span style="color: #000080">/&gt;&lt;label</span> <span style="color: #008080">for=</span><span style="color: #bb8844">&quot;sample-checkbox4-16&quot;</span><span style="color: #000080">&gt;</span>gray<span style="color: #000080">&lt;/label&gt;&lt;/li&gt;</span>
+    <span style="color: #000080">&lt;li&gt;&lt;input</span> <span style="color: #008080">type=</span><span style="color: #bb8844">&quot;checkbox&quot;</span> <span style="color: #008080">name=</span><span style="color: #bb8844">&quot;sample_checkbox4[]&quot;</span> <span style="color: #008080">id=</span><span style="color: #bb8844">&quot;sample-checkbox4-17&quot;</span> <span style="color: #008080">value=</span><span style="color: #bb8844">&quot;user-17&quot;</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;white&quot;</span> <span style="color: #000080">/&gt;&lt;label</span> <span style="color: #008080">for=</span><span style="color: #bb8844">&quot;sample-checkbox4-17&quot;</span><span style="color: #000080">&gt;</span>white<span style="color: #000080">&lt;/label&gt;&lt;/li&gt;</span>
+    <span style="color: #000080">&lt;li&gt;&lt;input</span> <span style="color: #008080">type=</span><span style="color: #bb8844">&quot;checkbox&quot;</span> <span style="color: #008080">name=</span><span style="color: #bb8844">&quot;sample_checkbox4[]&quot;</span> <span style="color: #008080">id=</span><span style="color: #bb8844">&quot;sample-checkbox4-18&quot;</span> <span style="color: #008080">value=</span><span style="color: #bb8844">&quot;bg-black&quot;</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;black&quot;</span> <span style="color: #000080">/&gt;&lt;label</span> <span style="color: #008080">for=</span><span style="color: #bb8844">&quot;sample-checkbox4-18&quot;</span><span style="color: #000080">&gt;</span>black<span style="color: #000080">&lt;/label&gt;&lt;/li&gt;</span>
+  <span style="color: #000080">&lt;/ul&gt;</span>
+<span style="color: #000080">&lt;/div&gt;</span>
+</pre></div>
+                </li>
+              </ul>
+            </div>
 
           </section>
         </section>
@@ -538,7 +846,7 @@
         <section class="container type-1">
           <section>
             <h3>폼 테이블</h3>
-
+            <p><span class="code">&lt;table&gt;</span> 안에 <span class="code">&lt;.form-box&gt;</span> class 를 추가하여 사용하세요. 필요에 따라서<span class="code">&lt;colgroup&gt;</span>을 사용하여 너비를 조정하세요.</p>
             
             <div class="tabview border">
               <ul class="tab">
@@ -547,44 +855,100 @@
               </ul>
               <ul class="tab-content">
                 <li>
-                  <div class="form-box type-2">
-                    <div>
-                      <table class="form-box">
-                        <tbody>
-                          <tr>
-                            <td class="th"><label for="user-id"><em>*</em>아이디</label></td>
-                            <td><input type="text" name="" id="user-id" class="text" value="" /></td>
-                            <td class="th"><label for="user-pw">비밀번호</label></td>
-                            <td><input type="password" name="" id="user-pw" class="text" value="" /></td>
-                          </tr>
-                          <tr>
-                            <td class="th"><label for="user-id">아이디</label></td>
-                            <td><input type="text" name="" id="user-id" class="text" value="" /></td>
-                            <td class="th"><label for="user-pw">비밀번호</label></td>
-                            <td><input type="password" name="" id="user-pw" class="text" value="" /></td>
-                          </tr>
-                          <tr>
-                            <td class="th"><label for="user-id">아이디</label></td>
-                            <td><input type="text" name="" id="user-id" class="text" value="" /></td>
-                            <td class="th"><label for="user-pw">비밀번호</label></td>
-                            <td><input type="password" name="" id="user-pw" class="text" value="" /></td>
-                          </tr>
-                          <tr>
-                            <td class="th"><label for="user-id">아이디</label></td>
-                            <td><input type="text" name="" id="user-id" class="text" value="" /></td>
-                            <td class="th"><label for="user-pw">비밀번호</label></td>
-                            <td><input type="password" name="" id="user-pw" class="text" value="" /></td>
-                          </tr>
-                        </tbody>
-                      </table>
-
-                    </div>
-                    <div></div>
-                  </div>
+                  <table class="form-box">
+                    <colgroup>
+                      <col style="width: 120px;" />
+                      <col />
+                      <col style="width: 120px;" />
+                      <col />
+                    </colgroup>
+                    <tbody>
+                      <tr>
+                        <td class="th"><label for="sample-input"><em>*</em>아이디</label></td>
+                        <td>
+                          <input type="text" name="" id="sample-input" class="text" value="" />
+                          <a href="#" class="btn regular outline-sub1">중복확인</a>
+                        </td>
+                        <td class="th"><label for="sample-input2">비밀번호</label></td>
+                        <td>
+                          <div class="input-group toggle-box">
+                            <input type="password" name="" id="sample-input2" class="text" value="" />
+                            <span class="label btn-eye"></span>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="th"><label for="sample-input3">sample3</label></td>
+                        <td>
+                          <div class="input-group">
+                            <input type="text" name="" id="sample-input3" class="text" value="" />
+                            <a href="#" class="btn regular black icon"><i class="fa-regular fa-face-kiss-wink-heart"><span>선택</span></i></a>
+                          </div>
+                        </td>
+                        <td class="th"><label for="sample-input4">sample4</label></td>
+                        <td><input type="text" name="" id="sample-input4" class="text" value="" /></td>
+                      </tr>
+                      <tr>
+                        <td class="th"><label for="sample-input5">sample5</label></td>
+                        <td><input type="text" name="" id="sample-input5" class="text" value="" /></td>
+                        <td class="th"><label for="sample-input6">sample6</label></td>
+                        <td><input type="text" name="" id="sample-input6" class="text full" value="" /></td>
+                      </tr>
+                      <tr>
+                        <td class="th"><label for="sample-input7">sample7</label></td>
+                        <td colspan="3"><input type="text" name="" id="sample-input7" class="text full" value="" /></td>
+                      </tr>
+                    </tbody>
+                  </table>
                 </li>
                 <li>
 <div class="code-box custom-scroll">
 <pre>
+<span style="color: #000080">&lt;table</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;form-box&quot;</span><span style="color: #000080">&gt;</span>
+  <span style="color: #000080">&lt;colgroup&gt;</span>
+  <span style="color: #000080">&lt;col</span> <span style="color: #008080">style=</span><span style="color: #bb8844">&quot;width: 120px;&quot;</span> <span style="color: #000080">/&gt;</span>
+  <span style="color: #000080">&lt;col</span> <span style="color: #000080">/&gt;</span>
+  <span style="color: #000080">&lt;col</span> <span style="color: #008080">style=</span><span style="color: #bb8844">&quot;width: 120px;&quot;</span> <span style="color: #000080">/&gt;</span>
+  <span style="color: #000080">&lt;col</span> <span style="color: #000080">/&gt;</span>
+<span style="color: #000080">&lt;/colgroup&gt;</span>
+<span style="color: #000080">&lt;tbody&gt;</span>
+  <span style="color: #000080">&lt;tr&gt;</span>
+    <span style="color: #000080">&lt;td</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;th&quot;</span><span style="color: #000080">&gt;&lt;label</span> <span style="color: #008080">for=</span><span style="color: #bb8844">&quot;sample-input&quot;</span><span style="color: #000080">&gt;&lt;em&gt;</span>*<span style="color: #000080">&lt;/em&gt;</span>아이디<span style="color: #000080">&lt;/label&gt;&lt;/td&gt;</span>
+    <span style="color: #000080">&lt;td&gt;</span>
+      <span style="color: #000080">&lt;input</span> <span style="color: #008080">type=</span><span style="color: #bb8844">&quot;text&quot;</span> <span style="color: #008080">name=</span><span style="color: #bb8844">&quot;&quot;</span> <span style="color: #008080">id=</span><span style="color: #bb8844">&quot;sample-input&quot;</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;text&quot;</span> <span style="color: #008080">value=</span><span style="color: #bb8844">&quot;&quot;</span> <span style="color: #000080">/&gt;</span>
+      <span style="color: #000080">&lt;a</span> <span style="color: #008080">href=</span><span style="color: #bb8844">&quot;#&quot;</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;btn regular outline-sub1&quot;</span><span style="color: #000080">&gt;</span>중복확인<span style="color: #000080">&lt;/a&gt;</span>
+    <span style="color: #000080">&lt;/td&gt;</span>
+    <span style="color: #000080">&lt;td</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;th&quot;</span><span style="color: #000080">&gt;&lt;label</span> <span style="color: #008080">for=</span><span style="color: #bb8844">&quot;sample-input2&quot;</span><span style="color: #000080">&gt;</span>비밀번호<span style="color: #000080">&lt;/label&gt;&lt;/td&gt;</span>
+    <span style="color: #000080">&lt;td&gt;</span>
+      <span style="color: #000080">&lt;div</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;input-group toggle-box&quot;</span><span style="color: #000080">&gt;</span>
+        <span style="color: #000080">&lt;input</span> <span style="color: #008080">type=</span><span style="color: #bb8844">&quot;password&quot;</span> <span style="color: #008080">name=</span><span style="color: #bb8844">&quot;&quot;</span> <span style="color: #008080">id=</span><span style="color: #bb8844">&quot;sample-input2&quot;</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;text&quot;</span> <span style="color: #008080">value=</span><span style="color: #bb8844">&quot;&quot;</span> <span style="color: #000080">/&gt;</span>
+        <span style="color: #000080">&lt;span</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;label btn-eye&quot;</span><span style="color: #000080">&gt;&lt;/span&gt;</span>
+      <span style="color: #000080">&lt;/div&gt;</span>
+    <span style="color: #000080">&lt;/td&gt;</span>
+  <span style="color: #000080">&lt;/tr&gt;</span>
+  <span style="color: #000080">&lt;tr&gt;</span>
+    <span style="color: #000080">&lt;td</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;th&quot;</span><span style="color: #000080">&gt;&lt;label</span> <span style="color: #008080">for=</span><span style="color: #bb8844">&quot;sample-input3&quot;</span><span style="color: #000080">&gt;</span>sample3<span style="color: #000080">&lt;/label&gt;&lt;/td&gt;</span>
+    <span style="color: #000080">&lt;td&gt;</span>
+      <span style="color: #000080">&lt;div</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;input-group&quot;</span><span style="color: #000080">&gt;</span>
+        <span style="color: #000080">&lt;input</span> <span style="color: #008080">type=</span><span style="color: #bb8844">&quot;text&quot;</span> <span style="color: #008080">name=</span><span style="color: #bb8844">&quot;&quot;</span> <span style="color: #008080">id=</span><span style="color: #bb8844">&quot;sample-input3&quot;</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;text&quot;</span> <span style="color: #008080">value=</span><span style="color: #bb8844">&quot;&quot;</span> <span style="color: #000080">/&gt;</span>
+        <span style="color: #000080">&lt;a</span> <span style="color: #008080">href=</span><span style="color: #bb8844">&quot;#&quot;</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;btn regular black icon&quot;</span><span style="color: #000080">&gt;&lt;i</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;fa-regular fa-face-kiss-wink-heart&quot;</span><span style="color: #000080">&gt;&lt;span&gt;</span>선택<span style="color: #000080">&lt;/span&gt;&lt;/i&gt;&lt;/a&gt;</span>
+      <span style="color: #000080">&lt;/div&gt;</span>
+    <span style="color: #000080">&lt;/td&gt;</span>
+    <span style="color: #000080">&lt;td</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;th&quot;</span><span style="color: #000080">&gt;&lt;label</span> <span style="color: #008080">for=</span><span style="color: #bb8844">&quot;sample-input4&quot;</span><span style="color: #000080">&gt;</span>sample4<span style="color: #000080">&lt;/label&gt;&lt;/td&gt;</span>
+    <span style="color: #000080">&lt;td&gt;&lt;input</span> <span style="color: #008080">type=</span><span style="color: #bb8844">&quot;text&quot;</span> <span style="color: #008080">name=</span><span style="color: #bb8844">&quot;&quot;</span> <span style="color: #008080">id=</span><span style="color: #bb8844">&quot;sample-input4&quot;</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;text&quot;</span> <span style="color: #008080">value=</span><span style="color: #bb8844">&quot;&quot;</span> <span style="color: #000080">/&gt;&lt;/td&gt;</span>
+  <span style="color: #000080">&lt;/tr&gt;</span>
+  <span style="color: #000080">&lt;tr&gt;</span>
+    <span style="color: #000080">&lt;td</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;th&quot;</span><span style="color: #000080">&gt;&lt;label</span> <span style="color: #008080">for=</span><span style="color: #bb8844">&quot;sample-input5&quot;</span><span style="color: #000080">&gt;</span>sample5<span style="color: #000080">&lt;/label&gt;&lt;/td&gt;</span>
+    <span style="color: #000080">&lt;td&gt;&lt;input</span> <span style="color: #008080">type=</span><span style="color: #bb8844">&quot;text&quot;</span> <span style="color: #008080">name=</span><span style="color: #bb8844">&quot;&quot;</span> <span style="color: #008080">id=</span><span style="color: #bb8844">&quot;sample-input5&quot;</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;text&quot;</span> <span style="color: #008080">value=</span><span style="color: #bb8844">&quot;&quot;</span> <span style="color: #000080">/&gt;&lt;/td&gt;</span>
+    <span style="color: #000080">&lt;td</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;th&quot;</span><span style="color: #000080">&gt;&lt;label</span> <span style="color: #008080">for=</span><span style="color: #bb8844">&quot;sample-input6&quot;</span><span style="color: #000080">&gt;</span>sample6<span style="color: #000080">&lt;/label&gt;&lt;/td&gt;</span>
+    <span style="color: #000080">&lt;td&gt;&lt;input</span> <span style="color: #008080">type=</span><span style="color: #bb8844">&quot;text&quot;</span> <span style="color: #008080">name=</span><span style="color: #bb8844">&quot;&quot;</span> <span style="color: #008080">id=</span><span style="color: #bb8844">&quot;sample-input6&quot;</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;text full&quot;</span> <span style="color: #008080">value=</span><span style="color: #bb8844">&quot;&quot;</span> <span style="color: #000080">/&gt;&lt;/td&gt;</span>
+  <span style="color: #000080">&lt;/tr&gt;</span>
+  <span style="color: #000080">&lt;tr&gt;</span>
+    <span style="color: #000080">&lt;td</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;th&quot;</span><span style="color: #000080">&gt;&lt;label</span> <span style="color: #008080">for=</span><span style="color: #bb8844">&quot;sample-input7&quot;</span><span style="color: #000080">&gt;</span>sample7<span style="color: #000080">&lt;/label&gt;&lt;/td&gt;</span>
+    <span style="color: #000080">&lt;td</span> <span style="color: #008080">colspan=</span><span style="color: #bb8844">&quot;3&quot;</span><span style="color: #000080">&gt;&lt;input</span> <span style="color: #008080">type=</span><span style="color: #bb8844">&quot;text&quot;</span> <span style="color: #008080">name=</span><span style="color: #bb8844">&quot;&quot;</span> <span style="color: #008080">id=</span><span style="color: #bb8844">&quot;sample-input7&quot;</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;text full&quot;</span> <span style="color: #008080">value=</span><span style="color: #bb8844">&quot;&quot;</span> <span style="color: #000080">/&gt;&lt;/td&gt;</span>
+  <span style="color: #000080">&lt;/tr&gt;</span>
+  <span style="color: #000080">&lt;/tbody&gt;</span>
+<span style="color: #000080">&lt;/table&gt;</span>
 </pre></div>
                 </li>
               </ul>
