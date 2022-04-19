@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <?php include '../../include/head.html'; ?>
+    <title>Editor | Module | Sample | 관리시스템</title>
+    <meta name="description" content="관리시스템 샘플 Editor" />
+  </head>
+  <body class="sub module editor">
+    <div id="wrapper">
+      <?php include '../../include/header.html'; ?>
+
+      <main id="main">
+
+        <section class="container type-1">
+          <section>
+            <h3>Default editor</h3>
+            <p>Default editor.</p>
+
+            <div class="tabview border">
+              <ul class="tab">
+                <li><a href="#">Preview</a></li>
+                <li><a href="#">Code</a></li>
+              </ul>
+              <ul class="tab-content">
+                <li>
+                  <textarea name="editor_content" id="editor-content" class="editor" style="height: 500px;"></textarea>
+                </li>
+                <li>
+<div class="code-box custom-scroll">
+<pre>
+<span style="color: #000080">&lt;textarea</span> <span style="color: #008080">name=</span><span style="color: #bb8844">&quot;editor_content&quot;</span> <span style="color: #008080">id=</span><span style="color: #bb8844">&quot;editor-content&quot;</span> <span style="color: #008080">class=</span><span style="color: #bb8844">&quot;editor&quot;</span> <span style="color: #008080">style=</span><span style="color: #bb8844">&quot;height: 500px;&quot;</span><span style="color: #000080">&gt;&lt;/textarea&gt;</span>
+</pre></div>
+                </li>
+              </ul>
+            </div>
+
+          </section>
+        </section>
+
+
+
+
+      </main>
+
+      <?php include '../../include/footer.html'; ?>
+    </div> <!-- #wrapper -->
+
+<script>
+'use strict';
+setTitle('Editor');
+
+
+
+</script>
+  </body>
+</html>

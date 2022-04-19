@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <?php include '../../include/head.html'; ?>
+    <title>Chart | Module | Sample | 관리시스템</title>
+    <meta name="description" content="관리시스템 샘플 Chart" />
+  </head>
+  <body class="sub module chart">
+    <div id="wrapper">
+      <?php include '../../include/header.html'; ?>
+
+      <main id="main">
+
+        <section class="container type-2">
+          <section>
+            <h3>Bar Chart</h3>
+            <p>A bar chart provides a way of showing data values represented as vertical bars. It is sometimes used to show trend data, and the comparison of multiple data sets side by side.</p>
+
+            <canvas id="bar-chart" height="200" class="chart"></canvas>
+
+          </section>
+          <section>
+            <h3>Line Chart</h3>
+            <p>A line chart is a way of plotting data points on a line. Often, it is used to show trend data, or the comparison of two data sets.</p>
+
+            <canvas id="line-chart" height="200" class="chart"></canvas>
+
+          </section>
+        </section>
+
+
+        <section class="container type-2">
+          <section>
+            <h3>Mixed bar & line Chart</h3>
+            <p>With Chart.js, it is possible to create mixed charts that are a combination of two or more different chart types. A common example is a bar chart that also includes a line dataset. When creating a mixed chart, we specify the chart type on each dataset.</p>
+
+            <canvas id="mixed-bar-line-chart" height="200" class="chart"></canvas>
+
+          </section>
+          <section>
+            <h3>Bubble Chart</h3>
+            <p>A bubble chart is used to display three dimensions of data at the same time. The location of the bubble is determined by the first two dimensions and the corresponding horizontal and vertical axes. The third dimension is represented by the size of the individual bubbles.</p>
+
+            <canvas id="bubble-chart" height="200" class="chart"></canvas>
+
+          </section>
+        </section>
+
+        <section class="container type-2">
+          <section>
+            <h3>Doughnut Chart</h3>
+            <p>Doughnut chart is probably the most commonly used chart. It is divided into segment, the arc of each segment shows the proportional value of each piece of data. They are excellent at showing the relational proportions between data.</p>
+
+              <canvas id="doughnut-chart" height="200" class="chart"></canvas>
+
+          </section>
+          <section>
+            <h3>Pie Chart</h3>
+            <p>Pie and doughnut charts are effectively the same class in Chart.js, but have one different default value - their <span class="code">cutout</span>. This equates to what portion of the inner should be cut out. This defaults to 0 for pie charts, and <span class="code">'50%'</span> for doughnuts. They are also registered under two aliases in the Chart core. Other than their different default value, and different alias, they are exactly the same.</p>
+
+            <canvas id="pie-chart" height="200" class="chart"></canvas>
+
+          </section>
+        </section>
+
+        <section class="container type-2">
+          <section>
+            <h3>Radar Chart</h3>
+            <p>A radar chart is a way of showing multiple data points and the variation between them. They are often useful for comparing the points of two or more different data sets.</p>
+
+            <canvas id="radar-chart" class="chart"></canvas>
+
+          </section>
+          <section>
+            <h3>Polar Area Chart</h3>
+            <p>Polar area charts are similar to pie charts, but each segment has the same angle - the radius of the segment differs depending on the value. This type of chart is often useful when we want to show a comparison data similar to a pie chart, but also show a scale of values for context.</p>
+
+            <canvas id="polar-area-chart" height="200" class="chart"></canvas>
+
+          </section>
+        </section>
+
+      </main>
+
+      <?php include '../../include/footer.html'; ?>
+    </div> <!-- #wrapper -->
+
+<script>
+'use strict';
+setTitle('Chart');
+setChart('bar-chart', 'bar');
+setChart('line-chart', 'line');
+setChart('mixed-bar-line-chart', 'bar-line');
+setChart('bubble-chart', 'bubble');
+setChart('doughnut-chart', 'doughnut');
+setChart('pie-chart', 'pie');
+setChart('radar-chart', 'radar');
+setChart('polar-area-chart', 'polarArea');
+
+
+</script>
+  </body>
+</html>

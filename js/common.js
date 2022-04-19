@@ -1,11 +1,7 @@
 // common script
 $(document).ready(function() {
   preventDefaultAnchor();
-  setToggleUI();
-  setHeader();
-  setCurrent();
-  setTabview();
-  setDatepiker();
+  initFunction();
 });
 
 
@@ -14,6 +10,15 @@ function preventDefaultAnchor() {
   $(document).on('click', 'a[href="#"]', function(e) {
     e.preventDefault();
   });
+}
+
+function initFunction() {
+  setToggleUI();
+  setHeader();
+  setCurrent();
+  setTabview();
+  setDatepiker();
+  setEditor();
 }
 
 //header
@@ -150,4 +155,322 @@ function setToggleUI() {
   });
 
   setTogglePW();
+}
+// tinymce editor 적용
+function setEditor() {
+  var rootPath = (document.querySelector('base')) ? document.querySelector('base').getAttribute('href') : '/';
+
+  tinymce.init({
+    selector: 'textarea.editor',
+    plugins: [
+      'advlist autolink link image lists charmap print preview hr anchor pagebreak spellchecker',
+      'searchreplace wordcount visualblocks visualchars code fullscreen insertdatetime media nonbreaking',
+      'save table directionality emoticons template paste'
+    ],
+    //content_css: 'css/content.css',
+    content_style: 'p {font-family: "나눔고딕", NanumGothic; margin: 5px; font-size: 13px; line-height: 1.4em;}',
+    toolbar: 'print preview newdocument undo redo | fontselect | fontsizeselect | forecolor backcolor bold italic underline strikethrough | link image media charmap code',
+    font_formats: '나눔고딕=나눔고딕,NanumGothic;Andale Mono=andale mono,times;Arial=arial,helvetica,sans-serif;Arial Black=arial black,avant garde;Book Antiqua=book antiqua,palatino;Comic Sans MS=comic sans ms,sans-serif;Courier New=courier new,courier;Georgia=georgia,palatino;Helvetica=helvetica;Impact=impact,chicago;Symbol=symbol;Tahoma=tahoma,arial,helvetica,sans-serif;Terminal=terminal,monaco;Times New Roman=times new roman,times;Trebuchet MS=trebuchet ms,geneva;Verdana=verdana,geneva;Webdings=webdings;Wingdings=wingdings,zapf dingbats',
+    fontsize_formats: '11px 12px 14px 16px 18px 24px 36px 48px',
+    language: 'ko_KR',
+    // images_upload_url: rootPath + 'editor-image-upload',
+    // images_upload_base_path: rootPath + 'storage/editor',
+    relative_urls : false,
+    images_upload_credentials: true,
+    image_dimensions: false,
+    setup: function (editor) {
+        editor.on('change', function() { editor.save(); });
+    }
+  });
+}
+function setChart(id, type) {
+  //type : bar, bubble, doughnut, line, mixed, polarArea, radar, scatter
+  var ctx = document.getElementById(id).getContext('2d');
+  var myChart = new Chart(ctx, setSampleChartData(type));
+}
+function setSampleChartData(type) {
+  var datasets = null;
+  var label = ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'];
+  var light_red = 'rgba(255, 99, 132, 0.2)';
+  var light_blue = 'rgba(54, 162, 235, 0.2)';
+  var light_yellow = 'rgba(255, 206, 86, 0.2)';
+  var light_green = 'rgba(75, 192, 192, 0.2)';
+  var light_purple = 'rgba(153, 102, 255, 0.2)';
+  var light_orange = 'rgba(255, 159, 64, 0.2)';
+  var light_grey = 'rgba(201, 203, 207, 0.2)';
+  var red = 'rgba(255, 99, 132, 1)';
+  var blue = 'rgba(54, 162, 235, 1)';
+  var yellow = 'rgba(255, 206, 86, 1)';
+  var green = 'rgba(75, 192, 192, 1)';
+  var purple = 'rgba(153, 102, 255, 1)';
+  var orange = 'rgba(255, 159, 64, 1)';
+  var grey = 'rgba(201, 203, 207, 1)';
+
+  
+  switch(type) {
+    case 'bar':
+      datasets = {
+        type: type,
+        data: {
+          labels: label,
+          datasets: [{
+            label: 'Colors', 
+            data: [12, 19, 3, 5, 2, 3], //x축 label에 대응되는 데이터 값
+            backgroundColor: [light_red, light_blue, light_yellow, light_green, light_purple, light_orange],
+            borderColor: [red, blue, yellow, green, purple, orange],
+            borderWidth: 1
+          }]
+        },
+        options: {
+          scales: {
+            y: {
+              beginAtZero: true // 0부터 시작하게 합니다.
+            }
+          },
+          plugins: {
+            title: {
+              display: true,
+              text: 'Bar Chart Sample'
+            }
+          }
+        }
+      };
+      break;
+    case 'bubble':
+      datasets = {
+        type: type,
+        data: {
+          labels: label,
+          datasets: [{
+            label: 'Dataset 1',
+            data: {
+              x: 20,
+              y: 30,
+              r: 15
+            },
+            borderColor: red,
+            backgroundColor: light_red
+          },
+          {
+            label: 'Dataset 2',
+            data: {
+              x: 40,
+              y: 10,
+              r: 15
+            },
+            borderColor: orange,
+            backgroundColor: light_orange
+          }]
+        },
+        options: {
+          // animation: {
+          //   onComplete: () => {
+          //     delayed = true;
+          //   },
+          //   delay: (context) => {
+          //     let delay = 0;
+          //     if (context.type === 'data' && context.mode === 'default' && !delayed) {
+          //       delay = context.dataIndex * 300 + context.datasetIndex * 100;
+          //     }
+          //     return delay;
+          //   },
+          // },
+          plugins: {
+            title: {
+              display: true,
+              text: 'Bubble Chart Sample'
+            }
+          }
+        }
+      };
+      break;
+    case 'doughnut':
+      datasets = {
+        type: type,
+        data: {
+          labels: label,
+          datasets: [{
+            label: 'Colors', 
+            data: [12, 19, 3, 5, 2, 3],
+            backgroundColor: [red, blue, yellow, green, purple, orange],
+            hoverOffset: 4 // hover 시, 호 오프셋(픽셀 단위).
+          }]
+        },
+        options: {
+          plugins: {
+            title: {
+              display: true,
+              text: 'Doughnut Chart Sample'
+            }
+          }
+        }
+      };
+      break;
+    case 'line':
+      datasets = {
+        type: type,
+        data: {
+          labels: label,
+          datasets: [
+            {
+              label: '1',
+              data: [65, 59, 80, 81, 56, 55],
+              //Fill 옵션은 총 네 가지가 존재합니다 
+              // - false  : 아무것도 채워지지 않음
+              // - origin : 기준점 사이로 채워짐 
+              // - start : x축 선부터 채워짐
+              // - end : x축의 최대값의 기준으로 채워짐
+              fill: false,
+              backgroundColor: light_red,
+              borderColor: red,
+              tension: 0.1
+            },
+            {
+              label: '2',
+              data: [44, 22, 55, 77, 44, 55],
+              fill: false,
+              backgroundColor: light_blue,
+              borderColor: blue,
+              tension: 0.1
+            }
+          ]
+        },
+        options: {
+          responsive: true,
+          // interaction : point에 상호작용
+          interaction: {
+            mode: 'index',
+            intersect: false,
+          },
+          plugins: {
+            title: {
+              display: true,
+              text: 'Line Chart Sample'
+            }
+          }
+        },
+      };
+      break;
+    case 'pie':
+      datasets = {
+        type: type,
+        data: {
+          labels: label,
+          datasets: [{
+            label: 'Colors', 
+            data: [12, 19, 3, 5, 2, 3],
+            backgroundColor: [red, blue, yellow, green, purple, orange],
+            hoverOffset: 4 // hover 시, 호 오프셋(픽셀 단위).
+          }]
+        },
+        options: {
+          plugins: {
+            title: {
+              display: true,
+              text: 'Pie Chart Sample'
+            }
+          }
+        }
+      };
+      break;
+    case 'polarArea':
+      datasets = {
+        type: type,
+        data: {
+          labels: label,
+          datasets: [{
+            label: 'Colors', 
+            data: [12, 19, 3, 5, 2, 3],
+            backgroundColor: [red, blue, yellow, green, purple, orange],
+          }]
+        },
+        options: {
+          plugins: {
+            title: {
+              display: true,
+              text: 'Polar Area Chart Sample'
+            }
+          }
+        }
+      };
+      break;
+    case 'radar':
+      datasets = {
+        type: type,
+        data: {
+          labels: label,
+          datasets: [{
+            label: 'First Dataset',
+            data: [65, 59, 90, 81, 56, 40],
+            fill: true,
+            backgroundColor: light_purple,
+            borderColor: purple,
+            pointBackgroundColor: purple,
+            pointBorderColor: '#fff',
+            pointHoverBackgroundColor: '#fff',
+            pointHoverBorderColor: purple
+          }, 
+          {
+            label: 'Second Dataset',
+            data: [28, 48, 40, 19, 96, 27],
+            fill: true,
+            backgroundColor: light_green,
+            borderColor: green,
+            pointBackgroundColor: green,
+            pointBorderColor: '#fff',
+            pointHoverBackgroundColor: '#fff',
+            pointHoverBorderColor: green
+          }]
+        },
+        options: {
+          plugins: {
+            title: {
+              display: true,
+              text: 'Polar Area Chart Sample'
+            }
+          }
+        }
+      };
+      break;
+    case 'scatter':
+      break;
+    case 'bar-line':
+      datasets = {
+        type: 'scatter',
+        data: {
+          labels: label,
+          datasets: [{
+            type: 'bar',
+            label: 'Bar Dataset',
+            data: [10, 20, 30, 40, 33, 2],
+            borderColor: yellow,
+            backgroundColor: light_yellow
+          }, {
+            type: 'line',
+            label: 'Line Dataset',
+            data: [44, 22, 55, 77, 44, 55],
+            fill: false,
+            borderColor: blue
+          }]
+        },
+        options: {
+          scales: {
+            y: {
+              beginAtZero: true // 0부터 시작하게 합니다.
+            }
+          },
+          plugins: {
+            title: {
+              display: true,
+              text: 'Bar & Line Chart Sample'
+            }
+          }
+        }
+      };
+      break;
+    default: 
+      break;
+  }
+
+  return datasets;
 }
