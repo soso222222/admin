@@ -156,6 +156,29 @@ function setToggleUI() {
 
   setTogglePW();
 }
+function setCheckedAll() {
+  document.querySelectorAll('input.check-all').forEach(function (el, i) {
+
+    el.addEventListener('change', function(e){
+    var checkboxName = el.getAttribute('name');
+    var isChecked = (el.checked === true) ? true : false;
+    var checkboxes = document.querySelectorAll('input[name="' + checkboxName + '"]');
+
+      checkboxes.forEach(function (el, i) {
+        el.checked = isChecked;
+      });
+    });
+  });
+}
+function setMenuClick (menuUl) {
+  $menu = $(menuUl);
+  $menu.find('li > a').on('click', function(e) {
+    var index = $menu.find('li').index($(this).parent());
+    var modeName = (index === 1) ? 'dark' : 'light';
+    $menu.find('li').removeClass('on');
+    $menu.find('li:eq(' + index + ')').addClass('on');
+  });
+}
 // tinymce editor 적용
 function setEditor() {
   var rootPath = (document.querySelector('base')) ? document.querySelector('base').getAttribute('href') : '/';

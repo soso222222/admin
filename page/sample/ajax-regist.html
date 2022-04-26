@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <title>DB Register | Module | Sample | 디노웍스 관리시스템</title>
+    <meta name="description" content="디노웍스 관리시스템 샘플 Edit" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=1400" />
+    <meta name="apple-mobile-web-app-title" content="디노웍스" />
+    <link rel="shortcut icon" type="image/x-icon" href="../../favicon.ico" />
+    <link rel="stylesheet" href="../../lib/fa/css/all.min.css" />
+    <link rel="stylesheet" href="../../lib/air-datepicker/datepicker.min.css" />
+    <link rel="stylesheet" href="../../css/web-font.css" />
+    <link rel="stylesheet" href="../../css/style.css" />
+    <script src="../../lib/tinymce/tinymce.min.js"></script>
+    <script src="../../js/jquery-3.6.0.min.js"></script>
+    <script src="../../lib/air-datepicker/datepicker.min.js"></script>
+    <script src="../../lib/air-datepicker/datepicker.ko.js"></script>
+    <script src="https://t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
+    <script src="../../js/dino-common.js"></script>
+  </head>
+  <body class="sub sample design edit">
+    <div id="wrapper">
+      <a href="#main" id="skip-nav">본문 바로가기</a>
+      <header id="header">
+        <div class="logo">
+          <h1>
+            <a href="#" class="default"><img alt="DinoWorks" src="../../img/logo.png" /></a>
+            <a href="#" class="circle">DinoWorks</a>
+          </h1>
+          <a href="#" class="toggle"><i class="fa-solid fa-angle-left"><span>네비게이션 열기/닫기</span></i></a>
+        </div>
+        <div class="user">
+          <span class="photo" style="background-image: url(../../img/common/sample-face.jpg);">사용자 사진</span>
+          <em class="name">김정민<span>(전체관리자)</span></em>
+          <a href="#" class="toggle"><i class="fa-solid fa-angle-down"><span>사용자 상세정보 열기/닫기</span></i></a>
+          <div class="layer-info">
+
+          </div>
+        </div>
+        <ul id="header-link">
+          <li><a href="#" title="로그아웃"><i class="fa-solid fa-arrow-right-from-bracket"><span>로그아웃</span></i></a></li>
+          <li><a href="#" target="_black" title="홈페이지 열기"><i class="fa-solid fa-desktop"><span>홈페이지 열기</span></i></a></li>
+          <li><a href="#" title="개인정보설정"><i class="fa-solid fa-user-gear"><span>개인정보설정</span></i></a></li>
+          <li><a href="#" title="비밀번호변경"><i class="fa-solid fa-lock"><span>비밀번호변경</span></i></a></li>
+          <li><a href="#" title="알람"><i class="fa-regular fa-bell"><span>알람</span></i></a></li>
+        </ul>
+      </header>
+
+      <section id="gnb" class="custom-scroll">
+        <h2 class="ir-hidden">네비게이션</h2>
+        <nav>
+          <h3>OVERIVEW</h3>
+          <ul>
+            <li><a href="../overview/dashboard.html" title="Dashboard Dashboard Dashboard"><i class="fa-solid fa-gauge"></i><em>Dashboard Dashboard Dashboard</em><i class="fa-solid fa-angle-right"><span>서브메뉴있음</span></i></a></li>
+            <li>
+              <a href="#"><i class="fa-solid fa-user-gear"></i><em>My Page</em></a>
+              <ul>
+                <li><a href="#">개인정보관리</a></li>
+                <li><a href="#">비밀번호수정</a></li>
+              </ul>
+            </li>
+          </ul>
+          <h3>Sample</h3>
+          <ul>
+            <li>
+              <a href="#"><i class="fa-solid fa-palette"></i><em>Design</em></a>
+              <ul>
+                <li><a href="../sample/design-layout.html">Layout</a></li>
+                <li><a href="../sample/design-button.html">Button</a></li>
+                <li><a href="../sample/design-form.html">Form</a></li>
+                <li><a href="../sample/design-list.html">List Page</a></li>
+                <li><a href="../sample/design-view.html">View Page</a></li>
+                <li><a href="../sample/design-edit.html">Edit Page</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#"><i class="fa-solid fa-cubes"></i><em>Module</em></a>
+              <ul>
+                <li><a href="../sample/module-list.html">DB List</a></li>
+                <li><a href="../sample/module-view.html?seq=13">DB View</a></li>
+                <li><a href="../sample/module-regist.html">DB Register</a></li>
+                <li><a href="../sample/module-modify.html?seq=13">DB Modify</a></li>
+                <li><a href="../sample/ajax-test.html">Ajax Test</a></li>
+                <li><a href="../sample/ajax-list.html">Ajax List</a></li>
+                <li><a href="../sample/ajax-view.html?seq=13">Ajax View</a></li>
+                <li><a href="../sample/ajax-regist.html">Ajax Register</a></li>
+                <li><a href="../sample/ajax-modify.html?seq=13">Ajax Modify</a></li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+      </section>
+
+      <main id="main">
+        <h2>Ajax Register</h2>
+        <p>폼페이지(edit) 샘플 : The most complete user interface framework that can be used to create stunning admin dashboards and presentation websites.</p>
+
+        <section class="container type-1">
+          <section>
+            <h3>회원정보관리</h3>
+
+            <form name="form1" action="function-regist.php" method="get" enctype="multipart/form-data">
+              <table class="form-box">
+                <colgroup>
+                  <col style="width: 120px;" />
+                  <col />
+                  <col style="width: 120px;" />
+                  <col />
+                </colgroup>
+                <tbody>
+                  <tr>
+                    <td class="th"><label for="org-name"><em>*</em>기관명</label></td>
+                    <td colspan="3">
+                      <input type="text" name="org_name" id="org-name" class="text" value="" />
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="th"><label for="type-seq"><em>*</em>기관구분</label></td>
+                    <td colspan="3">
+                      <select name="type_seq" id="type-seq">
+                        <option value="0">-구분선택-</option>
+                        <option value="14">대학</option>
+                        <option value="15">기업</option>
+                        <option value="16">연구소</option>
+                      </select>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="th"><label for="business-id"><em>*</em>사업자등록번호</label></td>
+                    <td colspan="3">
+                      <input type="text" name="business_id" id="business-id" class="text" value="" />
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="th"><label for="website"><em>*</em>웹사이트 주소</label></td>
+                    <td colspan="3">
+                      <input type="text" name="website" id="website" class="text half" value="" />
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="th"><label for="remarks">비고</label></td>
+                    <td colspan="3">
+                      <textarea name="remarks" id="remarks"></textarea>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+
+              <div class="button-box right">
+                <a href="module-list.html" class="btn large blue">목록보기</a>
+                <button type="submit" class="btn large blue">저장하기</button>
+              </div>
+            </form>
+
+          </section>
+        </section>
+
+
+
+
+      </main>
+
+      <footer id="footer">
+        <p>© Copyright 2022 DinoWorks Inc. All Rights Reserved.</p>
+      </footer>
+    </div> <!-- #wrapper -->
+
+<script>
+'use strict';
+
+
+
+
+
+
+
+</script>
+  </body>
+</html>
