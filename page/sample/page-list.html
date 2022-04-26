@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <?php include '../../include/head.html'; ?>
+    <title>List | Page | Sample | 관리시스템</title>
+    <meta name="description" content="관리시스템 샘플 레이아웃" />
+  </head>
+  <body class="sub page list">
+    <div id="wrapper">
+      <?php include '../../include/header.html'; ?>
+
+      <main id="main">
+
+        <section class="container type-1">
+          <section>
+            <h3>List</h3>
+            <!-- <p>Use <span class="code">&lt;div&gt; class="" &lt;/div&gt;</span></p> -->
+            
+            <div class="list-box form-box">
+              <div class="content-header">
+                <p>List title</p>
+                <div class="input-group">
+                  <input type="text" name="sample_keyword" id="sample-keyword" placeholder="Search..." class="text" />
+                  <a href="#" class="btn regular sub1 icon"><i class="fa-solid fa-search"><span>검색</span></i></a>
+                </div>
+              </div>
+              <div class="table">
+                <div class="table-column-group">
+                  <div class="table-column"></div>
+                  <div class="table-column"></div>
+                  <div class="table-column"></div>
+                  <div class="table-column"></div>
+                  <div class="table-column"></div>
+                  <div class="table-column"></div>
+                  <div class="table-column"></div>
+                </div>
+                <div class="table-header-group">
+                  <div class="table-row">
+                    <div class="table-cell">TITLE</div>
+                    <div class="table-cell">CATEGORY</div>
+                    <div class="table-cell">TEACHER</div>
+                    <div class="table-cell">LESSON</div>
+                    <div class="table-cell">ENROLLED</div>
+                    <div class="table-cell">PRICE</div>
+                    <div class="table-cell">STATUS</div>
+                  </div>
+                </div>
+                <div class="table-row-group">
+                  <div class="table-row">
+                    <div class="table-cell"><a href="page-view.html">title here</a></div>
+                    <div class="table-cell">Category name</div>
+                    <div class="table-cell">Teacher James</div>
+                    <div class="table-cell">Lessons name</div>
+                    <div class="table-cell">16</div>
+                    <div class="table-cell">$25.00</div>
+                    <div class="table-cell">Active</div>
+                  </div>
+                </div>
+                <div class="table-row-group">
+                  <div class="table-row">
+                    <div class="table-cell"><a href="page-view.html">title here</a></div>
+                    <div class="table-cell">Category name</div>
+                    <div class="table-cell">Teacher James</div>
+                    <div class="table-cell">Lessons name</div>
+                    <div class="table-cell">16</div>
+                    <div class="table-cell">$25.00</div>
+                    <div class="table-cell">Active</div>
+                  </div>
+                </div>
+                <div class="table-row-group">
+                  <div class="table-row">
+                    <div class="table-cell"><a href="page-view.html">title here</a></div>
+                    <div class="table-cell">Category name</div>
+                    <div class="table-cell">Teacher James</div>
+                    <div class="table-cell">Lessons name</div>
+                    <div class="table-cell">16</div>
+                    <div class="table-cell">$25.00</div>
+                    <div class="table-cell">Active</div>
+                  </div>
+                </div>
+                <div class="table-row-group">
+                  <div class="table-row">
+                    <div class="table-cell"><a href="page-view.html">title here</a></div>
+                    <div class="table-cell">Category name</div>
+                    <div class="table-cell">Teacher James</div>
+                    <div class="table-cell">Lessons name</div>
+                    <div class="table-cell">16</div>
+                    <div class="table-cell">$25.00</div>
+                    <div class="table-cell">Active</div>
+                  </div>
+                </div>
+                <div class="table-row-group">
+                  <div class="table-row">
+                    <div class="table-cell"><a href="page-view.html">title here</a></div>
+                    <div class="table-cell">Category name</div>
+                    <div class="table-cell">Teacher James</div>
+                    <div class="table-cell">Lessons name</div>
+                    <div class="table-cell">16</div>
+                    <div class="table-cell">$25.00</div>
+                    <div class="table-cell">Active</div>
+                  </div>
+                </div>
+                <div class="table-row-group">
+                  <div class="table-row">
+                    <div class="table-cell"><a href="page-view.html">title here</a></div>
+                    <div class="table-cell">Category name</div>
+                    <div class="table-cell">Teacher James</div>
+                    <div class="table-cell">Lessons name</div>
+                    <div class="table-cell">16</div>
+                    <div class="table-cell">$25.00</div>
+                    <div class="table-cell">Active</div>
+                  </div>
+                </div>
+              </div>
+              <div class="list-footer">
+                <p>Showing 1 to 10 of 10 entrie</p>
+                <ul class="page">
+                  <li><a class="prev"><i class="fa-solid fa-arrow-left"></i></a></li>
+                  <li class="on" data-page="1"><a href="#">1</a></li>
+                  <li data-page="2"><a href="#">2</a></li>
+                  <li><a class="next"><i class="fa-solid fa-arrow-right"></i></a></li>
+                </ul>
+              </div>
+            </div>
+
+          </section>
+        </section>
+
+      </main>
+
+      <?php include '../../include/footer.html'; ?>
+    </div> <!-- #wrapper -->
+
+<script>
+'use strict';
+setTitle('List');
+
+</script>
+  </body>
+</html>

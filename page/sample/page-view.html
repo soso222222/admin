@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <?php include '../../include/head.html'; ?>
+    <title>View | Page | Sample | 관리시스템</title>
+    <meta name="description" content="관리시스템 샘플 레이아웃" />
+  </head>
+  <body class="sub page view">
+    <div id="wrapper">
+      <?php include '../../include/header.html'; ?>
+
+      <main id="main">
+
+        <section class="container type-1">
+          <section>
+            <!-- <h3>List</h3> -->
+            <!-- <p>Use <span class="code">&lt;div&gt; class="" &lt;/div&gt;</span></p> -->
+            
+            <div class="view-box form-box">
+              <div class="content-header">
+                <div class="top">
+                  <p class="title">Draft the new contract document for sales team</p>
+                  <div class="more">
+                    <a href="#"><i class="fa-solid fa-ellipsis"></i></a>
+                    <ul class="menu">
+                      <li><a href="#"><i class="fa-solid fa-paperclip"></i>Attachment</a></li>
+                      <li><a href="#"><i class="fa-solid fa-pen-to-square"></i>Edit</a></li>
+                      <li><a href="#"><i class="fa-regular fa-trash-can"></i>Delete</a></li>
+                    </ul>
+                  </div>
+                  <div class="bottom">
+                    <div class="left">
+                      <p>NAME</p>
+                      <img alt="사용자 프로필" src="../../img/header-user-photo2.jpg" class="circle" />
+                      <span class="name">Arya Stark</span>
+                    </div>
+                    <div class="right">
+                      <p>DATE</p>
+                      <i class="fa-solid fa-calendar-days font-light-green"></i>
+                      <span class="date">Today 10am</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="content">
+                This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer. Some quick example text to build on the card title and make up the bulk of the card's content. Some quick example text to build on the card title and make up. This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer. Some quick example text to build on the card title and make up the bulk of the card's content. Some quick example text to build on the card title and make up. This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer. Some quick example text to build on the card title and make up the bulk of the card's content. <br />Some quick example text to build on the card title and make up. This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer. Some quick example text to build on the card title and make up the bulk of the card's content. Some quick example text to build on the card title and make up. This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer. Some quick example text to build on the card title and make up the bulk of the card's content. Some quick example text to build on the card title and make up. This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer. Some quick example text to build on the card title and make up the bulk of the card's content. Some quick example text to build on the card title and make up. This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer. Some quick example text to build on the card title and make up the bulk of the card's content. Some quick example text to build on the card title and make up.
+              </div>
+            </div>
+
+          </section>
+        </section>
+
+        <section class="container type-1">
+          <section>
+            <div class="comment-box">
+              <p class="title">Comments <span>(51)</span></p>
+              <div class="comments">
+                <ul class="comment-group" data-depth="0">
+                  <li>
+                    <div class="left">
+                      <img alt="사용자 프로필" src="../../img/header-user-photo2.jpg" class="circle" />
+                    </div>
+                    <div class="center">
+                      <p class="name">Jeremy Tomlinson</p>
+                      <p class="content">Nice work, makes me think of The Money Pit.</p>
+                      <a href="#" class="reply"><i class="fa-solid fa-reply"></i>Reply</a>
+                    </div>
+                    <div class="right">
+                      <span class="ago">5 hours ago</span>
+                    </div>
+                    <ul class="comment-group" data-depth="1">
+                      <li>
+                        <div class="left">
+                          <img alt="사용자 프로필" src="../../img/header-user-photo2.jpg" class="circle" />
+                        </div>
+                        <div class="center">
+                          <p class="name">Thelma Fridley</p>
+                          <p class="content">i'm in the middle of a timelapse animation myself! (Very different though.) Awesome stuff.</p>
+                          <a href="#" class="reply"><i class="fa-solid fa-reply"></i>Reply</a>
+                        </div>
+                        <div class="right">
+                          <span class="ago">3 hours ago</span>
+                        </div>
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    <div class="left">
+                      <img alt="사용자 프로필" src="../../img/header-user-photo2.jpg" class="circle" />
+                    </div>
+                    <div class="center">
+                      <p class="name">Kevin Martinez</p>
+                      <p class="content">It would be very nice to have.</p>
+                      <a href="#" class="reply"><i class="fa-solid fa-reply"></i>Reply</a>
+                    </div>
+                    <div class="right">
+                      <span class="ago">1 day ago</span>
+                    </div>
+                  </li>
+                </ul>
+                <a href="#" class="load">Load More</a>
+              </div>
+              <div class="form-box full">
+                <textarea name="" id="textarea" placeholder="Your comment..."></textarea>
+                <div class="bar">
+                  <a href="#" class="btn small main">Submit</a>
+                </div>
+              </div>
+            </div>
+          </section>
+        </section>
+
+      </main>
+
+      <?php include '../../include/footer.html'; ?>
+    </div> <!-- #wrapper -->
+
+<script>
+'use strict';
+setTitle('View');
+
+$('div.more > a').on('click', function(e) {
+    $(this).siblings('ul.menu').toggleClass('on');
+  });
+
+</script>
+  </body>
+</html>
