@@ -861,7 +861,7 @@ ul.page > li.on > a {background-color: rgba(115, 93, 120, 1); color: #fff;}
 
 
 /* calendar */
-#calendar {margin: 0 auto; height: 400px;}
+div.full-calendar {margin: 0 auto;}
 
 
 
