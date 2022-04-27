@@ -860,6 +860,12 @@ ul.page > li.on > a {background-color: rgba(115, 93, 120, 1); color: #fff;}
 
 
 
+/* calendar */
+#calendar {margin: 0 auto; height: 400px;}
+
+
+
+
 
 /* 스크롤바 디자인 : Webkit 계열 */
 .custom-scroll {overflow: auto;}
