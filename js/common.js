@@ -47,11 +47,13 @@ function setToggleMenu() {
     // if (windowWidth < 1024 && $(this).parent().find('ul').length > 0) {
     if ($(this).parent().find('ul').length > 0) {
       e.preventDefault();
-      
+
       // $(this).next().css({'transition': 'height 0.3s'});
+      // $(this).parent().addClass('show');
       openMenu($(this).next());
       
       $(this).parent().siblings().each(function() {
+        $(this).removeClass('show');
         $(this).find('ul').css({'height': '0px'});
         // $(this).find('> a i').attr({'class': 'fas fa-plus mobile'});
       });
@@ -65,6 +67,7 @@ function openMenu(ul) {
     height += $(this).outerHeight(true);
   });
   $ul.css({'height': height + 'px'});
+  $ul.parent().addClass('show');
   // $(this).find('i').attr({'class': 'fas fa-minus mobile'});
 }
 function setTabview() {
