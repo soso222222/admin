@@ -187,7 +187,7 @@ img.circle {overflow: hidden; box-sizing: border-box; border-radius: 50px;}
 #gnb nav h3:first-child {margin-top: 0;}
 #gnb nav > ul > li + li {margin-top: 3px;}
 #gnb nav > ul > li > a {display: block; position: relative; font-size: 13px; color: #8da0aa; line-height: 32px; border: 1px solid transparent; border-radius: 4px; padding-left: 28px; padding-right: 20px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; transition: all 0.3s;}
-#gnb nav > ul > li > a::after {content: '\f107'; position: absolute; right: 8px; top: 50%; transform: translate(0, -50%); font-size: 10px; font-weight: 600; font-family: 'Font Awesome 5 Free';}
+#gnb nav > ul > li.has-sub > a::after {content: '\f107'; position: absolute; right: 8px; top: 50%; transform: translate(0, -50%); font-size: 10px; font-weight: 600; font-family: 'Font Awesome 5 Free';}
 #gnb nav > ul > li > a i:first-child {position: absolute; left: 5px; top: 50%; transform: translate(0, -50%); color: #735D78; opacity: 0.6;}
 /* #gnb nav > ul > li > a i:last-child {position: absolute; right: 8px; top: 50%; transform: translate(0, -50%); font-size: 10px; font-weight: 400px;} */
 #gnb nav > ul > li.on > a {color: #735D78; background-color: #fcfdfe; border-color: rgba(61, 58, 75, 0.3);}

@@ -43,7 +43,7 @@ function setTitle(title) {
 }
 function setToggleMenu() {
   $('#gnb > nav > ul > li > a').on('click', function(e) {
-    var windowWidth = $(window).width();
+    // var windowWidth = $(window).width();
     // if (windowWidth < 1024 && $(this).parent().find('ul').length > 0) {
     if ($(this).parent().find('ul').length > 0) {
       e.preventDefault();
