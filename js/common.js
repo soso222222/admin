@@ -32,6 +32,9 @@ function setHeader() {
     // $('html').removeClass();
     // $('html').addClass(modeName);
   });
+  $('#header a.menu-bars').on('click', function(e) {
+    $('#wrapper').toggleClass('close-menu');
+  });
   $('#header ul.user > li.right-menu > a').on('click', function(e) {
     $(this).siblings('.tabview').css({'right': '-50px'});
   });
